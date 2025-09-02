@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Playora</title>
+  <link rel="shortcut icon" href="gamification.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --primary-color: #20df6c;
+      --secondary-color: #1a73e8;
+      --text-primary: #111714;
+      --text-secondary: #648772;
+      --background-primary: #ffffff;
+      --background-secondary: #f0f4f2;
+      --border-color: #dce5df;
+    }
+  </style>
+</head>
+
+<body class="bg-background-primary font-['Spline_Sans',_sans-serif] text-primary">
+  <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <header
+      class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-color bg-background-primary/80 px-10 py-4 backdrop-blur-sm">
+      <div class="flex items-center gap-4">
+        <img class="w-10" src="gamification.png" alt="">
+        <h1 class="text-2xl font-bold tracking-tighter">Playora</h1>
+      </div>
+      <div class="flex items-center gap-8 text-gray-700 font-medium ">
+        <a class="hover:text-gray-900 transition-colors" href="#">Home</a>
+        <a class="hover:text-gray-900 transition-colors" href="#">Dashboard</a>
+        <a class="hover:text-gray-900 transition-colors" href="#">Play</a>
+        <a class="hover:text-gray-900 transition-colors" href="compete.html">Compete</a>
+        <a class="hover:text-gray-900 transition-colors" href="communityHub.html">Community Hub</a>
+        <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
+      </div>
+      <div class="flex items-center space-x-4 relative">
+        <a href="notification.html" class="material-icons text-gray-600">notifications</a>
+        <div class="relative">
+          <!-- hidden checkbox acts as toggle -->
+          <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+          <!-- button (label for checkbox) -->
+          <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+            <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+              <span class="material-icons text-gray-500">person</span>
+            </div>
+          </label>
+
+          <!-- dropdown menu -->
+          <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">school</span>
+              My Courses
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+              href="MyAchievements.html">
+              <span class="material-symbols-outlined text-base">emoji_events</span>
+              My Achievements
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">help</span>
+              Help & Support
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">settings</span>
+              Settings
+            </a>
+            <div class="my-1 border-t border-gray-100"></div>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">logout</span>
+              Sign Out
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-1 bg-background-secondary/50">
+      <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-4xl font-extrabold tracking-tight text-primary">My Achievements</h2>
+          <p class="mt-2 text-lg text-secondary">A collection of all the badges you've earned on your learning journey.
+          </p>
+        </div>
+        <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div
+            class="flex flex-col items-center rounded-2xl bg-background-primary p-6 shadow-sm transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="relative mb-4 h-32 w-32">
+              <img alt="Eco-Warrior Badge" class="h-full w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzlJ4eQCC3M6iDe_7mmNXIbVHfpT2LtWgH3LULmdsltS3Iinp7qqvXbyz06hnaxqN_R_lMiijboh-OHf5fcizo4fTQSYGep4RfqOAJIMvOIaUYyXEv4B_PBOy0SoHqD14pUj6JT6mJJmIat0lx7FxghhhyIjwN08XDoudv_AEQp9P3vuLuZVnLWUtD1XOsf12BhGB7AeTmHdKtBZddvZFdX8T-C7GMr2LmsxroITrPkXWMGOEPU3XLRr4x0LxETNy6SzkvtZR4_lWc" />
+            </div>
+            <h3 class="text-xl font-bold text-primary">Eco-Warrior</h3>
+            <p class="mt-1 text-sm text-secondary">Earned: 15 Oct 2023</p>
+            <p class="mt-2 text-center text-sm text-primary">Completed the "Introduction to Climate Change" module.</p>
+          </div>
+          <div
+            class="flex flex-col items-center rounded-2xl bg-background-primary p-6 shadow-sm transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="relative mb-4 h-32 w-32">
+              <img alt="Recycling Ranger Badge" class="h-full w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG7iuu08ssYWT70e-DrY0xVQTi2ip6FIW73WnXiVKvKyHjS_smcRw0liiM5GvAQMJRhyylks18pWjn2_CInfSJ68Q4kUkbtzS0lL1oZwuDA6AHLJeab0z8AIlnPdKsWp6jun1zP0w-4-NXYH2dejCBsUjZKRwRFI-bXJhaBH4FNOSeIS9hdkOEME7-6dgjujnCHeHR770ri3bmpHBchHm4z7XhTC6bE2I6riGzJKKuQP2FWbsIDM4E1qUY7kYYyv96HYRDZ8KueBKN" />
+            </div>
+            <h3 class="text-xl font-bold text-primary">Recycling Ranger</h3>
+            <p class="mt-1 text-sm text-secondary">Earned: 28 Sep 2023</p>
+            <p class="mt-2 text-center text-sm text-primary">Mastered the "Waste Management &amp; Recycling" quiz.</p>
+          </div>
+          <div
+            class="flex flex-col items-center rounded-2xl bg-background-primary p-6 shadow-sm transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="relative mb-4 h-32 w-32">
+              <img alt="Water Wizard Badge" class="h-full w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOEYaCkm5N5gzxFc8BF1Vkr58noGvLo7NKw9oRa0ocO1_DLE-1TPYKF2MuWZHsUIy2x3r_MhSygwW0KeUNK88a_7VzNXTAMwFa5wd50z-5wfmuXoA4_-PohCi3SCw7K7NMMnAr0EnOKNMV_-SNISpkI2PU6KqxHkTAwmnk2eD6YCbKCCJkHOe4X0NdGs6QmYy3eM9Y4mCYqsJlrMv_5PrumFTNSZUHefqCr-tlbDqZsvcXMhmevHoRSUqSmY5G9i304BxOjut_ciWY" />
+            </div>
+            <h3 class="text-xl font-bold text-primary">Water Wizard</h3>
+            <p class="mt-1 text-sm text-secondary">Earned: 12 Sep 2023</p>
+            <p class="mt-2 text-center text-sm text-primary">Scored 100% in the "Water Conservation" game.</p>
+          </div>
+          <div
+            class="flex flex-col items-center rounded-2xl bg-background-primary p-6 shadow-sm transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="relative mb-4 h-32 w-32">
+              <img alt="Energy Saver Badge" class="h-full w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeOrymLEQbmRzFUfrdUX3oyH7-QRj6UiEbVOiuX60qZn7D-OmfBFzf-47C2CqnqoaEiec0HqcsPme3LdkQ0xtfd7pvUqyr3i5tbvEq0_-UMUWgfsyq4poA1EtVuMw222tyiR25VhPmPDSEXaK_IPF0bTncN4efUPTj5VBBDmJo3kAlbm-_YzrqhbDV6UC7-wc5woq524FXyrFXD1uVHlNEO9K11fxnJnIARMaVnEOCDgP7Vb-GwrQgS9gNACTIssof8gzhAAK2JE1m" />
+            </div>
+            <h3 class="text-xl font-bold text-primary">Energy Saver</h3>
+            <p class="mt-1 text-sm text-secondary">Earned: 05 Aug 2023</p>
+            <p class="mt-2 text-center text-sm text-primary">Finished the "Renewable Energy Sources" challenge.</p>
+          </div>
+          <div
+            class="flex flex-col items-center rounded-2xl bg-background-primary p-6 shadow-sm transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="relative mb-4 h-32 w-32">
+              <img alt="Biodiversity Buff Badge" class="h-full w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7uyO0OgO44W7Q8eZ7fOUm5FNw_CtVgaQ5rFU_wAxHj8D3E0pH1jIRK7_4MTYijjiwN34TpHxmcCS_SxBW4Ly0JF95dpYXcPJF2AURTZ3dR6YNksxxzxoCLtuRMzf5yDQOj3PTONKjq2u2TKEF7IJIYeWakc8lSYPJz8APMSuPdUdqAVBpR2GBHiHyaM371BR6ej0UVim0NqhM2ih2-0HmaP30Jt--0z2o6G8zPMOAHc9Kv1umH3TSekEClgPjYJlw4VnQys8FDpcE" />
+            </div>
+            <h3 class="text-xl font-bold text-primary">Biodiversity Buff</h3>
+            <p class="mt-1 text-sm text-secondary">Earned: 21 Jul 2023</p>
+            <p class="mt-2 text-center text-sm text-primary">Identified 20 local species in the "Ecosystem Explorer"
+              game.</p>
+          </div>
+          <div
+            class="flex flex-col items-center rounded-2xl bg-background-primary p-6 shadow-sm transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="relative mb-4 h-32 w-32">
+              <img alt="Green Thumb Badge" class="h-full w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiWQls1Ow10JTJ_rLVdK7tGIWMx0-Lyiy9uyYwUnNZRFhzbrztJVPMJ1bLWjdXMKNPLT2TUDCQJ11_wI4h41ZmK5LOP02GvMIUAy0TTaXkwf2jA9-OSYf-FCPJ9AgZcYMEmB1Kpl15uKlZx8hhqhzIlMdgigqypdSiqf1IeCpN_MyMRRkJjrPuEHc5DopHQuJ1EE6oV8hceW2Z494WmBtZzOeKkOxhOfGkcW0FhgPSEmuMX8rsLHj7FTJ3SeWSHOMQQoEDkUVxzHnr" />
+            </div>
+            <h3 class="text-xl font-bold text-primary">Green Thumb</h3>
+            <p class="mt-1 text-sm text-secondary">Earned: 02 Jun 2023</p>
+            <p class="mt-2 text-center text-sm text-primary">Completed the "Sustainable Agriculture" lesson.</p>
+          </div>
+          <div
+            class="flex flex-col items-center rounded-2xl bg-background-primary p-6 shadow-sm transition-transform hover:scale-105 hover:shadow-lg">
+            <div class="relative mb-4 h-32 w-32">
+              <img alt="Pollution Fighter Badge" class="h-full w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaMEhT8jyqYaIC9Jm-G5bUADc5wuU9nxhdu0SNyeb-nNZVSMu3GCuRrocT4WiUp_vyP8AHiWYWa8EynA_gBVeo8FiLXILWH-BUWyx3kcgDte-1pZDmC_fW_TeiRFo_hTxKHbNpb9YyqhdrovZLeaqhBqBMXHtkGDDV-d3pie9EZn7VHjGzxOKODdG7BzhucMXUQgvJIQQkwy4EsFJJuebB4AM0oy4w2nj9szeLbApeH59n2xdXOL9uq5n1c8kJLwC_gfD-6PfqhnYi" />
+            </div>
+            <h3 class="text-xl font-bold text-primary">Pollution Fighter</h3>
+            <p class="mt-1 text-sm text-secondary">Earned: 15 May 2023</p>
+            <p class="mt-2 text-center text-sm text-primary">Won the "Air Quality" debate in the community forum.</p>
+          </div>
+          <div class="flex flex-col items-center rounded-2xl bg-border-color/50 p-6 opacity-60">
+            <div class="relative mb-4 h-32 w-32">
+              <span
+                class="material-symbols-outlined text-7xl text-secondary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">lock</span>
+            </div>
+            <h3 class="text-xl font-bold text-secondary">Future Leader</h3>
+            <p class="mt-1 text-sm text-secondary">Locked</p>
+            <p class="mt-2 text-center text-sm text-secondary">Unlock by completing all advanced modules.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>
