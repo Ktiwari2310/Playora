@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Playora</title>
+  <link rel="shortcut icon" href="gamification.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+        --primary-color: #20DF6C;
+      }
+      .bg-primary {
+        background-color: var(--primary-color);
+      }
+      .text-primary {
+        color: var(--primary-color);
+      }
+      .border-primary {
+        border-color: var(--primary-color);
+      }
+      .tab-content {
+      display: none;
+    }
+
+    /* Show content when radio is checked */
+    #tab-discussions:checked ~ .mt-6 #content-discussions,
+    #tab-news:checked ~ .mt-6 #content-news,
+    #tab-projects:checked ~ .mt-6 #content-projects {
+      display: block;
+    }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 px-10 py-3 bg-white">
+        <div class="flex items-center gap-4 text-gray-900">
+          <div class="text-green-500">
+            <img class="w-10" src="gamification.png" alt="">
+          </div>
+          <h2 class="text-gray-900 text-2xl font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+        </div>
+        <div class="flex items-center gap-8 text-gray-700 font-medium">
+          <a class="hover:text-gray-900 transition-colors" href="#">Home</a>
+          <a class="hover:text-gray-900 transition-colors" href="#">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="#">Play</a>
+          <a class="text-gray-900 font-semibold" href="#">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="communityHub.html">Community Hub</a>
+          <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
+        </div>
+
+        <div class="flex items-center space-x-4 relative">
+          <a href="notification.html" class="material-icons text-gray-600">notifications</a>
+          <div class="relative">
+            <!-- hidden checkbox acts as toggle -->
+            <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+            <!-- button (label for checkbox) -->
+            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                <span class="material-icons text-gray-500">person</span>
+              </div>
+
+            </label>
+
+            <!-- dropdown menu -->
+            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">school</span>
+                My Courses
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="MyAchievements.html">
+                <span class="material-symbols-outlined text-base">emoji_events</span>
+                My Achievements
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">help</span>
+                Help & Support
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">settings</span>
+                Settings
+              </a>
+              <div class="my-1 border-t border-gray-100"></div>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">logout</span>
+                Sign Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 px-10 py-8 lg:px-20 xl:px-40">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10">
+            <h1 class="text-4xl font-bold text-gray-900 tracking-tight">Compete</h1>
+            <p class="mt-2 text-lg text-gray-600">Join challenges and competitions to earn rewards and climb the
+              leaderboard.</p>
+          </div>
+          <div class="border-b border-gray-200">
+            <nav aria-label="Tabs" class="-mb-px flex space-x-8">
+              <a class="border-green-500 text-green-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                href="#"> Individual Challenges </a>
+              <a class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                href="#"> School vs. School </a>
+              <a class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                href="#"> Team Challenges </a>
+            </nav>
+          </div>
+          <div class="mt-8">
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight">Current Challenges</h2>
+            <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div
+                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                <div class="h-48 w-full bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB232sg3OmNkK6dnfwTblwg8nnLu-84Re9CdasYvSq2OVn3ObKpb50t-aQ7RxgdIA5aRz6BkL6wbaTNxUomVWfMI7NZUCqWLh9uKEHKBFvUGNXSXJiLFjrlXj00zUIWvUtGJcIgbRRyk1nomXuhqS8xNzCv4Xmv7HDUH_2ez3_26H76tIEYd-Nhop2Sss4gn0iO2l_-w43G9PHM3SkUMRVi7RALQzRPKYmI-nSs9tjznv2mJE0ErFpQx12mynGEezTzQfqTHQ2mjFqo");'>
+                </div>
+                <div class="p-6">
+                  <p class="text-sm font-medium text-green-600">Ends in 7 days</p>
+                  <h3 class="mt-2 text-lg font-bold text-gray-900">Eco-Warrior Quiz Challenge</h3>
+                  <p class="mt-2 text-sm text-gray-600">Test your knowledge on environmental issues and compete for the
+                    top spot.</p>
+                  <a class="mt-4 inline-block rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600"
+                    href="#">View Challenge</a>
+                </div>
+              </div>
+              <div
+                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                <div class="h-48 w-full bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9ZWBXH6x03bEXn1L8sATp5E8s_BKFLLZ3oPPmOOVBOCLnoUdl02KxzZEcVA568--G_tHLeaN0ah2cijYSn_qWMx6bFKEEX51-8OialqITrMNONUoQq6v8Pwiucja2TCaS_Qm2pPiO4TqU2_lQ6HJKMlbLV3XRksTPTtRoulxL_WikIdqXyKqEuom3pVYJnzpyVunbkIpOoagsnw-MFs10aKfEF4KMZWmetlm2Z2nDKZbb_DWId8hpN256JqF8ZOyQZMWXkQg-QH54");'>
+                </div>
+                <div class="p-6">
+                  <p class="text-sm font-medium text-green-600">Ends in 14 days</p>
+                  <h3 class="mt-2 text-lg font-bold text-gray-900">Sustainable Living Challenge</h3>
+                  <p class="mt-2 text-sm text-gray-600">Earn points by completing daily sustainable actions like
+                    reducing waste and saving energy.</p>
+                  <a class="mt-4 inline-block rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600"
+                    href="#">View Challenge</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-900 tracking-tight">Upcoming Challenges</h2>
+            <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div
+                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                <div class="h-48 w-full bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkrps0SEucVpKFaPZWGJ-lXY_IZdptRICXjNOGlQ6tSMDxcn1j_4K7WucF7kDA3D5Wx1yXxG15kBoFS4wSco1zxO1QNbRy58mDFqCTxbFjsFJGRG7S_nCxJ04vnrPwNA7sXBHiUHnLh3HaG3TOmBIwO_JXaZ7XvRdOC5xAxpLrwsZwQHrgZl25ddxQH4inD_LC2RkTtPbTooRzCsaACEQUH8OlZYbNwUll6GZ3uUNDC2r1AHVCKkC2SWwjl47cp1nKJT0O0WK7R5yT");'>
+                </div>
+                <div class="p-6">
+                  <p class="text-sm font-medium text-blue-600">Starts in 3 days</p>
+                  <h3 class="mt-2 text-lg font-bold text-gray-900">Climate Change Awareness Campaign</h3>
+                  <p class="mt-2 text-sm text-gray-600">Create and share content to raise awareness about climate change
+                    and its impact.</p>
+                  <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+                    href="#">Get Notified</a>
+                </div>
+              </div>
+              <div
+                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                <div class="h-48 w-full bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnLYvvIhBq2g5_wYFB8dR4pggVssINHHUWgkZlcfTyGlJdhEVQIO98jKJp-wu4FuBku_KLjzCNGI1BXJtXfRXnmlvu5-Xg4boeTFkf2o-0sprkKc_VAj1Mi_i7TKuoUi_D-7da_hsSf7uHd7FGME0RThIInQu5HMUhg4AvjgVXNeibsWbHFF76brTqBY6teIugzakJgSizUsuWmeRi_k_J2oXTqclYLFgQVax5qfzQjk0GCW4YTvFQPNQQ7HopcQPlbNVh7Iu1o3kT");'>
+                </div>
+                <div class="p-6">
+                  <p class="text-sm font-medium text-blue-600">Starts in 10 days</p>
+                  <h3 class="mt-2 text-lg font-bold text-gray-900">Biodiversity Conservation Challenge</h3>
+                  <p class="mt-2 text-sm text-gray-600">Participate in activities that promote biodiversity and protect
+                    endangered species.</p>
+                  <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+                    href="#">Get Notified</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+
+</html>
