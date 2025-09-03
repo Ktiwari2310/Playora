@@ -1,0 +1,298 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#F0F4F2] group/design-root overflow-x-hidden"
+      style="font-family: 'Spline Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#dce5df] px-10 py-3"
+        >
+          <div class="flex items-center gap-4 text-[#111714]">
+            <div class="size-8 text-[#20DF6C]">
+              <svg
+                fill="none"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2
+              class="text-[#111714] text-xl font-bold leading-tight tracking-[-0.015em]"
+            >
+              Playora
+            </h2>
+          </div>
+          <nav
+            class="flex items-center gap-9 text-base font-medium text-[#111714]"
+          >
+            <a class="transition-colors hover:text-[#20DF6C]" href="home.html">Home</a>
+            <a class="transition-colors hover:text-[#20DF6C]" href="#">Learn</a>
+            <a class="transition-colors text-[#20DF6C] font-bold" href="#"
+              >Play</a
+            >
+            <a class="transition-colors hover:text-[#20DF6C]" href="#"
+              >Compete</a
+            >
+            <a class="transition-colors hover:text-[#20DF6C]" href="#">About</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-transparent text-[#111714] text-sm font-bold leading-normal tracking-[0.015em] border-2 border-transparent hover:border-[#20df6c] transition-all"
+            >
+              <span class="truncate">Log in</span>
+            </button>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-[#20df6c] text-[#111714] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all"
+            >
+              <span class="truncate">Sign up</span>
+            </button>
+          </div>
+        </header>
+        <main class="px-20 flex flex-1 justify-center py-10">
+          <div
+            class="layout-content-container flex flex-col max-w-[1100px] flex-1"
+          >
+            <div class="flex flex-col items-center text-center p-4">
+              <h1
+                class="text-[#111714] text-5xl font-bold leading-tight tracking-tighter mb-4"
+              >
+                Choose Your Challenge
+              </h1>
+              <p class="text-[#648772] text-lg max-w-2xl">
+                Select from a wide range of environmental topics and game
+                formats to start learning and playing.
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 p-4 mt-8"
+            >
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E9FBF0] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#20DF6C]"
+                    >forest</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Forest Conservation
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Learn about sustainable forestry and biodiversity.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E9FBF0] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#20DF6C]"
+                    >landscape</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Mountain Ecosystems
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Explore the unique flora and fauna of mountain regions.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E9FBF0] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#20DF6C]"
+                    >waves</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Oceanography
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Dive into the science of oceans and marine life.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E9FBF0] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#20DF6C]"
+                    >wb_sunny</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Climate Change
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Understand the causes and impacts of global warming.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E9FBF0] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#20DF6C]"
+                    >spa</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Botany Basics
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Discover the fundamentals of plant biology and ecology.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E9FBF0] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#20DF6C]"
+                    >flutter_dash</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Avian Studies
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Study the behavior and conservation of bird species.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center text-center mt-12 p-4">
+              <h2
+                class="text-[#111714] text-4xl font-bold leading-tight tracking-tight mb-4"
+              >
+                Game Formats
+              </h2>
+              <p class="text-[#648772] text-lg max-w-2xl">
+                Pick your favorite way to play and test your knowledge.
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 p-4 mt-8"
+            >
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E3F2FD] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#1E88E5]"
+                    >extension</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Puzzle Challenge
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Solve puzzles related to environmental topics.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E3F2FD] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#1E88E5]"
+                    >quiz</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Quiz Showdown
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Compete in a quiz format with questions on various subjects.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E3F2FD] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#1E88E5]"
+                    >groups</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Team Tournament
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Participate in team-based competitions and challenges.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 gap-4 rounded-xl border border-[#dce5df] bg-white p-6 flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div class="bg-[#E3F2FD] rounded-full p-4 mb-2">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[#1E88E5]"
+                    >emoji_events</span
+                  >
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#111714] text-lg font-bold leading-tight">
+                    Solo Quest
+                  </h2>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    Embark on individual quests and earn rewards.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex px-4 py-12 justify-center">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-[#20df6c] text-[#111714] text-lg font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all shadow-lg"
+              >
+                <span class="truncate">Start Learning</span>
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
