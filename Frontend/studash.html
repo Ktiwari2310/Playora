@@ -1,127 +1,259 @@
 <html>
   <head>
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" /> -->
-    <!-- <link
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
-    /> -->
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
 
-    <title>Dashboard</title>
-    <link rel="shortcut icon" href="gamification (2).png" type="image/png">
+    <title>Stitch Design</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="gamification (2).png" type="image/png">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-    </style>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f4f0] px-10 py-3">
-         <div class="flex items-center gap-4 text-[#111811]">
-  <!-- Replace SVG with Flaticon image -->
-  <div class="size-6">
-    <img 
-      src="https://cdn-icons-png.flaticon.com/512/3048/3048600.png" 
-      alt="Gamification Icon" 
-      class="w-full h-full object-contain"
-    />
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#0d141b]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <h2 class="text-[#0d141b] text-lg font-bold leading-tight tracking-[-0.015em]">EcoLearn</h2>
+          </div>
+            <!-- Center (Nav Links) -->
+  <div class="flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
+    <a class="text-gray-600 hover:text-gray-900" href="#">Home</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Dashboard</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Play</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Compete</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Community Hub</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Leaderboard</a>
   </div>
-  <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
-</div>
+
+ 
+            <!-- <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#e7edf3] text-[#0d141b] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-[#0d141b]" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button> -->
+            <!-- <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCyRtAVAtLxIseAEOn0BR6njIGURg0IAoBbvGC_kDxDm3kUZgsQG32lTkH6s1lmTYEPLtS_uzxH7jGpgmaX6EFiGOS7aT2eT_ND8BaU8z_C9P2htFNuAGBecxUWhfavzmH0iHtx2FIstkJw5YApySgGN9vEL4sl2LLTod7l6EChsb_52I6NLZxoL2eexcONhFzyUS3pZAKQ_653kn4CkIYCNg45cMAG5cq2tSGZN3pMT4cuJ5iAAtV1HDPKgBWVoo2DbFsmT1_Jms");'
+            ></div> -->
+              <!-- Right side (Icons with dropdown) -->
+    <a href="index.html">
+      <div class="flex items-center space-x-4 relative">
+        <span class="material-icons text-gray-600">notifications</span>
+        </a>
+        <!-- Person Icon Button -->
+        <button id="profile-btn" class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+          <span class="material-icons text-gray-500">person</span>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="dropdown-menu" class="hidden absolute right-0 top-12 w-56 bg-white rounded-lg shadow-xl z-10 p-2">
+          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
+            <span class="material-icons text-base">school</span>
+            My Courses
+          </a>
+          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
+            <span class="material-icons text-base">emoji_events</span>
+            My Achievements
+          </a>
+          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
+            <span class="material-icons text-base">help</span>
+            Help & Support
+          </a>
+          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
+            <span class="material-icons text-base">settings</span>
+            Settings
+          </a>
+          <div class="my-1 border-t border-gray-100"></div>
+          <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors rounded-md" href="#">
+            <span class="material-icons text-base">logout</span>
+            Sign Out
+          </a>
+        </div>
+      </div>
+     
         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <div class="flex min-w-72 flex-col gap-3">
-             <div class="flex flex-wrap gap-2 p-4">   <a href="quizres.html" class="flex items-center cursor-pointer text-[#111811] hover:text-green-600">
-    <span class="material-icons">arrow_back</span>
-    <span class="ml-2">Back</span>
-  </a> 
-</div>
-                <p class="text-[#111811] tracking-light text-[32px] font-bold leading-tight">My Dashboard</p>
-                <p class="text-[#618961] text-sm font-normal leading-normal">Track your eco-points, progress, and school ranking</p>
-              </div>
+            <h1 class="text-[#0d141b] tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">Welcome back, Clara!</h1>
+            <p class="text-[#0d141b] text-base font-normal leading-normal pb-3 pt-1 px-4">Explore new challenges and continue your eco-journey.</p>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">My Progress</h2>
+            <div class="flex flex-col gap-3 p-4">
+              <div class="flex gap-6 justify-between"><p class="text-[#0d141b] text-base font-medium leading-normal">Learning Path</p></div>
+              <div class="rounded bg-[#cfdbe7]"><div class="h-2 rounded bg-[#1380ec]" style="width: 60%;"></div></div>
+              <p class="text-[#4c739a] text-sm font-normal leading-normal">60% Complete</p>
             </div>
             <div class="flex flex-wrap gap-4 p-4">
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-[#f0f4f0]">
-                <p class="text-[#111811] text-base font-medium leading-normal">Total Eco-Points</p>
-                <p class="text-[#111811] tracking-light text-2xl font-bold leading-tight">1,250</p>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfdbe7]">
+                <p class="text-[#0d141b] text-base font-medium leading-normal">Challenges Completed</p>
+                <p class="text-[#0d141b] tracking-light text-2xl font-bold leading-tight">5</p>
+              </div>
+              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfdbe7]">
+                <p class="text-[#0d141b] text-base font-medium leading-normal">Points Earned</p>
+                <p class="text-[#0d141b] tracking-light text-2xl font-bold leading-tight">250</p>
               </div>
             </div>
-            <h2 class="text-[#111811] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recent Activity</h2>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
-              <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="CheckCircle" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                  <path
-                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">+150 Eco-Points</p>
-                <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">Completed 'Water Conservation' quiz</p>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Latest Challenges</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBc7n97fiwk2DllTStEg6L9ssla4SCUvVck1PEUlBBkSnbBL4f2M0ofr47qUfyzrG_ypXC7wB9P1qFtbZCkBSSUUePwlOUASaZ5XcH3mvcAxZuuw_iD7D5BYuRAoU6VZZgUaPHiDs16JIYrtrfXqaXtftePd_DwNzPqNwB0MRo0img3UuGt5haSfIb0BZh_cE4_ZsDOjwyk87NYDoFGBpjXchKwPKljCBI_cW49ottmrY6pL2qWFc1wT8FlGbScrA8EYqPp-wtcTIE");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#0d141b] text-base font-medium leading-normal">Recycling Basics</p>
+                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Learn how to recycle effectively.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Explore </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0bGJJQt34u9DLt7f0dozeTF98-YSS1O2sj1ll2aqlm5kRek1X1wEj6xqMPw51HQlA3_OJhyMUnCfpoHfzkCGDLAwxEQlWs2vP3UiTII3z7hDzfAJuKrs0J6qdXNTf5Hz7YicbOM2s4u1IOQbsP51U3FtbmmXg5vwxlSUKsze0nllumTmhSwJ58SPwD1DTG2hwmAx4d2HM19WrW0cqNYVseVSwla5KfqahL7Z-syRwZK09xro721CDxan30gxspF9IUxjdv7lZAms");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#0d141b] text-base font-medium leading-normal">Water Conservation</p>
+                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Discover ways to save water.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Explore </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd7WrFr9soPW4WPrcYRiOM4xMnonQXilzH8fIL659TZ2gBS2H84rNY2bOupLxuS6MsNSzJKN-UeTzIWriGbM3b2vlH28qYimH4uUwSkUYN01-RQQTrtJMbDOi1ruXzG_43_gOv8hiZFBrrXV_nkKTWM2dKfPFkUhaREX0twk3JNaklK5Oo3nrJOZHoEJlCjZYPrCuu9EaskBao1p6GnEadTp3lOLhN3m__2Yx9kNptiuiVdh1UE3GUbKZTH8mAVlAa-ebVMrSTY6Q");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#0d141b] text-base font-medium leading-normal">Renewable Energy</p>
+                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Explore the world of renewable energy.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">Explore </span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
-              <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="CheckCircle" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                  <path
-                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">+100 Eco-Points</p>
-                <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">Played 'Recycling Challenge' game</p>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Educational Resources</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-n9Jhjh2lbpUqedbS9oS2O5S1IVkbhKXVk_o57c1idLkGN9UHaktnNkUx1ypGABxXxTATlvgKnEgO3nFSH4YVxcI_AAvHeDdh-c6SGczvUP22UUhXKHS-MTtYGKxSjH5dM8JBOOiujggPgMAq2ie49c_6xcHLpOI0RykcIeAjl0Imw6zEHwEPP_VDwFCm6Z5sSiwwgo1V4Av0rwt84OlBbThLVXz1BGL7mf_3hZElZwzLJuGgUworQDCfcE9hhPTmGYb3q81WMEU");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#0d141b] text-base font-medium leading-normal">Environmental Science</p>
+                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Understand the basics of environmental science.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">View </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOvOO24Mxc1SBgvP-n9uDHU_ZYMU7vxZ1Zi14BFXc2d4ylGjymcFvUGrbPoyYxE_h0WZySE7SInQQrvh7rl2nDFvkDZIuWuBxqfVJccgZzwUb4PNHN0HFouJkGsFi7lnUOdx1f7cjimoS_tGIogMOTWjiSWvBF9loH7xAap3Q688DXdWuKxM024XzA6BwYP7G74HORhHCukefOaA9mGgVJDPLIqxuxY5l8EC6I9WhYtyV2IoAmJUefIVRNeX-WZBF2RYsJfNpHJD4");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#0d141b] text-base font-medium leading-normal">Sustainable Agriculture</p>
+                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Learn about sustainable farming practices.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">View </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfAb0q1qkRMkxjv87fOof6jrIxoIXK5rASQI9Haba6UgWeMpK23EP74SvqmIDIzEEl2uStlDwVEUVtGy-xL5oJVc-K21s9qVVCeP7WwqmU6vNvTKD_jS-0z7a27TbfcfkQ5TU7lihAWZPVB9QjC3y52wejngkuV5DxV7Tb34sVduZBW4bfyStpX6-SNkQ49UpuI4aaq2mpZaz0F3YF799sekIWWS6RgU34G7YJKyfdb36XpLPHQjZDFr_zBLp9tpUwxmZBjXcaJuE");'
+                  ></div>
+                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                    <div>
+                      <p class="text-[#0d141b] text-base font-medium leading-normal">Climate Change</p>
+                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Explore the causes and effects of climate change.</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                      <span class="truncate">View </span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
-              <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="CheckCircle" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                  <path
-                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">+200 Eco-Points</p>
-                <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">Participated in 'Community Cleanup' event</p>
-              </div>
-            </div>
-            <h2 class="text-[#111811] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">School Ranking</h2>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
-              <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="Trophy" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                  <path
-                    d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-28.49,64.64-63.51,64.9H128a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">Rank: 25th out of 250</p>
-                <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">Top 10% of students in your school</p>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Community Discussions</h2>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIn7NNmsCqvdrgG5OQ6zn6TQUUeDpe8ETgc23195Tu3vqbWjYDy89sfh4yzS9sPOM0k3-3zvEevfXMy32q498GcLs9FyO5Rp-lVfxAAhZWqz_Y1asUWoo_Z13DXreyG9nZizGkkUe69Z3w2JWkbUbfGhzhf6AeYAntjgWRGFkmmN5J5fFleUlUaA4owMyIyTUtRGqqvMA9JJoa026hDSeTpVyu1F_mJGq04FD0ZOznbdlIQjD7aWfWUCmUjMW6xbdDX6S-qpY_3pM");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">Olivia</p>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">2h ago</p>
+                </div>
+                <p class="text-[#0d141b] text-sm font-normal leading-normal">Just completed the 'Sustainable Shopping' challenge! It was eye-opening.</p>
               </div>
             </div>
-            <div class="flex justify-stretch">
-              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-between">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#11d411] text-[#111811] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span class="truncate">Go to Quizzes</span>
-                </button>
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f0f4f0] text-[#111811] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span class="truncate">Go to Games</span>
-                </button>
+            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPSD-rOwYIR5fdGnkL9wxybhpPd-6FFo0cEvafwbneRAQp-xhfochr8IgS8OpL_OUrJd5ubqHoo_p2pMis_xWH_9uJ5DqFSEZP3xofqM2f-FXy5Cih-KsOMAWPOA5gcf5in_0dPys471sGqAk2r25Ke-9akHFtKaHjcOTPta8BBEJ-eEdyr90jFDgWWsxbdOEDw7k96IDO0CNHhtAVlrlSUoJvYbcugZbSvtfeuo1YNhpFyfoxdnOzXbWEUj5r_1HNyzRM4EXPq9Y");'
+              ></div>
+              <div class="flex h-full flex-1 flex-col items-start justify-start">
+                <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                  <p class="text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">Ethan</p>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">4h ago</p>
+                </div>
+                <p class="text-[#0d141b] text-sm font-normal leading-normal">Anyone else struggling with the 'Energy Efficiency' quiz? Need some tips!</p>
               </div>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">View More</span>
+              </button>
             </div>
           </div>
         </div>
