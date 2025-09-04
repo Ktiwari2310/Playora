@@ -1,1 +1,359 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>My Classes</title>
+    <link rel="shortcut icon" href="Images/gamification(2).png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f;
+        --primary-500: #20df6c;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+    </style>
+  </head>
 
+ <body class="bg-gray-50 text-gray-900" style="font-family: Lexend, 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-color bg-background-primary/80 px-10 py-4 backdrop-blur-sm">
+      <div class="flex items-center gap-4">
+        <img class="w-10" src="../Images/gamification (2).png" alt="">
+        <h1 class="text-2xl font-bold tracking-tighter">Playora</h1>
+      </div>
+      <div class="flex items-center gap-8 text-gray-700 font-medium ">
+        <a class="hover:text-gray-900 transition-colors" href="./EduDash.html">Home</a>
+        <a class="hover:text-gray-900 transition-colors" href="./EduMyClasses.html">My Classes</a>
+        <a class="hover:text-gray-900 transition-colors" href="./ContentManagement.html">Content Management</a>
+        <a class="hover:text-gray-900 transition-colors" href="./StuTracking.html">Analytics</a>
+      </div>
+      <div class="flex items-center space-x-4 relative">
+        <a href="notifications.html" class="material-icons text-gray-600">notifications</a>
+        <div class="relative">
+          <!-- hidden checkbox acts as toggle -->
+          <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+          <!-- button (label for checkbox) -->
+          <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+            <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+              <span class="material-icons text-gray-500">person</span>
+            </div>
+          </label>
+
+          <!-- dropdown menu -->
+          <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">help</span>
+              Help & Support
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">settings</span>
+              Settings
+            </a>
+            <div class="my-1 border-t border-gray-100"></div>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">logout</span>
+              Sign Out
+                </a>
+                </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 px-10 py-8">
+          <div class="mx-auto max-w-7xl">
+            <div class="mb-8">
+              <h1 class="text-4xl font-bold tracking-tight">
+                Educator Dashboard
+              </h1>
+              <p class="text-gray-500 mt-2">
+                Welcome back, Ms. Harper! Here's an overview of your classes and
+                student progress.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              <div class="lg:col-span-2">
+                <div class="space-y-8">
+                  <div>
+                    <h2 class="text-2xl font-bold tracking-tight mb-4">
+                      My Classes
+                    </h2>
+                    <div
+                      class="overflow-hidden rounded-xl border border-gray-200 bg-white"
+                    >
+                      <table class="w-full">
+                        <thead class="bg-gray-50">
+                          <tr>
+                            <th
+                              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                            >
+                              Class Name
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                            >
+                              Students
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                            >
+                              Average Score
+                            </th>
+                            <th
+                              class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                            >
+                              Last Activity
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                          <tr>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                            >
+                              Environmental Science 101
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              25
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              <div class="flex items-center gap-3">
+                                <div
+                                  class="w-24 overflow-hidden rounded-full bg-gray-200"
+                                >
+                                  <div
+                                    class="h-2 rounded-full bg-[var(--primary-500)]"
+                                    style="width: 78%"
+                                  ></div>
+                                </div>
+                                <p class="font-medium text-gray-900">78%</p>
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              2 days ago
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                            >
+                              Sustainable Living Practices
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              30
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              <div class="flex items-center gap-3">
+                                <div
+                                  class="w-24 overflow-hidden rounded-full bg-gray-200"
+                                >
+                                  <div
+                                    class="h-2 rounded-full bg-[var(--primary-500)]"
+                                    style="width: 85%"
+                                  ></div>
+                                </div>
+                                <p class="font-medium text-gray-900">85%</p>
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              1 day ago
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                            >
+                              Climate Change Awareness
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              20
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              <div class="flex items-center gap-3">
+                                <div
+                                  class="w-24 overflow-hidden rounded-full bg-gray-200"
+                                >
+                                  <div
+                                    class="h-2 rounded-full bg-[var(--primary-500)]"
+                                    style="width: 72%"
+                                  ></div>
+                                </div>
+                                <p class="font-medium text-gray-900">72%</p>
+                              </div>
+                            </td>
+                            <td
+                              class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                            >
+                              3 days ago
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-8">
+                <div>
+                  <h2 class="text-2xl font-bold tracking-tight mb-4">
+                    Quick Actions
+                  </h2>
+                  <div class="grid grid-cols-2 gap-4">
+                    <a href="./educlassManage.html"><button
+                      class="flex items-center justify-center gap-2 rounded-xl bg-[var(--primary-500)] px-4 py-3 text-sm font-bold text-white shadow-sm hover:bg-[var(--primary-600)]"
+                    >
+                      <span class="material-symbols-outlined"> school </span>
+                      <span>Manage Classes</span>
+                    </button></a>
+                    <a href="./ContentManagement.html"><button
+                      class="flex items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-bold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
+                    >
+                      <span class="material-symbols-outlined">
+                        add_circle
+                      </span>
+                      <span>Create Content</span>
+                    </button></a>
+                  </div>
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold tracking-tight mb-4">
+                    Recent Activity
+                  </h2>
+                  <div class="flow-root">
+                    <ul class="-mb-8" role="list">
+                      <li>
+                        <div class="relative pb-8">
+                          <span
+                            aria-hidden="true"
+                            class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+                          ></span>
+                          <div class="relative flex items-start space-x-3">
+                            <div>
+                              <div
+                                class="relative h-8 w-8 flex items-center justify-center rounded-full bg-[var(--primary-100)] ring-8 ring-gray-50"
+                              >
+                                <span
+                                  class="material-symbols-outlined text-lg text-[var(--primary-700)]"
+                                >
+                                  person_add
+                                </span>
+                              </div>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5">
+                              <p class="text-sm text-gray-800">
+                                New student joined
+                                <span class="font-medium"
+                                  >Environmental Science 101</span
+                                >
+                              </p>
+                              <p class="mt-0.5 text-xs text-gray-500">
+                                2 hours ago
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="relative pb-8">
+                          <span
+                            aria-hidden="true"
+                            class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"
+                          ></span>
+                          <div class="relative flex items-start space-x-3">
+                            <div>
+                              <div
+                                class="relative h-8 w-8 flex items-center justify-center rounded-full bg-blue-100 ring-8 ring-gray-50"
+                              >
+                                <span
+                                  class="material-symbols-outlined text-lg text-blue-700"
+                                >
+                                  check_circle
+                                </span>
+                              </div>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5">
+                              <p class="text-sm text-gray-800">
+                                <span class="font-medium"
+                                  >Sustainable Living Practices</span
+                                >
+                                quiz completed
+                              </p>
+                              <p class="mt-0.5 text-xs text-gray-500">
+                                Yesterday
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="relative pb-8">
+                          <div class="relative flex items-start space-x-3">
+                            <div>
+                              <div
+                                class="relative h-8 w-8 flex items-center justify-center rounded-full bg-yellow-100 ring-8 ring-gray-50"
+                              >
+                                <span
+                                  class="material-symbols-outlined text-lg text-yellow-700"
+                                >
+                                  edit
+                                </span>
+                              </div>
+                            </div>
+                            <div class="min-w-0 flex-1 pt-1.5">
+                              <p class="text-sm text-gray-800">
+                                <span class="font-medium"
+                                  >Climate Change Awareness</span
+                                >
+                                content updated
+                              </p>
+                              <p class="mt-0.5 text-xs text-gray-500">
+                                3 days ago
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

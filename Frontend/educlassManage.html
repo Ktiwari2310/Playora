@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Class Management</title>
+    <link rel="shortcut icon" href="Images/gamification(2).png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root { --primary-color: #20df6c;
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f;
+        --primary-500: #20df6c;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+    </style>
+  </head>
+
+ <body class="bg-gray-50 text-gray-900" style="font-family: Lexend, 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-color bg-background-primary/80 px-10 py-4 backdrop-blur-sm">
+      <div class="flex items-center gap-4">
+        <img class="w-10" src="../Images/gamification (2).png" alt="">
+        <h1 class="text-2xl font-bold tracking-tighter">Playora</h1>
+      </div>
+      <div class="flex items-center gap-8 text-gray-700 font-medium ">
+        <a class="hover:text-gray-900 transition-colors" href="./EduDash.html">Home</a>
+        <a class="hover:text-gray-900 transition-colors" href="./EduMyClasses.html">My Classes</a>
+        <a class="hover:text-gray-900 transition-colors" href="./ContentManagement.html">Content Management</a>
+        <a class="hover:text-gray-900 transition-colors" href="./StuTracking.html">Analytics</a>
+      </div>
+      <div class="flex items-center space-x-4 relative">
+        <a href="notifications.html" class="material-icons text-gray-600">notifications</a>
+        <div class="relative">
+          <!-- hidden checkbox acts as toggle -->
+          <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+          <!-- button (label for checkbox) -->
+          <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+            <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+              <span class="material-icons text-gray-500">person</span>
+            </div>
+          </label>
+
+          <!-- dropdown menu -->
+          <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">help</span>
+              Help & Support
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">settings</span>
+              Settings
+            </a>
+            <div class="my-1 border-t border-gray-100"></div>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">logout</span>
+              Sign Out
+                </a>
+                </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 bg-gray-50/50">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+            <div class="space-y-12">
+              <header class="pb-6 border-b border-gray-200">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900">
+                  Class Management
+                </h1>
+                <p class="mt-2 text-lg text-gray-600">
+                  Manage your classes, enroll students, and access
+                  class-specific settings.
+                </p>
+              </header>
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1 space-y-6">
+                  <h2 class="text-2xl font-semibold text-gray-800">
+                    Create New Class
+                  </h2>
+                  <form
+                    class="space-y-6 bg-white p-6 rounded-lg border border-gray-200 shadow-sm"
+                  >
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-gray-700 pb-2"
+                        for="class-name"
+                        >Class Name</label
+                      >
+                      <input
+                        class="form-input block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)] sm:text-sm h-12"
+                        id="class-name"
+                        placeholder="e.g., Environmental Science 101"
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-gray-700 pb-2"
+                        for="grade-level"
+                        >Grade Level</label
+                      >
+                      <select
+                        class="form-select block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)] sm:text-sm h-12"
+                        id="grade-level"
+                      >
+                        <option>Select grade level</option>
+                        <option>Grade 6</option>
+                        <option>Grade 7</option>
+                        <option>Grade 8</option>
+                        <option>Grade 9</option>
+                        <option>Grade 10</option>
+                        <option>College</option>
+                      </select>
+                    </div>
+                    <button
+                      class="flex w-full items-center justify-center rounded-lg h-11 px-4 bg-[var(--primary-color)] text-white text-sm font-bold shadow-sm hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
+                      type="submit"
+                    >
+                      <span class="material-symbols-outlined mr-2">
+                        add_circle
+                      </span>
+                      Create Class
+                    </button>
+                  </form>
+                </div>
+                <div class="lg:col-span-2">
+                  <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+                    Existing Classes
+                  </h2>
+                  <div
+                    class="overflow-x-auto bg-white rounded-lg border border-gray-200 shadow-sm"
+                  >
+                    <table class="min-w-full divide-y divide-gray-200">
+                      <thead class="bg-gray-50">
+                        <tr>
+                          <th
+                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                            scope="col"
+                          >
+                            Class Name
+                          </th>
+                          <th
+                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                            scope="col"
+                          >
+                            Grade Level
+                          </th>
+                          <th
+                            class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                            scope="col"
+                          >
+                            Students
+                          </th>
+                          <th class="relative px-6 py-4" scope="col">
+                            <span class="sr-only">Actions</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                          >
+                            Eco Explorers
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                          >
+                            Grade 7
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                          >
+                            25
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                          >
+                            <a
+                              class="text-[var(--primary-color)] hover:text-green-700 font-semibold"
+                              href="#"
+                              >View Roster</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                          >
+                            Green Guardians
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                          >
+                            Grade 8
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                          >
+                            22
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                          >
+                            <a
+                              class="text-[var(--primary-color)] hover:text-green-700 font-semibold"
+                              href="#"
+                              >View Roster</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                          >
+                            Nature Navigators
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                          >
+                            Grade 9
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                          >
+                            28
+                          </td>
+                          <td
+                            class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                          >
+                            <a
+                              class="text-[var(--primary-color)] hover:text-green-700 font-semibold"
+                              href="#"
+                              >View Roster</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
