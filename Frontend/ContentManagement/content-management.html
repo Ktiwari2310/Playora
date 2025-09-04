@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Playora - Content Management</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #20df6c;
+        --secondary-color: #1a2e39;
+        --accent-color: #84cc16;
+        --background-color: #f0f4f2;
+        --text-primary: #111714;
+        --text-secondary: #648772;
+      }
+      .btn-primary {
+        @apply bg-[var(--primary-color)] text-white;
+      }
+      .btn-secondary {
+        @apply bg-[var(--secondary-color)] text-white;
+      }
+      .status-published {
+        @apply bg-lime-100 text-lime-800;
+      }
+      .status-draft {
+        @apply bg-gray-100 text-gray-800;
+      }
+    </style>
+  </head>
+<body class="bg-gray-50">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+
+        <div class="flex items-center gap-4 text-gray-900">
+          <div class="text-[var(--primary-color)]">
+            <img class="w-10" src="gamification.png" alt="">
+          </div>
+          <h2 class="text-gray-900 text-2xl font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+        </div>
+
+        <div class="flex items-center gap-8 text-gray-700 font-medium">
+          <a class="hover:text-gray-900 transition-colors" href="#">Home</a>
+          <a class="hover:text-gray-900 transition-colors" href="#">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="#">Play</a>
+          <a class="hover:text-gray-900 transition-colors" href="compete.html">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="communityHub.html">Community Hub</a>
+          <a class="hover:text-gray-900 transition-colors" href="#">Leaderboard</a>
+        </div>
+
+
+        <div class="flex items-center space-x-4 relative">
+          <a href="notifications.html" class="material-icons text-gray-600">notifications</a>
+
+          <div class="relative">
+            <!-- hidden checkbox acts as toggle -->
+            <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+            <!-- button (label for checkbox) -->
+            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                <span class="material-icons text-gray-500">person</span>
+              </div>
+
+
+
+            </label>
+
+            <!-- dropdown menu -->
+            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">school</span>
+                My Courses
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="MyAchievements.html">
+                <span class="material-symbols-outlined text-base">emoji_events</span>
+                My Achievements
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">help</span>
+                Help & Support
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">settings</span>
+                Settings
+              </a>
+              <div class="my-1 border-t border-gray-100"></div>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">logout</span>
+                Sign Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+        <!-- Main -->
+        <main
+          class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8"
+        >
+          <div
+            class="layout-content-container flex flex-col w-full max-w-6xl gap-8"
+          >
+            <!-- Title + Create New -->
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div class="flex flex-col gap-1">
+                <h2
+                  class="text-[var(--text-primary)] text-4xl font-bold leading-tight tracking-tight"
+                >
+                  Content Management
+                </h2>
+                <p
+                  class="text-[var(--text-secondary)] text-base font-normal leading-normal"
+                >
+                  Manage your quizzes, games, and other educational materials.
+                </p>
+              </div>
+              <button
+                class="btn-primary flex items-center justify-center gap-2 rounded-lg h-12 px-6 text-base font-bold leading-normal tracking-wide shadow-md hover:shadow-lg transition-shadow"
+              >
+                <span class="material-symbols-outlined"> add_circle </span>
+                <span class="truncate">Create New</span>
+              </button>
+            </div>
+
+            <!-- Search + Filter -->
+            <div class="flex flex-col gap-6">
+              <div class="flex items-center justify-between gap-4">
+                <div class="relative flex-1">
+                  <span
+                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]"
+                  >
+                    search
+                  </span>
+                  <input
+                    class="form-input w-full rounded-lg border-gray-300 bg-white py-3 pl-12 pr-4 text-[var(--text-primary)] focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)] placeholder:text-[var(--text-secondary)]"
+                    placeholder="Search for content..."
+                    type="search"
+                  />
+                </div>
+                <div class="flex items-center gap-2">
+                  <button
+                    class="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    <span class="material-symbols-outlined text-base">
+                      filter_list
+                    </span>
+                    <span>Filter</span>
+                  </button>
+                  <button
+                    class="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    <span class="material-symbols-outlined text-base">
+                      swap_vert
+                    </span>
+                    <span>Sort</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Tabs -->
+              <div class="border-b border-gray-200">
+                <nav aria-label="Tabs" class="-mb-px flex space-x-8 px-4">
+                  <a
+                    aria-current="page"
+                    class="border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap border-b-2 py-4 px-1 text-base font-semibold"
+                    href="#"
+                  >
+                    My Content
+                  </a>
+                  <a
+                    class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
+                    href="#"
+                  >
+                    Shared with Me
+                  </a>
+                  <a
+                    class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
+                    href="#"
+                  >
+                    Public Library
+                  </a>
+                </nav>
+              </div>
+            </div>
+
+            <!-- My Quizzes -->
+            <section class="flex flex-col gap-4">
+              <h3
+                class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-tight px-4"
+              >
+                My Quizzes
+              </h3>
+              <div
+                class="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm"
+              >
+                <table class="w-full min-w-full text-sm">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Title
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Subject
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Grade Level
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Status
+                      </th>
+                      <th
+                        class="relative py-4 pl-3 pr-6"
+                        scope="col"
+                      >
+                        <span class="sr-only">Actions</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200 bg-white">
+                    <tr>
+                      <td class="whitespace-nowrap px-6 py-5 font-medium text-gray-900">
+                        Environmental Science Quiz 1
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Environmental Science
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        High School
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5">
+                        <span
+                          class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium status-published"
+                          >Published</span
+                        >
+                      </td>
+                      <td
+                        class="whitespace-nowrap py-5 pl-3 pr-6 text-right text-sm font-medium"
+                      >
+                        <a
+                          class="text-[var(--primary-color)] hover:text-green-700"
+                          href="#"
+                          >Edit</a
+                        >
+                        <span class="mx-2 text-gray-300">|</span>
+                        <a
+                          class="text-blue-600 hover:text-blue-800"
+                          href="#"
+                          >Assign</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="whitespace-nowrap px-6 py-5 font-medium text-gray-900">
+                        Sustainability Basics
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Sustainability
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Middle School
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5">
+                        <span
+                          class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium status-draft"
+                          >Draft</span
+                        >
+                      </td>
+                      <td
+                        class="whitespace-nowrap py-5 pl-3 pr-6 text-right text-sm font-medium"
+                      >
+                        <a
+                          class="text-[var(--primary-color)] hover:text-green-700"
+                          href="#"
+                          >Edit</a
+                        >
+                        <span class="mx-2 text-gray-300">|</span>
+                        <a
+                          class="text-blue-600 hover:text-blue-800"
+                          href="#"
+                          >Assign</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="whitespace-nowrap px-6 py-5 font-medium text-gray-900">
+                        Climate Change Awareness
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Climate Change
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        High School
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5">
+                        <span
+                          class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium status-published"
+                          >Published</span
+                        >
+                      </td>
+                      <td
+                        class="whitespace-nowrap py-5 pl-3 pr-6 text-right text-sm font-medium"
+                      >
+                        <a
+                          class="text-[var(--primary-color)] hover:text-green-700"
+                          href="#"
+                          >Edit</a
+                        >
+                        <span class="mx-2 text-gray-300">|</span>
+                        <a
+                          class="text-blue-600 hover:text-blue-800"
+                          href="#"
+                          >Assign</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- My Games -->
+            <section class="flex flex-col gap-4">
+              <h3
+                class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-tight px-4"
+              >
+                My Games
+              </h3>
+              <div
+                class="overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm"
+              >
+                <table class="w-full min-w-full text-sm">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Title
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Subject
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Grade Level
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left font-semibold text-gray-900"
+                        scope="col"
+                      >
+                        Status
+                      </th>
+                      <th
+                        class="relative py-4 pl-3 pr-6"
+                        scope="col"
+                      >
+                        <span class="sr-only">Actions</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200 bg-white">
+                    <tr>
+                      <td class="whitespace-nowrap px-6 py-5 font-medium text-gray-900">
+                        Eco-Adventure Game
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Environmental Science
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Elementary School
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5">
+                        <span
+                          class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium status-published"
+                          >Published</span
+                        >
+                      </td>
+                      <td
+                        class="whitespace-nowrap py-5 pl-3 pr-6 text-right text-sm font-medium"
+                      >
+                        <a
+                          class="text-[var(--primary-color)] hover:text-green-700"
+                          href="#"
+                          >Edit</a
+                        >
+                        <span class="mx-2 text-gray-300">|</span>
+                        <a
+                          class="text-blue-600 hover:text-blue-800"
+                          href="#"
+                          >Assign</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="whitespace-nowrap px-6 py-5 font-medium text-gray-900">
+                        Recycling Challenge
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Sustainability
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5 text-gray-500">
+                        Middle School
+                      </td>
+                      <td class="whitespace-nowrap px-6 py-5">
+                        <span
+                          class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium status-draft"
+                          >Draft</span
+                        >
+                      </td>
+                      <td
+                        class="whitespace-nowrap py-5 pl-3 pr-6 text-right text-sm font-medium"
+                      >
+                        <a
+                          class="text-[var(--primary-color)] hover:text-green-700"
+                          href="#"
+                          >Edit</a
+                        >
+                        <span class="mx-2 text-gray-300">|</span>
+                        <a
+                          class="text-blue-600 hover:text-blue-800"
+                          href="#"
+                          >Assign</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+  <script src="../scripts/dropdown.js"></script>
+</html>
