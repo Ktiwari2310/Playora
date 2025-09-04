@@ -1,1 +1,239 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Educator Dashboard</title>
+    <link rel="shortcut icon" href="Images/gamification(2).png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+    :root {
+      --primary-color: #20df6c;
+      --secondary-color: #1a73e8;
+      --text-primary: #111714;
+      --text-secondary: #648772;
+      --background-primary: #ffffff;
+      --background-secondary: #f0f4f2;
+      --border-color: #dce5df;
+    }
+  </style>
+  </head>
 
+  <body class="bg-background-primary font-['Spline_Sans',_sans-serif] text-primary">
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+      class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-color bg-background-primary/80 px-10 py-4 backdrop-blur-sm">
+      <div class="flex items-center gap-4">
+        <img class="w-10" src="../Images/gamification (2).png" alt="">
+        <h1 class="text-2xl font-bold tracking-tighter">Playora</h1>
+      </div>
+      <div class="flex items-center gap-8 text-gray-700 font-medium ">
+        <a class="hover:text-gray-900 transition-colors" href="#">Home</a>
+        <a class="hover:text-gray-900 transition-colors" href="#">Analytics</a>
+        <a class="hover:text-gray-900 transition-colors" href="#">Content Management</a>
+        <a class="hover:text-gray-900 transition-colors" href="#">Competitions</a>
+      </div>
+      <div class="flex items-center space-x-4 relative">
+        <a href="notifications.html" class="material-icons text-gray-600">notifications</a>
+        <div class="relative">
+          <!-- hidden checkbox acts as toggle -->
+          <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+          <!-- button (label for checkbox) -->
+          <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+            <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+              <span class="material-icons text-gray-500">person</span>
+            </div>
+          </label>
+
+          <!-- dropdown menu -->
+          <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">help</span>
+              Help & Support
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">settings</span>
+              Settings
+            </a>
+            <div class="my-1 border-t border-gray-100"></div>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">logout</span>
+              Sign Out
+                </a>
+                </div>
+                </div>
+            </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Educator Dashboard</p>
+                <p class="text-[#617589] text-sm font-normal leading-normal">Manage your educational content, track student progress, and oversee school competitions.</p>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Quick Actions</h2>
+            <div class="flex justify-stretch">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1172d4] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Create New Content</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">View Student Roster</span>
+                </button>
+              </div>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Content Overview</h2>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-xl border border-[#dbe0e6] bg-white">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-white">
+                      <th class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-120 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Content Title
+                      </th>
+                      <th class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-240 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">Type</th>
+                      <th class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-360 px-4 py-3 text-left text-[#111418] w-60 text-sm font-medium leading-normal">Status</th>
+                      <th class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-480 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Last Updated
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Introduction to Ecology
+                      </td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-240 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        Learning Module
+                      </td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Published</span>
+                        </button>
+                      </td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-480 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        2024-06-15
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Water Conservation Quiz
+                      </td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-240 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">Quiz</td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Published</span>
+                        </button>
+                      </td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-480 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        2024-07-01
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Sustainable Living Game
+                      </td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-240 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">Game</td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Draft</span>
+                        </button>
+                      </td>
+                      <td class="table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-480 h-[72px] px-4 py-2 w-[400px] text-[#617589] text-sm font-normal leading-normal">
+                        2024-07-10
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-120{display: none;}}
+                @container(max-width:240px){.table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-240{display: none;}}
+                @container(max-width:360px){.table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-360{display: none;}}
+                @container(max-width:480px){.table-89d2b654-4ee6-4969-903a-6f430bf24a56-column-480{display: none;}}
+              </style>
+            </div>
+            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Student Engagement</h2>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dbe0e6] p-6">
+                <p class="text-[#111418] text-base font-medium leading-normal">Student Activity Over Time</p>
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">+15%</p>
+                <div class="flex gap-1">
+                  <p class="text-[#617589] text-base font-normal leading-normal">Last 30 Days</p>
+                  <p class="text-[#078838] text-base font-medium leading-normal">+15%</p>
+                </div>
+                <div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+                  <svg width="100%" height="148" viewBox="-3 0 478 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path
+                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z"
+                      fill="url(#paint0_linear_1131_5935)"
+                    ></path>
+                    <path
+                      d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
+                      stroke="#617589"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    ></path>
+                    <defs>
+                      <linearGradient id="paint0_linear_1131_5935" x1="236" y1="1" x2="236" y2="149" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#f0f2f4"></stop>
+                        <stop offset="1" stop-color="#f0f2f4" stop-opacity="0"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="flex justify-around">
+                    <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 1</p>
+                    <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 2</p>
+                    <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 3</p>
+                    <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Week 4</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#dbe0e6] p-6">
+                <p class="text-[#111418] text-base font-medium leading-normal">Top Performing Students</p>
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight truncate">Top 5</p>
+                <div class="flex gap-1">
+                  <p class="text-[#617589] text-base font-normal leading-normal">Current Semester</p>
+                  <p class="text-[#078838] text-base font-medium leading-normal">+10%</p>
+                </div>
+                <div class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3">
+                  <div class="border-[#617589] bg-[#f0f2f4] border-t-2 w-full" style="height: 30%;"></div>
+                  <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Student A</p>
+                  <div class="border-[#617589] bg-[#f0f2f4] border-t-2 w-full" style="height: 50%;"></div>
+                  <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Student B</p>
+                  <div class="border-[#617589] bg-[#f0f2f4] border-t-2 w-full" style="height: 100%;"></div>
+                  <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Student C</p>
+                  <div class="border-[#617589] bg-[#f0f2f4] border-t-2 w-full" style="height: 20%;"></div>
+                  <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Student D</p>
+                  <div class="border-[#617589] bg-[#f0f2f4] border-t-2 w-full" style="height: 40%;"></div>
+                  <p class="text-[#617589] text-[13px] font-bold leading-normal tracking-[0.015em]">Student E</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
