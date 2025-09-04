@@ -1,1 +1,367 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Student Analytics</title>
+    <link rel="shortcut icon" href="Images/gamification(2).png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #20df6c;
+        --secondary-color: #111714;
+        --accent-color: #648772;
+        --background-color: #f0f4f2;
+        --text-primary: #111714;
+        --text-secondary: #648772;
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f; --primary-500: #20df6c; --primary-600: #16a34a; --primary-700: #15803d; --primary-800: #166534; --primary-900: #14532d; --primary-950: #052e16;
+      }
+    </style>
+  </head>
 
+  <body class="bg-gray-50 text-gray-900" style="font-family: Lexend, 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-border-color bg-background-primary/80 px-10 py-4 backdrop-blur-sm">
+      <div class="flex items-center gap-4">
+        <img class="w-10" src="../Images/gamification (2).png" alt="">
+        <h1 class="text-2xl font-bold tracking-tighter">Playora</h1>
+      </div>
+      <div class="flex items-center gap-8 text-gray-700 font-medium ">
+        <a class="hover:text-gray-900 transition-colors" href="./EduDash.html">Home</a>
+        <a class="hover:text-gray-900 transition-colors" href="./EduMyClasses.html">My Classes</a>
+        <a class="hover:text-gray-900 transition-colors" href="./ContentManagement.html">Content Management</a>
+        <a class="hover:text-gray-900 transition-colors" href="./StuTracking.html">Analytics</a>
+      </div>
+      <div class="flex items-center space-x-4 relative">
+        <a href="notifications.html" class="material-icons text-gray-600">notifications</a>
+        <div class="relative">
+          <!-- hidden checkbox acts as toggle -->
+          <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+          <!-- button (label for checkbox) -->
+          <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+            <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+              <span class="material-icons text-gray-500">person</span>
+            </div>
+          </label>
+
+          <!-- dropdown menu -->
+          <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">help</span>
+              Help & Support
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">settings</span>
+              Settings
+            </a>
+            <div class="my-1 border-t border-gray-100"></div>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">logout</span>
+              Sign Out
+                </a>
+                </div>
+                </div>
+            </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-8 bg-gray-50">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-2">
+                <h1
+                  class="text-[#111714] tracking-tight text-3xl font-bold leading-tight"
+                >
+                  Student Analytics
+                </h1>
+                <p class="text-[#648772] text-base font-normal leading-normal">
+                  Track individual student performance, eco-points, badges, and
+                  quiz/game completion.
+                </p>
+              </div>
+            </div>
+            <div class="px-4 py-4">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div
+                  class="flex w-full flex-1 items-stretch rounded-xl h-full border border-gray-200 bg-white"
+                >
+                  <div
+                    class="text-[#648772] flex items-center justify-center pl-4 rounded-l-xl"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <span class="material-symbols-outlined text-2xl">
+                      search
+                    </span>
+                  </div>
+                  <input
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-[#111714] focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-[#648772] px-4 text-base font-normal leading-normal"
+                    placeholder="Search for a student..."
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="pb-3 px-4">
+              <div class="flex border-b border-[#dce5df] gap-8">
+                <a
+                  class="flex flex-col items-center justify-center border-b-2 border-b-[#20df6c] text-[#111714] pb-3 pt-4"
+                  href="#"
+                >
+                  <p
+                    class="text-[#111714] text-sm font-semibold leading-normal"
+                  >
+                    Overview
+                  </p>
+                </a>
+                <a
+                  class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-[#648772] pb-3 pt-4"
+                  href="#"
+                >
+                  <p
+                    class="text-[#648772] text-sm font-semibold leading-normal"
+                  >
+                    Quizzes
+                  </p>
+                </a>
+                <a
+                  class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-[#648772] pb-3 pt-4"
+                  href="#"
+                >
+                  <p
+                    class="text-[#648772] text-sm font-semibold leading-normal"
+                  >
+                    Games
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="p-4 bg-white rounded-lg mt-4">
+              <h2
+                class="text-[#111714] text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-2"
+              >
+                Student Performance
+              </h2>
+              <div class="flex p-4 @container">
+                <div
+                  class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-24 w-24"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbzRSawX2_aXzoRCwkuq7ysLK2jZODubGe_sCvibwrUYg6dS-vVKhOUZXKNmBMbFD-Ou9Tbwg2p0QWa5zyP4BJKL6hGWfCRScX0OHmoCN2WqHA_nSs_AqgelhEIP7UeaeJSPKIn9q0CaJPP22iVKiK4flOw14XdLyydd9B56wih6pksgjoBjjSPjgbYH667VEZy8Vudcs3ufaX4K1CyOeqXEM61a-LK25q-cyAR26tjzwFAgNd-lCkJHRY86bxiazkDQ9VXHaFES3h');
+                      "
+                    ></div>
+                    <div class="flex flex-col justify-center">
+                      <p
+                        class="text-[#111714] text-xl font-bold leading-tight tracking-[-0.015em]"
+                      >
+                        Ethan Carter
+                      </p>
+                      <p
+                        class="text-[#648772] text-sm font-normal leading-normal"
+                      >
+                        Student ID: 12345
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-4 px-4 py-3">
+                <div
+                  class="flex flex-col gap-2 rounded-lg border border-[#dce5df] p-4 items-start bg-gray-50"
+                >
+                  <p
+                    class="text-[var(--primary-color)] text-3xl font-bold leading-tight"
+                  >
+                    1500
+                  </p>
+                  <p class="text-[#648772] text-sm font-medium leading-normal">
+                    Eco-Points Earned
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col gap-2 rounded-lg border border-[#dce5df] p-4 items-start bg-gray-50"
+                >
+                  <p
+                    class="text-[var(--primary-color)] text-3xl font-bold leading-tight"
+                  >
+                    12
+                  </p>
+                  <p class="text-[#648772] text-sm font-medium leading-normal">
+                    Badges Earned
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col gap-2 rounded-lg border border-[#dce5df] p-4 items-start bg-gray-50"
+                >
+                  <p
+                    class="text-[var(--primary-color)] text-3xl font-bold leading-tight"
+                  >
+                    8
+                  </p>
+                  <p class="text-[#648772] text-sm font-medium leading-normal">
+                    Quizzes Completed
+                  </p>
+                </div>
+              </div>
+              <h2
+                class="text-[#111714] text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-6"
+              >
+                Progress Overview
+              </h2>
+              <div class="flex flex-col gap-3 p-4">
+                <div class="flex gap-6 justify-between">
+                  <p
+                    class="text-[#111714] text-base font-medium leading-normal"
+                  >
+                    Overall Progress
+                  </p>
+                  <p class="text-[#111714] text-base font-bold leading-normal">
+                    75%
+                  </p>
+                </div>
+                <div class="rounded-full bg-[#dce5df] h-2.5">
+                  <div
+                    class="h-2.5 rounded-full bg-[var(--primary-color)]"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-4 px-4 py-6">
+                <div
+                  class="flex min-w-72 flex-1 flex-col gap-4 rounded-xl border border-[#dce5df] p-6 bg-gray-50"
+                >
+                  <p
+                    class="text-[#111714] text-base font-semibold leading-normal"
+                  >
+                    Quiz Completion Rate
+                  </p>
+                  <div
+                    class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3"
+                  >
+                    <div
+                      class="bg-[var(--primary-color)] rounded-t-md w-full"
+                      style="height: 100%"
+                    ></div>
+                    <p class="text-[#648772] text-xs font-bold leading-normal">
+                      Quiz 1
+                    </p>
+                    <div
+                      class="bg-[var(--primary-color)] rounded-t-md w-full"
+                      style="height: 60%"
+                    ></div>
+                    <p class="text-[#648772] text-xs font-bold leading-normal">
+                      Quiz 2
+                    </p>
+                    <div
+                      class="bg-[var(--primary-color)] rounded-t-md w-full"
+                      style="height: 90%"
+                    ></div>
+                    <p class="text-[#648772] text-xs font-bold leading-normal">
+                      Quiz 3
+                    </p>
+                    <div
+                      class="bg-[var(--primary-color)] rounded-t-md w-full"
+                      style="height: 40%"
+                    ></div>
+                    <p class="text-[#648772] text-xs font-bold leading-normal">
+                      Quiz 4
+                    </p>
+                    <div
+                      class="bg-[var(--primary-color)] rounded-t-md w-full"
+                      style="height: 50%"
+                    ></div>
+                    <p class="text-[#648772] text-xs font-bold leading-normal">
+                      Quiz 5
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-white rounded-lg mt-4">
+              <h2
+                class="text-[#111714] text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-2"
+              >
+                Recent Activity
+              </h2>
+              <div class="grid grid-cols-[auto_1fr] gap-x-4 px-4">
+                <div class="flex flex-col items-center gap-1.5 pt-3">
+                  <div class="bg-green-100 rounded-full p-2">
+                    <span class="material-symbols-outlined text-green-600">
+                      check_circle
+                    </span>
+                  </div>
+                  <div class="w-px bg-[#dce5df] grow"></div>
+                </div>
+                <div class="flex flex-1 flex-col py-3">
+                  <p
+                    class="text-[#111714] text-base font-medium leading-normal"
+                  >
+                    Completed Quiz 3: Water Conservation
+                  </p>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    2 days ago
+                  </p>
+                </div>
+                <div class="flex flex-col items-center gap-1.5">
+                  <div class="w-px bg-[#dce5df] h-3"></div>
+                  <div class="bg-yellow-100 rounded-full p-2">
+                    <span class="material-symbols-outlined text-yellow-600">
+                      military_tech
+                    </span>
+                  </div>
+                  <div class="w-px bg-[#dce5df] grow"></div>
+                </div>
+                <div class="flex flex-1 flex-col py-3">
+                  <p
+                    class="text-[#111714] text-base font-medium leading-normal"
+                  >
+                    Earned Badge: Eco-Warrior
+                  </p>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    5 days ago
+                  </p>
+                </div>
+                <div class="flex flex-col items-center gap-1.5 pb-3">
+                  <div class="w-px bg-[#dce5df] h-3"></div>
+                  <div class="bg-blue-100 rounded-full p-2">
+                    <span class="material-symbols-outlined text-blue-600">
+                      sports_esports
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-1 flex-col py-3">
+                  <p
+                    class="text-[#111714] text-base font-medium leading-normal"
+                  >
+                    Participated in Game: Recycle Mania
+                  </p>
+                  <p class="text-[#648772] text-sm font-normal leading-normal">
+                    1 week ago
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
