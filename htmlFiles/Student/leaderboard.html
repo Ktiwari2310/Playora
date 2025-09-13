@@ -1,290 +1,239 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-    <link
-      as="style"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
-      onload="this.rel='stylesheet'"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <title>Stitch Design</title>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style type="text/tailwindcss">
-      :root {
-        --primary-color: #0df269;
-      }
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50">
-    <div
-      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-      style="font-family: 'Spline Sans', 'Noto Sans', sans-serif"
-    >
-      <div class="layout-container flex h-full grow flex-col">
-        <header
-          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3"
-        >
-          <div class="flex items-center gap-4 text-gray-900">
-            <div class="text-[var(--primary-color)]">
-              <svg
-                class="w-8 h-8"
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Playora</title>
+  <link rel="shortcut icon" href="gamification.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root { --primary-color: #0df269; }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24
+  }
+</style>
+</head>
+
+<body class="bg-gray-50">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+
+        <div class="flex items-center gap-4 text-gray-900">
+          <div class="size-8 text-[#20DF6C]">
+             <img src="../../Images/gamification (2).png" alt="">
             </div>
-            <h2
-              class="text-gray-900 text-2xl font-bold leading-tight tracking-[-0.015em]"
-            >
-              Playora
-            </h2>
-          </div>
-          <div class="flex items-center gap-8 text-gray-700 font-medium">
-            <a class="hover:text-gray-900 transition-colors" href="home.html">Home</a>
-            <a class="hover:text-gray-900 transition-colors" href="#">Learn</a>
-            <a class="hover:text-gray-900 transition-colors" href="quiz.html">Play</a>
-            <a class="text-gray-900 font-semibold" href="#">Leaderboard</a>
-          </div>
-          <div class="flex items-center gap-4">
-            <button
-              class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900 transition-colors"
-            >
-              <span class="material-symbols-outlined text-2xl">
-                notifications
-              </span>
-            </button>
-            <div class="relative">
-              <button class="flex items-center gap-2">
-                <div
-                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                  style="
-                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-jrU5MkiBnHXtrqK6n3IyZ_jyAPrFoSoduvBpCyrmAcha2uvYp8QRtda6McKVLMfFY_XRjglWBGTa_imQlYZo00eoiV0wDdoLL1tNTwtE94oBbAbMW9QzqD6JtUj4YBcVbTD2Sdt6x2kkG_v-MKIFVryvBHeKRo5tDd6p-5ubUeRU207myzhoxRoUKUHR4oPCTxiF0dSSsOsSTOAc35ITthIpcaZ-hVbgv3hx2y1cJzSB0NIRluj2y0hPWzNfKuwxA0qC1fhgDVJg');
-                  "
-                ></div>
-                <span
-                  class="material-symbols-outlined text-gray-900 transform rotate-180"
-                >
-                  arrow_drop_down
-                </span>
-              </button>
-              <div
-                class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2"
-              >
-                <a
-                  class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-base"
-                    >school</span
-                  >
-                  My Courses
-                </a>
-                <a
-                  class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-base"
-                    >emoji_events</span
-                  >
-                  My Achievements
-                </a>
-                <a
-                  class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-base">help</span>
-                  Help &amp; Support
-                </a>
-                <a
-                  class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-base"
-                    >settings</span
-                  >
-                  Settings
-                </a>
-                <div class="my-1 border-t border-gray-100"></div>
-                <a
-                  class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors rounded-md"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-base"
-                    >logout</span
-                  >
-                  Sign Out
-                </a>
+          <h2 class="text-gray-900 text-2xl font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+        </div>
+
+       <div class="flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
+    
+    <a class="text-gray-600 hover:text-gray-900" href="#">Dashboard</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Play</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Compete</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Community Hub</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Leaderboard</a>
+  </div>
+
+
+        <div class="flex items-center space-x-4 relative">
+          <a href="notif.html" class="material-icons text-gray-600">notifications</a>
+
+          <div class="relative">
+            <!-- hidden checkbox acts as toggle -->
+            <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+            <!-- button (label for checkbox) -->
+            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                <span class="material-icons text-gray-500">person</span>
               </div>
+
+
+
+            </label>
+
+            <!-- dropdown menu -->
+            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">school</span>
+                My Courses
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="myach.html">
+                <span class="material-symbols-outlined text-base">emoji_events</span>
+                My Achievements
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">help</span>
+                Help & Support
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">settings</span>
+                Settings
+              </a>
+              <div class="my-1 border-t border-gray-100"></div>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">logout</span>
+                Sign Out
+              </a>
             </div>
           </div>
-        </header>
-        <main class="flex-1 px-40 py-10">
-          <div class="layout-content-container mx-auto flex max-w-4xl flex-col">
-            <div class="text-center mb-12">
-              <h1 class="text-5xl font-black tracking-tighter text-gray-900">
-                Leaderboard
-              </h1>
-              <p class="text-lg text-gray-600 mt-2">
-                See how you and your school rank in the eco-challenge
-              </p>
-            </div>
-            <div class="mb-8">
-              <div class="flex justify-center border-b border-gray-200">
-                <button
-                  class="px-6 py-3 text-lg font-semibold text-gray-900 border-b-4 border-[var(--primary-color)]"
-                >
-                  School
-                </button>
-                <button
-                  class="px-6 py-3 text-lg font-semibold text-gray-500 hover:text-gray-900 hover:border-b-4 hover:border-gray-300 transition-all"
-                >
-                  Students
-                </button>
-              </div>
-            </div>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div class="p-6 @container">
-                <table class="w-full">
-                  <thead>
-                    <tr class="border-b border-gray-200">
-                      <th
-                        class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider text-gray-500"
-                      >
-                        Rank
-                      </th>
-                      <th
-                        class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider text-gray-500"
-                      >
-                        School
-                      </th>
-                      <th
-                        class="px-6 py-4 text-right text-sm font-bold uppercase tracking-wider text-gray-500"
-                      >
-                        Eco-Points
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr
-                      class="group border-b border-gray-100 hover:bg-gray-50 transition-colors"
-                    >
-                      <td class="px-6 py-5 text-lg font-bold text-gray-800">
-                        <div class="flex items-center gap-3">
-                          <span class="text-2xl text-amber-400">
-                            <span class="material-symbols-outlined !text-3xl"
-                              >emoji_events</span
-                            >
-                          </span>
-                          1
-                        </div>
-                      </td>
-                      <td class="px-6 py-5 text-lg font-medium text-gray-800">
-                        Greenwood High
-                      </td>
-                      <td
-                        class="px-6 py-5 text-right text-lg font-bold text-emerald-500"
-                      >
-                        12,500
-                      </td>
-                    </tr>
-                    <tr
-                      class="group border-b border-gray-100 hover:bg-gray-50 transition-colors"
-                    >
-                      <td class="px-6 py-5 text-lg font-bold text-gray-800">
-                        <div class="flex items-center gap-3">
-                          <span class="text-2xl text-slate-400">
-                            <span class="material-symbols-outlined !text-3xl"
-                              >emoji_events</span
-                            >
-                          </span>
-                          2
-                        </div>
-                      </td>
-                      <td class="px-6 py-5 text-lg font-medium text-gray-800">
-                        Oakridge Academy
-                      </td>
-                      <td
-                        class="px-6 py-5 text-right text-lg font-bold text-emerald-500"
-                      >
-                        11,800
-                      </td>
-                    </tr>
-                    <tr
-                      class="group border-b border-gray-100 hover:bg-gray-50 transition-colors"
-                    >
-                      <td class="px-6 py-5 text-lg font-bold text-gray-800">
-                        <div class="flex items-center gap-3">
-                          <span class="text-2xl text-orange-700">
-                            <span class="material-symbols-outlined !text-3xl"
-                              >emoji_events</span
-                            >
-                          </span>
-                          3
-                        </div>
-                      </td>
-                      <td class="px-6 py-5 text-lg font-medium text-gray-800">
-                        Riverdale School
-                      </td>
-                      <td
-                        class="px-6 py-5 text-right text-lg font-bold text-emerald-500"
-                      >
-                        10,200
-                      </td>
-                    </tr>
-                    <tr
-                      class="group border-b border-gray-100 hover:bg-gray-50 transition-colors"
-                    >
-                      <td
-                        class="px-6 py-5 text-lg font-medium text-gray-600 pl-12"
-                      >
-                        4
-                      </td>
-                      <td class="px-6 py-5 text-lg font-medium text-gray-800">
-                        Maplewood College
-                      </td>
-                      <td
-                        class="px-6 py-5 text-right text-lg font-bold text-emerald-500"
-                      >
-                        9,500
-                      </td>
-                    </tr>
-                    <tr class="group hover:bg-gray-50 transition-colors">
-                      <td
-                        class="px-6 py-5 text-lg font-medium text-gray-600 pl-12"
-                      >
-                        5
-                      </td>
-                      <td class="px-6 py-5 text-lg font-medium text-gray-800">
-                        Pinecrest Institute
-                      </td>
-                      <td
-                        class="px-6 py-5 text-right text-lg font-bold text-emerald-500"
-                      >
-                        8,900
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+        </div>
+      </header>
+
+      <main class="flex-1 px-40 py-10">
+        <div class="layout-content-container mx-auto flex max-w-4xl flex-col">
+          <div class="text-center mb-12">
+            <h1 class="text-5xl font-black tracking-tighter text-gray-900">Leaderboard</h1>
+            <p class="text-lg text-gray-600 mt-2">See how you and your school rank in the eco-challenge</p>
           </div>
-        </main>
-      </div>
+
+          <div class="mb-8">
+            <!-- Tabs row -->
+            <div class="flex justify-center border-b border-gray-200 flex-wrap">
+              <!-- Radios + Labels -->
+              <input type="radio" name="tab" id="tab-school" class="peer/tab-school hidden" checked>
+              <label for="tab-school"
+                class="px-6 py-3 text-lg font-semibold cursor-pointer peer-checked/tab-school:text-gray-900 peer-checked/tab-school:border-b-4 peer-checked/tab-school:border-[var(--primary-color)] text-gray-500 hover:text-gray-900 transition-all">
+                School
+              </label>
+
+              <input type="radio" name="tab" id="tab-student" class="peer/tab-student hidden">
+              <label for="tab-student"
+                class="px-6 py-3 text-lg font-semibold cursor-pointer peer-checked/tab-student:text-gray-900 peer-checked/tab-student:border-b-4 peer-checked/tab-student:border-[var(--primary-color)] text-gray-500 hover:text-gray-900 transition-all">
+                Students
+              </label>
+
+              <!-- SCHOOL TABLE -->
+              <div class="peer-checked/tab-school:block hidden w-full basis-full mt-6">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                  <div class="p-6 @container">
+                    <table class="w-full">
+                      <thead>
+                        <tr class="border-b border-gray-200">
+                          <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider text-gray-500">Rank
+                          </th>
+                          <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider text-gray-500">
+                            School</th>
+                          <th class="px-6 py-4 text-right text-sm font-bold uppercase tracking-wider text-gray-500">
+                            Eco-Points</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">
+                            <div class="flex items-center gap-3">
+                              <span class="text-2xl text-amber-400">
+                                <span class="material-symbols-outlined !text-3xl">emoji_events</span>
+                              </span> 1
+                            </div>
+                          </td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Greenwood High</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">12,500</td>
+                        </tr>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">
+                            <div class="flex items-center gap-3">
+                              <span class="text-2xl text-slate-400">
+                                <span class="material-symbols-outlined !text-3xl">emoji_events</span>
+                              </span> 2
+                            </div>
+                          </td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Oakridge Academy</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">11,800</td>
+                        </tr>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">
+                            <div class="flex items-center gap-3">
+                              <span class="text-2xl text-orange-700">
+                                <span class="material-symbols-outlined !text-3xl">emoji_events</span>
+                              </span> 3
+                            </div>
+                          </td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Riverdale School</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">10,200</td>
+                        </tr>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800 pl-16">4</td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Maplewood College</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">9,500</td>
+                        </tr>
+                        <tr class="group hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800 pl-16">5</td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Pinecrest Institute</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">8,900</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STUDENTS TABLE -->
+              <div class="peer-checked/tab-student:block hidden w-full basis-full mt-6">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                  <div class="p-6 @container">
+                    <table class="w-full">
+                      <thead>
+                        <tr class="border-b border-gray-200">
+                          <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider text-gray-500">Rank
+                          </th>
+                          <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider text-gray-500">
+                            Student</th>
+                          <th class="px-6 py-4 text-right text-sm font-bold uppercase tracking-wider text-gray-500">
+                            Eco-Points</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">1</td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Alice Johnson</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">2,300</td>
+                        </tr>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">2</td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Rahul Sharma</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">2,050</td>
+                        </tr>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">3</td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Emily Chen</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">1,950</td>
+                        </tr>
+                        <tr class="group border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">4</td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Mohammed Ali</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">1,700</td>
+                        </tr>
+                        <tr class="group hover:bg-gray-50 transition-colors">
+                          <td class="px-6 py-5 text-lg font-bold text-gray-800">5</td>
+                          <td class="px-6 py-5 text-lg font-medium text-gray-800">Sophia Martinez</td>
+                          <td class="px-6 py-5 text-right text-lg font-bold text-emerald-500">1,500</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /tabs row -->
+          </div>
+        </div>
+      </main>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

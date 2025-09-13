@@ -8,6 +8,7 @@
       onload="this.rel='stylesheet'"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -27,16 +28,7 @@
         >
           <div class="flex items-center gap-4 text-[#111714]">
             <div class="size-8 text-[#20DF6C]">
-              <svg
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
+             <img src="../../Images/gamification (2).png" alt="">
             </div>
             <h2
               class="text-[#111714] text-xl font-bold leading-tight tracking-[-0.015em]"
@@ -44,30 +36,56 @@
               Playora
             </h2>
           </div>
-          <nav
-            class="flex items-center gap-9 text-base font-medium text-[#111714]"
-          >
-            <a class="transition-colors hover:text-[#20DF6C]" href="home.html">Home</a>
-            <a class="transition-colors hover:text-[#20DF6C]" href="#">Learn</a>
-            <a class="transition-colors text-[#20DF6C] font-bold" href="#"
-              >Play</a
-            >
-            <a class="transition-colors hover:text-[#20DF6C]" href="#"
-              >Compete</a
-            >
-            <a class="transition-colors hover:text-[#20DF6C]" href="#">About</a>
-          </nav>
-          <div class="flex items-center gap-4">
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-transparent text-[#111714] text-sm font-bold leading-normal tracking-[0.015em] border-2 border-transparent hover:border-[#20df6c] transition-all"
-            >
-              <span class="truncate">Log in</span>
-            </button>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-11 px-6 bg-[#20df6c] text-[#111714] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all"
-            >
-              <span class="truncate">Sign up</span>
-            </button>
+         <div class="flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
+  
+    <a class="text-gray-600 hover:text-gray-900" href="#">Dashboard</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Play</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Compete</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Community Hub</a>
+    <a class="text-gray-600 hover:text-gray-900" href="#">Leaderboard</a>
+  </div>
+         <div class="flex items-center space-x-4 relative">
+          <a href="notif.html" class="material-icons text-gray-600">notifications</a>
+
+          <div class="relative">
+            <!-- hidden checkbox acts as toggle -->
+            <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+            <!-- button (label for checkbox) -->
+            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                <span class="material-icons text-gray-500">person</span>
+              </div>
+
+
+
+            </label>
+
+            <!-- dropdown menu -->
+            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">school</span>
+                My Courses
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="myach.html">
+                <span class="material-symbols-outlined text-base">emoji_events</span>
+                My Achievements
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">help</span>
+                Help & Support
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">settings</span>
+                Settings
+              </a>
+              <div class="my-1 border-t border-gray-100"></div>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">logout</span>
+                Sign Out
+              </a>
+            </div>
           </div>
         </header>
         <main class="px-20 flex flex-1 justify-center py-10">
