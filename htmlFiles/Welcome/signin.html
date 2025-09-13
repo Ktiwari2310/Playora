@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700"
+    />
+    <title>Playora - Sign In</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body class="bg-gradient-to-br from-green-50 to-white min-h-screen flex flex-col">
+    <header class="flex items-center justify-between border-b border-gray-200 px-10 py-4 bg-white shadow-sm">
+      <div class="flex items-center gap-3 text-[#111811]">
+        <div class="size-5 text-green-600">
+          <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+          </svg>
+        </div>
+        <h2 class="text-lg font-bold tracking-tight">Playora</h2>
+      </div>
+    </header>
+
+    <main class="flex flex-1 items-center justify-center px-6 py-10">
+      <div
+        class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md transition transform hover:scale-[1.01]"
+        style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'
+      >
+        <h1 class="text-3xl font-bold text-gray-900 mb-2 text-center">Sign In </h1>
+        <p class="text-gray-500 text-sm mb-6 text-center">
+          🌍 Join Playora to start your journey towards a greener future, or sign in to continue your progress.
+        </p>
+
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Select User Type</h3>
+        <div class="flex gap-3 mb-6">
+          <!-- Student -->
+          <input type="radio" id="student" name="userType" value="student" class="hidden peer/student" />
+          <label
+            for="student"
+            class="flex-1 text-sm font-medium flex items-center justify-center rounded-xl border px-4 h-11 cursor-pointer transition 
+                   hover:bg-green-50 peer-checked/student:bg-green-100 peer-checked/student:border-green-500 peer-checked/student:text-green-700"
+          >
+            Student
+          </label>
+
+          <!-- Educator -->
+          <input type="radio" id="educator" name="userType" value="educator" class="hidden peer/educator" />
+          <label
+            for="educator"
+            class="flex-1 text-sm font-medium flex items-center justify-center rounded-xl border px-4 h-11 cursor-pointer transition 
+                   hover:bg-green-50 peer-checked/educator:bg-green-100 peer-checked/educator:border-green-500 peer-checked/educator:text-green-700"
+          >
+            Educator
+          </label>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
+          />
+        </div>
+
+        <!-- Password -->
+<div class="mb-6 relative">
+  <input
+    type="password"
+    id="password"
+    placeholder="Password"
+    class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
+  />
+  <span
+    id="togglePassword"
+    class="absolute right-4 top-3 text-gray-400 cursor-pointer hover:text-gray-600 select-none"
+  >
+    👁️
+  </span>
+</div>
+
+
+        <!-- Continue button -->
+        <button
+          id="continueBtn"
+          class="w-full bg-green-500 hover:bg-green-600 text-white rounded-xl h-12 font-semibold transition transform hover:scale-[1.02] shadow-md"
+        >
+          Continue
+        </button>
+
+        <!-- Or divider -->
+        <div class="flex items-center my-6">
+          <div class="flex-grow h-px bg-gray-200"></div>
+          <span class="px-3 text-sm text-gray-400">Or</span>
+          <div class="flex-grow h-px bg-gray-200"></div>
+        </div>
+
+        <!-- Social logins -->
+        <div class="flex flex-col gap-3">
+          <button
+            class="w-full bg-white border border-gray-300 text-gray-700 rounded-xl h-12 font-medium flex items-center justify-center gap-2 hover:bg-gray-50 transition"
+          >
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
+            Continue with Google
+          </button>
+          <button
+            class="w-full bg-black text-white rounded-xl h-12 font-medium flex items-center justify-center gap-2 hover:bg-gray-900 transition"
+          >
+            Continue with X
+          </button>
+        </div>
+
+        <!-- Links -->
+        <p class="text-sm text-green-600 text-center mt-6 hover:underline cursor-pointer">Forgot password?</p>
+        <p class="text-sm text-gray-600 text-center mt-2">
+          Don’t have an account?
+          <a href="#" class="text-green-600 font-semibold hover:underline">Sign up</a>
+        </p>
+      </div>
+    </main>
+
+    <script>
+  // Toggle show/hide password
+  const togglePassword = document.getElementById("togglePassword");
+  const passwordInput = document.getElementById("password");
+
+  togglePassword.addEventListener("click", function () {
+    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+
+    // Change icon when toggled
+    this.textContent = type === "password" ? "👁️" : "🙈";
+  });
+
+  // Continue button logic
+  document.getElementById("continueBtn").addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const userType = document.querySelector('input[name="userType"]:checked');
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!userType) {
+      console.warn("No user type selected");
+      return;
+    }
+
+    if (!email || !password) {
+      console.warn("Email or password missing");
+      return;
+    }
+
+    // 👉 Here you can handle the data (send to backend / redirect)
+    // Example:
+    // fetch("/login", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ userType: userType.value, email, password }),
+    // }).then(res => console.log(res));
+  });
+</script>
+
+    
+  </body>
+</html>
