@@ -17,52 +17,45 @@
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#0d141b]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <h2 class="text-[#0d141b] text-lg font-bold leading-tight tracking-[-0.015em]">EcoLearn</h2>
-          </div>
-            <!-- Center (Nav Links) -->
-          <div class="flex items-center gap-8 text-gray-700 font-medium">
-            <a class="hover:text-gray-900 transition-colors" href="studash.html">Dashboard</a>
-            <a class="text-gray-900 font-semibold" href="compete.html">Compete</a>
-            <a class="hover:text-gray-900 transition-colors" href="htmlFiles/../../Common/communityHub.html">Community Hub</a>
-            <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
-          </div>
-
- 
-            <!-- <button
-              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#e7edf3] text-[#0d141b] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-            >
-              <div class="text-[#0d141b]" data-icon="Bell" data-size="20px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                  <path
-                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
-                  ></path>
-                </svg>
-              </div>
-            </button> -->
-            <!-- <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCyRtAVAtLxIseAEOn0BR6njIGURg0IAoBbvGC_kDxDm3kUZgsQG32lTkH6s1lmTYEPLtS_uzxH7jGpgmaX6EFiGOS7aT2eT_ND8BaU8z_C9P2htFNuAGBecxUWhfavzmH0iHtx2FIstkJw5YApySgGN9vEL4sl2LLTod7l6EChsb_52I6NLZxoL2eexcONhFzyUS3pZAKQ_653kn4CkIYCNg45cMAG5cq2tSGZN3pMT4cuJ5iAAtV1HDPKgBWVoo2DbFsmT1_Jms");'
-            ></div> -->
-              <!-- Right side (Icons with dropdown) -->
-    <a href="index.html">
-      <div class="flex items-center space-x-4 relative">
-        <span class="material-icons text-gray-600">notifications</span>
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
         </a>
-        <!-- Person Icon Button -->
-        <button id="profile-btn" class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
-          <span class="material-icons text-gray-500">person</span>
-        </button>
+        <div class="flex items-center gap-4 text-gray-900">
+          <div class="text-green-500">
+            <!-- <img class="w-10" src="gamification.png" alt=""> -->
+          </div>
+          <div class="flex items-center gap-4 text-[#111811]">
+            <div class="size-6">
+              <img src="https://cdn-icons-png.flaticon.com/512/3048/3048600.png" alt="Gamification Icon"
+                class="w-full h-full object-contain" />
+            </div>
+            <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+          </div>
+        </div>
+        <div class="flex items-center gap-8 text-gray-700 font-medium">
+          <a class="hover:text-gray-900 transition-colors" href="studash.html">Dashboard</a>
+          <a class="text-gray-900 font-semibold" href="compete.html">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="htmlFiles/../../Common/communityHub.html">Community Hub</a>
+          <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
+        </div>
 
-        <!-- Dropdown Menu -->
+        <div class="flex items-center space-x-4 relative">
+          <a href="htmlFiles/../../Common/notifications.html" class="material-icons text-gray-600">notifications</a>
+          <div class="relative">
+            <!-- hidden checkbox acts as toggle -->
+            <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+            <!-- button (label for checkbox) -->
+            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                <span class="material-icons text-gray-500">person</span>
+              </div>
+
+            </label>
+
+            <!-- dropdown menu -->
             <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="./MyCourses/learn.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="./MyCourses/learn.html">
                 <span class="material-symbols-outlined text-base">school</span>
                 My Courses
               </a>
@@ -71,11 +64,13 @@
                 <span class="material-symbols-outlined text-base">emoji_events</span>
                 My Achievements
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="htmFiles/../../Common/helpSupport.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="htmFiles/../../Common/helpSupport.html">
                 <span class="material-symbols-outlined text-base">help</span>
                 Help & Support
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="settings.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="settings.html">
                 <span class="material-symbols-outlined text-base">settings</span>
                 Settings
               </a>
