@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700"
+    />
+    <title>Playora - Student Registration</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body class="bg-gradient-to-br from-green-50 to-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="flex items-center justify-between border-b border-gray-200 px-10 py-4 bg-white shadow-sm">
+      <div class="flex items-center gap-3 text-[#111811]">
+        <div class="size-5 text-green-600">
+          <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+          </svg>
+        </div>
+        <h2 class="text-lg font-bold tracking-tight">Playora</h2>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-1 items-center justify-center px-6 py-10">
+      <div
+        class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md transition transform hover:scale-[1.01]"
+        style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'
+      >
+        <h1 class="text-3xl font-bold text-gray-900 mb-6 text-center">Student Registration</h1>
+
+        <!-- Form -->
+        <form class="space-y-5">
+          <!-- Full Name -->
+          <input
+            type="text"
+            placeholder="Full Name"
+            required
+            class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
+          />
+
+          <!-- School Name -->
+          <input
+            type="text"
+            placeholder="School Name"
+            required
+            class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
+          />
+
+          <!-- Username -->
+          <input
+            type="text"
+            placeholder="Username"
+            required
+            class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
+          />
+
+          <!-- Email -->
+          <input
+            type="email"
+            placeholder="Email Address"
+            required
+            class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
+          />
+
+          <!-- Password with toggle -->
+          <div class="relative">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+              minlength="6"
+              class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 pr-10 text-sm"
+            />
+            <span
+              id="togglePassword"
+              class="absolute right-4 top-3 text-gray-400 cursor-pointer hover:text-gray-600 select-none"
+            >
+              👁️
+            </span>
+          </div>
+
+          <!-- Button -->
+          <button
+            type="submit"
+            class="w-full bg-green-500 hover:bg-green-600 text-white rounded-xl h-12 font-semibold transition transform hover:scale-[1.02] shadow-md"
+          >
+            Register
+          </button>
+        </form>
+
+        <!-- Footer -->
+        <p class="text-sm text-gray-600 text-center mt-6">
+          Already have an account?
+          <a href="#" class="text-green-600 font-semibold hover:underline">Sign in</a>
+        </p>
+      </div>
+    </main>
+
+    <!-- Script -->
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("password");
+
+      togglePassword.addEventListener("click", function () {
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+        this.textContent = type === "password" ? "👁️" : "🙈";
+      });
+    </script>
+  </body>
+</html>
