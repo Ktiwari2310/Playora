@@ -133,7 +133,6 @@
 
     // Change icon when toggled
     this.textContent = type === "password" ? "👁️" : "🙈";
-  });
 
   // Continue button logic
   document.getElementById("continueBtn").addEventListener("click", function (event) {
@@ -148,10 +147,13 @@
       return;
     }
 
-    if (!email || !password) {
-      console.warn("Email or password missing");
-      return;
-    }
+  if (userType.value === "educator"){
+    window.location.href = "../Educator/EduDash.html";
+  }
+  else if (userType.value === "student") {
+    window.location.href = "../Student/studash.html";
+  }
+});
 
     // 👉 Here you can handle the data (send to backend / redirect)
     // Example:

@@ -25,12 +25,11 @@
   </a>
 
  <!-- Center (Navigation links) -->
-      <div class="flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
-        <a class="text-gray-600 hover:text-gray-900" href="#">Dashboard</a>
-        <a class="text-gray-600 hover:text-gray-900" href="#">Play</a>
-        <a class="text-gray-600 hover:text-gray-900" href="#">Compete</a>
-        <a class="text-gray-600 hover:text-gray-900" href="#">Community Hub</a>
-        <a class="text-gray-600 hover:text-gray-900" href="#">Leaderboard</a>
+      <div class="flex items-center gap-8 text-gray-700 font-medium">
+        <a class="hover:text-gray-900 transition-colors" href="studash.html">Dashboard</a>
+        <a class="text-gray-900 font-semibold" href="compete.html">Compete</a>
+        <a class="hover:text-gray-900 transition-colors" href="htmlFiles/../../Common/communityHub.html">Community Hub</a>
+        <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
       </div>
 
       <!-- Right side (Icons with dropdown) -->
@@ -43,31 +42,33 @@
         </button>
 
         <!-- Dropdown Menu -->
-        <div id="dropdown-menu" class="hidden absolute right-0 top-12 w-56 bg-white rounded-lg shadow-xl z-10 p-2">
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
-            <span class="material-icons text-base">school</span>
-            My Courses
-          </a>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
-            <span class="material-icons text-base">emoji_events</span>
-            My Achievements
-          </a>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
-            <span class="material-icons text-base">help</span>
-            Help & Support
-          </a>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="#">
-            <span class="material-icons text-base">settings</span>
-            Settings
-          </a>
-          <div class="my-1 border-t border-gray-100"></div>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors rounded-md" href="#">
-            <span class="material-icons text-base">logout</span>
-            Sign Out
-          </a>
+            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="./MyCourses/learn.html">
+                <span class="material-symbols-outlined text-base">school</span>
+                My Courses
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="MyAchievements.html">
+                <span class="material-symbols-outlined text-base">emoji_events</span>
+                My Achievements
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="htmFiles/../../Common/helpSupport.html">
+                <span class="material-symbols-outlined text-base">help</span>
+                Help & Support
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="settings.html">
+                <span class="material-symbols-outlined text-base">settings</span>
+                Settings
+              </a>
+              <div class="my-1 border-t border-gray-100"></div>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">logout</span>
+                Sign Out
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-</header>
+      </header>
 
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">

@@ -7,7 +7,9 @@
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+      onload="this.rel='stylesheet'"
       rel="stylesheet"
     />
     <link
@@ -17,13 +19,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     <style>
+      :root {
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f;
+        --primary-500: #20df6c;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
+        /* background-color: #f8fafc; */
       }
     </style>
   </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800">
   <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
     style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
     <div class="layout-container flex h-full grow flex-col">
@@ -38,17 +53,16 @@
         </div>
 
         <div class="flex items-center gap-8 text-gray-700 font-medium">
-          <a class="hover:text-gray-900 transition-colors" href="#">Home</a>
-          <a class="hover:text-gray-900 transition-colors" href="#">Dashboard</a>
-          <a class="hover:text-gray-900 transition-colors" href="#">Play</a>
-          <a class="hover:text-gray-900 transition-colors" href="compete.html">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="../studash.html">Home</a>
+          <a class="hover:text-gray-900 transition-colors" href="../studash.html">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../compete.html">Compete</a>
           <a class="hover:text-gray-900 transition-colors" href="communityHub.html">Community Hub</a>
-          <a class="hover:text-gray-900 transition-colors" href="#">Leaderboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../leaderboard.html">Leaderboard</a>
         </div>
 
 
         <div class="flex items-center space-x-4 relative">
-          <a href="notifications.html" class="material-icons text-gray-600">notifications</a>
+          <a href="../../Common/notifications.html" class="material-icons text-gray-600">notifications</a>
 
           <div class="relative">
             <!-- hidden checkbox acts as toggle -->
@@ -66,20 +80,20 @@
 
             <!-- dropdown menu -->
             <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href=".learn.html">
                 <span class="material-symbols-outlined text-base">school</span>
                 My Courses
               </a>
               <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="MyAchievements.html">
+                href="../MyAchievements.html">
                 <span class="material-symbols-outlined text-base">emoji_events</span>
                 My Achievements
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../../Common/helpSupport.html">
                 <span class="material-symbols-outlined text-base">help</span>
                 Help & Support
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../settings.html">
                 <span class="material-symbols-outlined text-base">settings</span>
                 Settings
               </a>
