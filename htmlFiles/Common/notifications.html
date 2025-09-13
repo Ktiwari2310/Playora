@@ -1,82 +1,118 @@
+
 <html>
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
+   <link
       as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      rel="stylesheet"
     />
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="shortcut icon" href="Images/gamification (2).png" type="image/png">
     <title>Notifications</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
+      
+    </script>
+     <style type="text/tailwindcss">
+    
+
+    :root {
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f;
+        --primary-500: #20df6c;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+
+    /* Show content when radio is checked */
+    #tab-discussions:checked ~ .mt-6 #content-discussions,
+    #tab-news:checked ~ .mt-6 #content-news,
+    #tab-projects:checked ~ .mt-6 #content-projects {
+      display: block;
+    }
+    </style>
   </head>
   <body>
+    
+
+        
     <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Spilne Sans",Lexend, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
         <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f4f0] px-10 py-3">
-  <!-- Left (Logo) -->
+   <div class="flex items-center gap-4 text-gray-900">
+          
+  
 <div class="flex items-center gap-4 text-[#111811]">
   <!-- Replace SVG with Flaticon image -->
   <div class="size-6">
     <img 
-      src="../../Images/gamification (2).png" 
+      src="https://cdn-icons-png.flaticon.com/512/3048/3048600.png" 
       alt="Gamification Icon" 
       class="w-full h-full object-contain"
     />
   </div>
   <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
 </div>
-
-
-  <!-- Center (Nav Links) -->
-  <div class="flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
-    <a class="text-gray-600 hover:text-gray-900" href="htmlFiles/../../Student/studash.html">Dashboard</a>
-    <a class="text-gray-600 hover:text-gray-900" href="compete.html">Compete</a>
-    <a class="text-gray-600 hover:text-gray-900" href="communityHub.html">Community Hub</a>
-    <a class="text-gray-600 hover:text-gray-900" href="htmlFiles/../../Student/leaderboard.html">Leaderboard</a>
-  </div>
-
-   <!-- Right side (Icons with dropdown) -->
-    <a href="notifications.html">
-      <div class="flex items-center space-x-4 relative">
-        <span class="material-icons text-gray-700">notifications</span>
-        </a>
-        <!-- Person Icon Button -->
-        <button id="profile-btn" class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
-          <span class="material-icons text-gray-500">person</span>
-        </button>
-
-        <!-- Dropdown Menu -->
-        <div id="dropdown-menu" class="hidden absolute right-0 top-12 w-56 bg-white rounded-lg shadow-xl z-10 p-2">
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="htmlFiles/../../Student/MyCourses/learn.html">
-            <span class="material-icons text-base">school</span>
-            My Courses
-            </a>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="htmlFiles/../../Student/MyAchievements.html">
-            <span class="material-icons text-base">emoji_events</span>
-            My Achievements
-          </a>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="helpSupport.html">
-            <span class="material-icons text-base">help</span>
-            Help & Support
-          </a>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md" href="htmlFiles/../../Student/settings.html">
-            <span class="material-icons text-base">settings</span>
-            Settings
-          </a>
-          <div class="my-1 border-t border-gray-100"></div>
-          <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors rounded-md" href="#">
-            <span class="material-icons text-base">logout</span>
-            Sign Out
-          </a>
         </div>
-      </div>
+        <div class="flex items-center gap-8 text-gray-700 font-medium">
+          <a class="hover:text-gray-900 transition-colors" href="studash.html">Dashboard</a>
+          <a class="text-gray-900 font-semibold" href="compete.html">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="htmlFiles/../../Common/communityHub.html">Community Hub</a>
+          <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
+        </div>
+
+        <div class="flex items-center space-x-4 relative">
+          <a href="htmlFiles/../../Common/notifications.html" class="material-icons text-gray-600">notifications</a>
+          <div class="relative">
+            <!-- hidden checkbox acts as toggle -->
+            <input type="checkbox" id="dropdownToggle" class="hidden peer">
+
+            <!-- button (label for checkbox) -->
+            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                <span class="material-icons text-gray-500">person</span>
+              </div>
+
+            </label>
+
+            <!-- dropdown menu -->
+            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="./MyCourses/learn.html">
+                <span class="material-symbols-outlined text-base">school</span>
+                My Courses
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="MyAchievements.html">
+                <span class="material-symbols-outlined text-base">emoji_events</span>
+                My Achievements
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="htmFiles/../../Common/helpSupport.html">
+                <span class="material-symbols-outlined text-base">help</span>
+                Help & Support
+              </a>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="settings.html">
+                <span class="material-symbols-outlined text-base">settings</span>
+                Settings
+              </a>
+              <div class="my-1 border-t border-gray-100"></div>
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+                <span class="material-symbols-outlined text-base">logout</span>
+                Sign Out
+              </a>
+            </div>
+          </div>
 </header>
 
         <div class="px-40 flex flex-1 justify-center py-5">
