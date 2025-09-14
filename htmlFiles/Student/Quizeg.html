@@ -1,50 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Playora</title>
-  
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Quiz</title>
+  <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-  <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/png">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <style>
-  
-    body {
-      font-family: 'Roboto', sans-serif;
+  <style type="text/tailwindcss">
+    /* :root {
+        --primary-color: #20DF6C;
+      }
+      .bg-primary {
+        background-color: var(--primary-color);
+      }
+      .text-primary {
+        color: var(--primary-color);
+      }
+      .border-primary {
+        border-color: var(--primary-color);
+      }
+      .tab-content {
+      display: none;
+    } */
+
+    :root {
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f;
+        --primary-500: #20df6c;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+
+    /* Show content when radio is checked */
+    #tab-discussions:checked ~ .mt-6 #content-discussions,
+    #tab-news:checked ~ .mt-6 #content-news,
+    #tab-projects:checked ~ .mt-6 #content-projects {
+      display: block;
     }
-  </style>
+    </style>
 </head>
-<body class="bg-white text-gray-900">
-  <div class="container mx-auto px-4 py-8">
-    <header class="flex justify-between items-center mb-8">
-      <!-- Left side (Back button) -->
-      <button class="flex items-center text-gray-600 hover:text-gray-900">
-        <span class="material-icons">arrow_back</span>
-        <span class="ml-2">Back</span>
-      </button>
 
-      <!-- Center (Navigation links) -->
-      <div class="flex items-center gap-8 text-gray-700 font-medium">
-        <a class="hover:text-gray-900 transition-colors" href="studash.html">Dashboard</a>
-        <a class="text-gray-900 font-semibold" href="compete.html">Compete</a>
-        <a class="hover:text-gray-900 transition-colors" href="htmlFiles/../../Common/communityHub.html">Community Hub</a>
-        <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
-      </div>
+<body class="bg-gray-50">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+        </a>
+        <div class="flex items-center gap-4 text-gray-900">
+          <div class="text-green-500">
+            <img class="w-10" src="gamification.png" alt="">
+          </div>
+          <div class="flex items-center gap-4 text-[#111811]">
+            <div class="size-8">
+              <img src="../../Images/gamification (2).png" alt="Gamification Icon"
+                class="w-full h-full object-contain" />
+            </div>
+            <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+          </div>
+        </div>
+        <div class="flex items-center gap-8 text-gray-700 font-medium">
+          <a class="hover:text-gray-900 transition-colors" href="../Student/studash.html">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/play.html">Play</a>
+          <a class="text-gray-900 font-semibold " href="../Student/compete.html">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Common/communityHub.html">Community Hub</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/leaderboard.html">Leaderboard</a>
+        </div>
 
-      <!-- Right side (Icons with dropdown) -->
-      <div class="flex items-center space-x-4 relative">
-        <span class="material-icons text-gray-600">notifications</span>
-        
-        <!-- Person Icon Button -->
-        <button id="profile-btn" class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
-          <span class="material-icons text-gray-500">person</span>
-        </button>
+        <div class="flex items-center space-x-4 relative">
+          <a href="htmlFiles/../../Common/notifications.html" class="material-icons text-gray-600">notifications</a>
+          <div class="relative">
+            <!-- hidden checkbox acts as toggle -->
+            <input type="checkbox" id="dropdownToggle" class="hidden peer">
 
-        <!-- Dropdown Menu -->
+            <!-- button (label for checkbox) -->
+            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+                <span class="material-icons text-gray-500">person</span>
+              </div>
+
+            </label>
+
+            <!-- dropdown menu -->
             <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="./MyCourses/learn.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="./MyCourses/learn.html">
                 <span class="material-symbols-outlined text-base">school</span>
                 My Courses
               </a>
@@ -53,11 +110,13 @@
                 <span class="material-symbols-outlined text-base">emoji_events</span>
                 My Achievements
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="htmFiles/../../Common/helpSupport.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="htmFiles/../../Common/helpSupport.html">
                 <span class="material-symbols-outlined text-base">help</span>
                 Help & Support
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="settings.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="settings.html">
                 <span class="material-symbols-outlined text-base">settings</span>
                 Settings
               </a>
@@ -71,69 +130,71 @@
         </div>
       </header>
 
-    <!-- Main content (unchanged) -->
-    <main class="max-w-4xl mx-auto">
-      <h1 class="text-4xl font-bold">Climate Change Challenge</h1>
-      <div class="flex justify-between items-center">
-        <p class="text-gray-500 mb-8">Quiz</p>
-        <p class="text-gray-500 mb-8 font-medium">Total Questions: 10</p>
+  <!-- Main content (unchanged) -->
+  <main class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold">Climate Change Challenge</h1>
+    <div class="flex justify-between items-center">
+      <p class="text-gray-500 mb-8">Quiz</p>
+      <p class="text-gray-500 mb-8 font-medium">Total Questions: 10</p>
+    </div>
+    <div class="mb-8">
+      <div class="flex justify-between items-center mb-2">
+        <span class="font-medium">Progress</span>
+        <span class="text-gray-500">30%</span>
       </div>
-      <div class="mb-8">
-        <div class="flex justify-between items-center mb-2">
-          <span class="font-medium">Progress</span>
-          <span class="text-gray-500">30%</span>
-        </div>
-        <div class="w-full bg-gray-200 rounded-full h-2.5">
-          <div class="bg-gray-800 h-2.5 rounded-full" style="width: 30%"></div>
-        </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5">
+        <div class="bg-gray-800 h-2.5 rounded-full" style="width: 30%"></div>
       </div>
-      <div class="grid grid-cols-3 gap-8 mb-12">
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-          <p class="text-5xl font-bold">05</p>
-          <p class="text-gray-500">Minutes</p>
-        </div>
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-          <p class="text-5xl font-bold">30</p>
-          <p class="text-gray-500">Seconds</p>
-        </div>
-        <div class="bg-blue-100 p-6 rounded-lg text-center">
-          <p class="text-5xl font-bold text-blue-600">30</p>
-          <p class="text-gray-500">Score</p>
-        </div>
+    </div>
+    <div class="grid grid-cols-3 gap-8 mb-12">
+      <div class="bg-gray-100 p-6 rounded-lg text-center">
+        <p class="text-5xl font-bold">05</p>
+        <p class="text-gray-500">Minutes</p>
       </div>
-      <h2 class="text-2xl font-semibold mb-6">What is the primary cause of global warming?</h2>
-      <div class="space-y-4">
-        <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-          <input checked class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio"/>
-          <span class="ml-4 text-lg">Deforestation</span>
-        </label>
-        <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-          <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio"/>
-          <span class="ml-4 text-lg">Burning of fossil fuels</span>
-        </label>
-        <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-          <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio"/>
-          <span class="ml-4 text-lg">Industrial waste</span>
-        </label>
-        <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-          <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio"/>
-          <span class="ml-4 text-lg">Agricultural practices</span>
-        </label>
+      <div class="bg-gray-100 p-6 rounded-lg text-center">
+        <p class="text-5xl font-bold">30</p>
+        <p class="text-gray-500">Seconds</p>
       </div>
-      <div class="flex justify-between items-center mt-12">
-        <button class="flex items-center text-gray-600 hover:text-gray-900">
-          <span class="material-icons">chevron_left</span>
-          <span>Previous Question</span>
+      <div class="bg-blue-100 p-6 rounded-lg text-center">
+        <p class="text-5xl font-bold text-blue-600">30</p>
+        <p class="text-gray-500">Score</p>
+      </div>
+    </div>
+    <h2 class="text-2xl font-semibold mb-6">What is the primary cause of global warming?</h2>
+    <div class="space-y-4">
+      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+        <input checked class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause"
+          type="radio" />
+        <span class="ml-4 text-lg">Deforestation</span>
+      </label>
+      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+        <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio" />
+        <span class="ml-4 text-lg">Burning of fossil fuels</span>
+      </label>
+      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+        <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio" />
+        <span class="ml-4 text-lg">Industrial waste</span>
+      </label>
+      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+        <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio" />
+        <span class="ml-4 text-lg">Agricultural practices</span>
+      </label>
+    </div>
+    <div class="flex justify-between items-center mt-12">
+      <button class="flex items-center text-gray-600 hover:text-gray-900">
+        <span class="material-icons">chevron_left</span>
+        <span>Previous Question</span>
+      </button>
+      <div class="flex items-center space-x-4">
+        <p class="text-gray-600">Earned Eco-Points: 10</p>
+        <button
+          class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors flex items-center">
+          <span>Next Question</span>
+          <span class="material-icons ml-2">chevron_right</span>
         </button>
-        <div class="flex items-center space-x-4">
-          <p class="text-gray-600">Earned Eco-Points: 10</p>
-          <button class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors flex items-center">
-            <span>Next Question</span>
-            <span class="material-icons ml-2">chevron_right</span>
-          </button>
-        </div>
       </div>
-    </main>
+    </div>
+  </main>
   </div>
 
   <!-- Toggle Script -->
@@ -153,5 +214,5 @@
     });
   </script>
 </body>
-</html>
 
+</html>
