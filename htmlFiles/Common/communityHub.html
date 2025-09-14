@@ -1,130 +1,136 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-  <link
-      as="style"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
-      onload="this.rel='stylesheet'"
-      rel="stylesheet"
-    />
   <link as="style"
     href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
     onload="this.rel='stylesheet'" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <title>Compete</title>
-  <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
+  <title>Playora</title>
+  <link rel="shortcut icon" href="gamification.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <style type="text/tailwindcss">
-    /* :root {
-        --primary-color: #20DF6C;
-      }
-      .bg-primary {
-        background-color: var(--primary-color);
-      }
-      .text-primary {
-        color: var(--primary-color);
-      }
-      .border-primary {
-        border-color: var(--primary-color);
-      }
-      .tab-content {
-      display: none;
-    } */
-
     :root {
-        --primary-50: #f0fdf6;
-        --primary-100: #dcfce9;
-        --primary-200: #bbf7d4;
-        --primary-300: #86efb5;
-        --primary-400: #4ade8f;
-        --primary-500: #20df6c;
-        --primary-600: #16a34a;
-        --primary-700: #15803d;
-        --primary-800: #166534;
-        --primary-900: #14532d;
-        --primary-950: #052e16;
-      }
+      --primary-color: #20DF6C;
+    }
 
-    /* Show content when radio is checked */
-    #tab-discussions:checked ~ .mt-6 #content-discussions,
-    #tab-news:checked ~ .mt-6 #content-news,
-    #tab-projects:checked ~ .mt-6 #content-projects {
+    .bg-primary {
+      background-color: var(--primary-color);
+    }
+
+    .text-primary {
+      color: var(--primary-color);
+    }
+
+    .border-primary {
+      border-color: var(--primary-color);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
       display: block;
     }
-    </style>
+
+    .tab-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 2px solid transparent;
+      padding: 0.5rem 1rem;
+      color: #555;
+      cursor: pointer;
+      font-weight: 600;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .tab-wrapper .tab-icon {
+      color: inherit;
+      transition: color 0.3s;
+    }
+
+    .tab-wrapper.active {
+      color: #20DF6C;
+      border-bottom-color: #20DF6C;
+    }
+
+    .tab-wrapper.active .tab-icon {
+      color: #20DF6C;
+    }
+
+    .tab-wrapper:hover:not(.active) {
+      color: gray;
+      border-bottom-color: transparent;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50">
-  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+<body class="bg-gray-50 text-gray-800" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
     <div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
-        </a>
+      <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
         <div class="flex items-center gap-4 text-gray-900">
-          <div class="text-green-500">
-            <img class="w-10" src="gamification.png" alt="">
-          </div>
-          <div class="flex items-center gap-4 text-[#111811]">
-            <div class="size-6">
-              <img src="../../Images/gamification (2).png" alt="Gamification Icon"
-                class="w-full h-full object-contain" />
-            </div>
-            <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
-          </div>
+          <img class="w-10" src="gamification.png" alt="">
+          <h1 class="text-gray-900 text-2xl font-bold leading-tight tracking-[-0.015em]"> Playora</h1>
         </div>
         <div class="flex items-center gap-8 text-gray-700 font-medium">
+<<<<<<< HEAD
           <a class="text-gray-900 font-semibold" href="../Student/studash.html">Dashboard</a>
           <a class="" href="../Student/compete.html">Compete</a>
           <a class="hover:text-gray-900 transition-colors" href="../Common/communityHub.html">Community Hub</a>
           <a class="hover:text-gray-900 transition-colors " href="../Student/leaderboard.html">Leaderboard</a>
+=======
+          <a class="hover:text-gray-900 transition-colors" href="#">Home</a>
+          <a class="hover:text-gray-900 transition-colors" href="#">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="#">Play</a>
+          <a class="hover:text-gray-900 transition-colors" href="compete.html">Compete</a>
+          <a class="text-gray-900 font-semibold" href="#">Community Hub</a>
+          <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
+>>>>>>> 29784727556f09acb5f3bce9af49700c016039cc
         </div>
-
         <div class="flex items-center space-x-4 relative">
-          <a href="htmlFiles/../../Common/notifications.html" class="material-icons text-gray-600">notifications</a>
+          <a href="notification.html" class="material-icons text-gray-600">notifications</a>
+
           <div class="relative">
-            <!-- hidden checkbox acts as toggle -->
             <input type="checkbox" id="dropdownToggle" class="hidden peer">
 
-            <!-- button (label for checkbox) -->
             <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
               <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
                 <span class="material-icons text-gray-500">person</span>
               </div>
-
             </label>
 
-            <!-- dropdown menu -->
-            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="./MyCourses/learn.html">
+            <div class="absolute right-0 top-12 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
+                href="#">
                 <span class="material-symbols-outlined text-base">school</span>
                 My Courses
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="MyAchievements.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
+                href="myach.html">
                 <span class="material-symbols-outlined text-base">emoji_events</span>
                 My Achievements
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="htmFiles/../../Common/helpSupport.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
+                href="#">
                 <span class="material-symbols-outlined text-base">help</span>
                 Help & Support
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="settings.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors rounded-md"
+                href="#">
                 <span class="material-symbols-outlined text-base">settings</span>
                 Settings
               </a>
               <div class="my-1 border-t border-gray-100"></div>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors rounded-md"
+                href="#">
                 <span class="material-symbols-outlined text-base">logout</span>
                 Sign Out
               </a>
@@ -132,80 +138,74 @@
           </div>
         </div>
       </header>
+
       <main class="flex-1 px-40 py-10">
         <div class="mx-auto max-w-5xl">
           <div class="flex items-center justify-between mb-8">
             <h2 class="text-4xl font-bold tracking-tight text-gray-900">Community Hub</h2>
-            <button
-              class="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-bold text-lg hover:opacity-90 transition-opacity">
+            <button class="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-bold text-lg hover:opacity-90 transition-opacity">
               <span class="material-symbols-outlined"> add </span>
               <span>Start a Discussion</span>
             </button>
           </div>
-          <div class="mb-8">
-            <div class="flex border-b border-gray-200">
-              <a class="flex items-center justify-center gap-2 border-b-2 border-primary text-primary px-6 py-3 text-lg font-semibold"
-                href="#">
-                <span class="material-symbols-outlined"> forum </span>
-                <span>Discussions</span>
-              </a>
-              <a class="flex items-center justify-center gap-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 px-6 py-3 text-lg font-semibold transition-colors"
-                href="#">
-                <span class="material-symbols-outlined"> newspaper </span>
-                <span>News Feed</span>
-              </a>
-              <a class="flex items-center justify-center gap-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 px-6 py-3 text-lg font-semibold transition-colors"
-                href="#">
-                <span class="material-symbols-outlined"> emoji_objects </span>
-                <span>User Projects</span>
-              </a>
-            </div>
+
+          <div class="flex border-b border-gray-200 pl-6 md:pl-10 lg:pl-16 gap-4">
+            <a href="#" class="tab-wrapper active flex items-center gap-2 px-6 py-3 text-lg font-semibold" data-target="content-discussions">
+              <span class="material-symbols-outlined tab-icon">forum</span>
+              Discussions
+            </a>
+            <a href="newsfeed.html" class="tab-wrapper flex items-center gap-2 px-6 py-3 text-lg font-semibold">
+              <span class="material-symbols-outlined tab-icon">newspaper</span>
+              News Feed
+            </a>
+            <a href="userproj.html" class="tab-wrapper flex items-center gap-2 px-6 py-3 text-lg font-semibold">
+              <span class="material-symbols-outlined tab-icon">emoji_objects</span>
+              User Projects
+            </a>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="md:col-span-2 space-y-6">
+
+          <!-- Main Grid: Discussions + Recent News -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+
+            <!-- Active Discussions Content -->
+            <div class="md:col-span-2 space-y-6 tab-content active" id="content-discussions">
               <h3 class="text-2xl font-bold text-gray-900">Active Discussions</h3>
+
               <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 flex items-start gap-4">
-                <div
-                  class="flex-shrink-0 size-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <div class="flex-shrink-0 size-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                   <span class="material-symbols-outlined text-3xl"> recycling </span>
                 </div>
                 <div class="flex-1">
-                  <a class="text-xl font-semibold text-gray-800 hover:text-primary transition-colors" href="#">How can
-                    we reduce plastic waste in our schools?</a>
-                  <p class="text-gray-500 mt-1">Started by <span class="font-medium text-gray-700">EcoWarrior22</span> ·
-                    12 comments</p>
+                  <a class="text-xl font-semibold text-gray-800 hover:text-primary transition-colors" href="#">How can we reduce plastic waste in our schools?</a>
+                  <p class="text-gray-500 mt-1">Started by <span class="font-medium text-gray-700">EcoWarrior22</span> · 12 comments</p>
                 </div>
                 <div class="text-right text-gray-500 text-sm">
                   <p>Last reply</p>
                   <p>5m ago</p>
                 </div>
               </div>
+
               <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 flex items-start gap-4">
-                <div
-                  class="flex-shrink-0 size-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <div class="flex-shrink-0 size-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                   <span class="material-symbols-outlined text-3xl"> compost </span>
                 </div>
                 <div class="flex-1">
-                  <a class="text-xl font-semibold text-gray-800 hover:text-primary transition-colors" href="#">Best
-                    practices for composting at home</a>
-                  <p class="text-gray-500 mt-1">Started by <span class="font-medium text-gray-700">GreenThumb</span> · 8
-                    comments</p>
+                  <a class="text-xl font-semibold text-gray-800 hover:text-primary transition-colors" href="#">Best practices for composting at home</a>
+                  <p class="text-gray-500 mt-1">Started by <span class="font-medium text-gray-700">GreenThumb</span> · 8 comments</p>
                 </div>
                 <div class="text-right text-gray-500 text-sm">
                   <p>Last reply</p>
                   <p>1h ago</p>
                 </div>
               </div>
+
               <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 flex items-start gap-4">
-                <div
-                  class="flex-shrink-0 size-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                <div class="flex-shrink-0 size-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                   <span class="material-symbols-outlined text-3xl"> public </span>
                 </div>
                 <div class="flex-1">
-                  <a class="text-xl font-semibold text-gray-800 hover:text-primary transition-colors"
-                    href="#">Organizing a community cleanup event</a>
-                  <p class="text-gray-500 mt-1">Started by <span class="font-medium text-gray-700">CleanUpCrew</span> ·
-                    15 comments</p>
+                  <a class="text-xl font-semibold text-gray-800 hover:text-primary transition-colors" href="#">Organizing a community cleanup event</a>
+                  <p class="text-gray-500 mt-1">Started by <span class="font-medium text-gray-700">CleanUpCrew</span> · 15 comments</p>
                 </div>
                 <div class="text-right text-gray-500 text-sm">
                   <p>Last reply</p>
@@ -213,52 +213,71 @@
                 </div>
               </div>
             </div>
+
+            <!-- Recent News Aside -->
             <aside class="space-y-6">
               <div class="bg-white p-6 rounded-lg shadow-sm">
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Recent News</h3>
                 <ul class="space-y-4">
                   <li class="flex items-start gap-3">
-                    <div
-                      class="flex-shrink-0 mt-1 size-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                    <div class="flex-shrink-0 mt-1 size-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
                       <span class="material-symbols-outlined text-xl"> newspaper </span>
                     </div>
                     <div>
-                      <a class="font-semibold text-gray-700 hover:text-primary transition-colors" href="#">New recycling
-                        initiative launched in the city</a>
+                      <a class="font-semibold text-gray-700 hover:text-primary transition-colors" href="#">New recycling initiative launched in the city</a>
                       <p class="text-sm text-gray-500">2 days ago</p>
                     </div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <div
-                      class="flex-shrink-0 mt-1 size-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                    <div class="flex-shrink-0 mt-1 size-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
                       <span class="material-symbols-outlined text-xl"> school </span>
                     </div>
                     <div>
-                      <a class="font-semibold text-gray-700 hover:text-primary transition-colors" href="#">Local school
-                        wins award for sustainability</a>
+                      <a class="font-semibold text-gray-700 hover:text-primary transition-colors" href="#">Local school wins award for sustainability</a>
                       <p class="text-sm text-gray-500">1 week ago</p>
                     </div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <div
-                      class="flex-shrink-0 mt-1 size-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                    <div class="flex-shrink-0 mt-1 size-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
                       <span class="material-symbols-outlined text-xl"> groups </span>
                     </div>
                     <div>
-                      <a class="font-semibold text-gray-700 hover:text-primary transition-colors" href="#">Global
-                        climate summit highlights key actions</a>
+                      <a class="font-semibold text-gray-700 hover:text-primary transition-colors" href="#">Global climate summit highlights key actions</a>
                       <p class="text-sm text-gray-500">2 weeks ago</p>
                     </div>
                   </li>
                 </ul>
               </div>
             </aside>
+
           </div>
         </div>
       </main>
     </div>
   </div>
 
+  <script>
+    const tabs = document.querySelectorAll('.tab-wrapper[data-target]');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = tab.dataset.target;
+        tabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const defaultTab = document.querySelector('.tab-wrapper[data-target="content-discussions"]');
+      const defaultContent = document.getElementById('content-discussions');
+      defaultTab.classList.add('active');
+      defaultContent.classList.add('active');
+    });
+  </script>
 </body>
 
 </html>
