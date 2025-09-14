@@ -1,327 +1,279 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Playora - Eco Learning Platform</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8fafc;
-        }
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .nav-link {
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #34d399;}
-        .badge-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .badge-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-        }
-        .tooltip {
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .has-tooltip:hover .tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
-</head>
-<body class="text-gray-800">
-<nav class="sticky-nav">
-<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-<div class="flex items-center">
-<div class="bg-[#10B981] p-2 rounded-lg mr-3">
-<img alt="Playora Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdiSVeLhtj-VUZavPQ3n1DuByOWX27VWWYQxVv1Z1mZUgY_SI4lmo63kBzya2fGZTS9bUR9NnewtGNIH8MWAsakkku0Od3As0PqIbS_w_kdBVwIEOfjL90h2XgnLgCDTV-_3HkhaFvdptqbUXn5ZHlfMWj-pFt-9KkHr66j-JPxjROvCelPeI5lwP9IEorA5O-G9q5KkILEalxwY7sHb1zdNckWOrBzUQ462qZ6-hPSpKUbVIIRUT9G5TLh44dOhZpILeC56zkowc"/>
-</div>
-<span class="text-2xl font-bold text-gray-800">playora</span>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="nav-link font-medium" href="#">Home</a>
-<a class="nav-link font-medium" href="#">About</a>
-<a class="nav-link font-medium" href="#">Features</a>
-<a class="nav-link font-medium" href="#">Resources</a>
-<a class="nav-link font-medium" href="#">Community</a>
-<a class="nav-link font-medium" href="#">Leaderboards</a>
-</div>
-<div class="flex items-center space-x-4">
-<a class="hidden md:block nav-link font-medium" href="#">Login</a>
-<a class="bg-emerald-500 text-white px-4 py-2 rounded-full hover:bg-emerald-600 transition-colors" href="#">Register</a>
-<button class="md:hidden">
-<span class="material-icons">menu</span>
-</button>
-</div>
-</div>
-</nav>
-<header class="bg-white">
-<div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
-<div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
-<h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-6">Learn, Play, and Grow a Greener World.</h1>
-<p class="text-lg text-gray-600 mb-8">Join a global community of young eco-warriors making a real impact. Fun quizzes, exciting challenges, and real-world rewards await!</p>
-<div class="flex justify-center md:justify-start space-x-4">
-<a class="bg-emerald-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-emerald-600 transition-colors shadow-lg" href="#">Join Now</a>
-<a class="bg-gray-200 text-gray-800 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-300 transition-colors" href="#">Explore Quizzes</a>
-</div>
-</div>
-<div class="md:w-1/2 flex justify-center">
-<img alt="Eco-themed illustration of a sapling" class="w-3/4 md:w-full max-w-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97LfRNBjAtvQLeM4wSdpGCn9Ji_pmuj_84VHy9WCnQRu1f_28Xn17_mQf2y38GTpUnjqW46oEjkyRfjVrmsLzS1NLX7XvVnEnNr6-NBpD5Ob7y3t4pgXopDneIV1HPlruIuv32V6HuKkMGW2eDg36aAwPAB9F2jdeB2KQkAzNkoZZDjtHmyphXx98ibT6LsX4K708FOfor2YIZt3OEH7x2V64npY6UF6LWvIsLMALUJ7KV-5sofnHwaxr3wn9gdMQKi7dTtWfCbA"/>
-</div>
-</div>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <title>Collaboration</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+  <header class="border-b border-solid border-b-[#e7edf3] px-10 py-3">
+    <div class="flex items-center gap-4 text-[#0d141b]">
+      <div class="size-4">
+        <!-- icon -->
+       <div class="flex items-center gap-4 text-gray-900">
+          <div class="text-green-500">
+            <!-- <img class="w-10" src="gamification.png" alt=""> -->
+          </div>
+          <div class="flex items-center gap-4 text-[#111811]">
+            <div class="size-6">
+              <img src="https://cdn-icons-png.flaticon.com/512/3048/3048600.png" alt="Gamification Icon"
+                class="w-full h-full object-contain" />
+            </div>
+            <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+          </div>
+        </div>
+  </header>
+
+ 
+
+
 </header>
-<main class="container mx-auto px-6 py-12">
-<section class="mb-20 text-center">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-xl shadow-md">
-<h3 class="text-4xl font-bold text-emerald-500 mb-2">🌱 1,245,678</h3>
-<p class="text-gray-600 font-medium">Eco-Points Earned</p>
-</div>
-<div class="bg-white p-8 rounded-xl shadow-md">
-<h3 class="text-4xl font-bold text-emerald-500 mb-2">🌳 12,345</h3>
-<p class="text-gray-600 font-medium">Trees Planted</p>
-</div>
-<div class="bg-white p-8 rounded-xl shadow-md">
-<h3 class="text-4xl font-bold text-emerald-500 mb-2">🏫 450+</h3>
-<p class="text-gray-600 font-medium">Schools Involved</p>
-</div>
-</div>
-</section>
-<section class="mb-20">
-<h2 class="text-3xl font-bold text-center mb-4">Your Learning Journey</h2>
-<p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Follow our visual path to become an Eco-Master. Each step unlocks new knowledge and rewards!</p>
-<div class="relative w-full">
-<div class="absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 border-t-2 border-dashed border-gray-400 -translate-y-1/2"></div>
-<div class="relative flex justify-between items-start">
-<div class="flex flex-col items-center text-center w-1/5">
-<div class="bg-emerald-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl mb-2 z-10 border-4 border-white">
-<span class="material-icons">flag</span>
-</div>
-<h4 class="font-semibold">Start</h4>
-</div>
-<div class="flex flex-col items-center text-center w-1/5 pt-8">
-<div class="bg-white text-gray-500 rounded-full w-16 h-16 flex items-center justify-center text-2xl mb-2 z-10 border-4 border-gray-300">
-<span class="material-icons">quiz</span>
-</div>
-<h4 class="font-semibold">Quiz</h4>
-</div>
-<div class="flex flex-col items-center text-center w-1/5">
-<div class="bg-white text-gray-500 rounded-full w-16 h-16 flex items-center justify-center text-2xl mb-2 z-10 border-4 border-gray-300">
-<span class="material-icons">emoji_events</span>
-</div>
-<h4 class="font-semibold">Badge</h4>
-</div>
-<div class="flex flex-col items-center text-center w-1/5 pt-8">
-<div class="bg-white text-gray-500 rounded-full w-16 h-16 flex items-center justify-center text-2xl mb-2 z-10 border-4 border-gray-300">
-<span class="material-icons">groups</span>
-</div>
-<h4 class="font-semibold">Competition</h4>
-</div>
-<div class="flex flex-col items-center text-center w-1/5">
-<div class="bg-white text-gray-500 rounded-full w-16 h-16 flex items-center justify-center text-2xl mb-2 z-10 border-4 border-gray-300">
-<span class="material-icons">card_giftcard</span>
-</div>
-<h4 class="font-semibold">Reward</h4>
-</div>
-</div>
-</div>
-</section>
-<section class="mb-20">
-<h2 class="text-3xl font-bold text-center mb-12">Featured Quizzes &amp; Games</h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
-<div class="bg-green-100 p-4 rounded-full mb-4">
-<span class="material-icons text-green-500 text-4xl">recycling</span>
-</div>
-<h3 class="font-bold text-xl mb-2">Recycling Master Quiz</h3>
-<p class="text-gray-600 mb-4">Test your recycling knowledge and become a waste-sorting champion.</p>
-<a class="mt-auto bg-emerald-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-600 transition-colors" href="#">Play Now</a>
-</div>
-<div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
-<div class="bg-blue-100 p-4 rounded-full mb-4">
-<span class="material-icons text-blue-500 text-4xl">water_drop</span>
-</div>
-<h3 class="font-bold text-xl mb-2">Water Saver Adventure</h3>
-<p class="text-gray-600 mb-4">A fun game about saving every precious drop in your daily life.</p>
-<a class="mt-auto bg-emerald-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-600 transition-colors" href="#">Play Now</a>
-</div>
-<div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
-<div class="bg-yellow-100 p-4 rounded-full mb-4">
-<span class="material-icons text-yellow-500 text-4xl">bolt</span>
-</div>
-<h3 class="font-bold text-xl mb-2">Energy Saver Challenge</h3>
-<p class="text-gray-600 mb-4">Learn to reduce energy consumption with this electrifying challenge.</p>
-<a class="mt-auto bg-emerald-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-600 transition-colors" href="#">Play Now</a>
-</div>
-</div>
-</section>
-<section class="bg-emerald-50 p-12 rounded-2xl mb-20">
-<div class="flex flex-col md:flex-row items-center gap-8">
-<div class="md:w-1/2 text-center md:text-left">
-<h2 class="text-3xl font-bold text-gray-800 mb-4">Team Up for a Greener Planet</h2>
-<p class="text-gray-600 mb-6">Collaboration is key to making a big impact. Join or create a team to participate in group projects, tackle challenges together, and combine your eco-points for greater rewards.</p>
-<a class="bg-emerald-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center space-x-2" href="#">
-<span class="material-icons">people_alt</span>
-<span>Explore Collaboration</span>
-</a>
-</div>
-<div class="md:w-1/2">
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-white p-4 rounded-lg shadow-sm text-center">
-<span class="material-icons text-emerald-500 text-3xl">add_circle_outline</span>
-<p class="font-semibold mt-1">Start a Project</p>
-</div>
-<div class="bg-white p-4 rounded-lg shadow-sm text-center">
-<span class="material-icons text-blue-500 text-3xl">groups</span>
-<p class="font-semibold mt-1">Join a Team</p>
-</div>
-<div class="bg-white p-4 rounded-lg shadow-sm text-center">
-<span class="material-icons text-yellow-500 text-3xl">military_tech</span>
-<p class="font-semibold mt-1">Team Challenges</p>
-</div>
-<div class="bg-white p-4 rounded-lg shadow-sm text-center">
-<span class="material-icons text-purple-500 text-3xl">handshake</span>
-<p class="font-semibold mt-1">Partner Up</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="grid md:grid-cols-2 gap-12 mb-20">
-<div>
-<h2 class="text-3xl font-bold mb-6">From the Community</h2>
-<div class="space-y-4">
-<div class="bg-white p-4 rounded-lg shadow-sm flex items-start space-x-4">
-<img alt="Student avatar" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz7VxR99WPfdddawjjr79MJL7IcFRniLkviUWml7DoJwtmvSUgHcONvwaGmPY7t4n1C69rKNShh1mAQqhKKy-AgAh-O8zbxnv0UctpL7d_-5MOyWja5IPKFDke_WkhGiSKkgy9tLYV16hBpw-5oDaPBAW7_PzEA0ooY51vqYvmAAuDcn5jIJzm1oEwDcxme7D7HXoA5kjF5VaX6UdJFn9h7iUgPEcr_oR8EFc7MQ8HRh7WLrAHHpwQ0Wkjy__y3oHON9AoJg0u9Vk"/>
-<div>
-<p class="font-semibold">Maria S.</p>
-<p class="text-sm text-gray-600">Started a school garden project! We're growing our own veggies. 🌱 #EcoProject</p>
-</div>
-</div>
-<div class="bg-white p-4 rounded-lg shadow-sm flex items-start space-x-4">
-<img alt="Student avatar" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeB4YJKFvKFxNib15uYFt9RMbKo9GzQKyyB8Or_-DKkjpree9ql76L2nu6ewD2QBP-DZ8wS1rHhcIZ9PRmsLfUvfhSsK1SgGjVgxwCeTn4s6s6SA1XNurD5nGlGY-0-J7ttS9k225nH2czmeCxflpGciH_8CqD3vTGkI-jPOUW02if3sksatXtTeE_Pi522TcLdqZvaobb6TI_XVbnWlP9-LfU17sFyvacPbjKXtwLnsj0TdFiztX0oKDhJRSwi3RS7mSTnc1IlqI"/>
-<div>
-<p class="font-semibold">Eco-Innovators Club</p>
-<p class="text-sm text-gray-600">Discussion: What's the best way to reduce plastic use at school?</p>
-</div>
-</div>
-</div>
-<a class="text-emerald-500 font-semibold mt-4 inline-block hover:underline" href="#">View More →</a>
-</div>
-<div>
-<h2 class="text-3xl font-bold mb-6">Leaderboard Highlights</h2>
-<div class="bg-white p-6 rounded-lg shadow-sm">
-<h4 class="font-bold mb-2">Top Students</h4>
-<ul class="space-y-2 mb-4">
-<li class="flex items-center">🥇 Alex Doe - 15,200 pts</li>
-<li class="flex items-center">🥈 Jane Smith - 14,800 pts</li>
-<li class="flex items-center">🥉 Sam Wilson - 14,550 pts</li>
-</ul>
-<h4 class="font-bold mb-2">Top Schools</h4>
-<ul class="space-y-2">
-<li class="flex items-center">🥇 Greenfield High</li>
-<li class="flex items-center">🥈 Oakwood Academy</li>
-<li class="flex items-center">🥉 Maple Creek School</li>
-</ul>
-</div>
-<a class="text-emerald-500 font-semibold mt-4 inline-block hover:underline" href="#">See Full Leaderboard →</a>
-</div>
-</section>
-<section class="mb-20">
-<h2 class="text-3xl font-bold text-center mb-12">Unlock Awesome Badges</h2>
-<div class="flex justify-center flex-wrap gap-8">
-<div class="relative has-tooltip badge-card p-4 bg-white rounded-lg flex flex-col items-center">
-<div class="bg-yellow-100 rounded-full p-3"><span class="text-4xl">🏅</span></div>
-<p class="font-semibold mt-2">Eco-Warrior</p>
-<div class="tooltip absolute bottom-full mb-2 w-48 bg-gray-800 text-white text-xs text-center rounded-md p-2">Complete 10 eco-challenges.</div>
-</div>
-<div class="relative has-tooltip badge-card p-4 bg-white rounded-lg flex flex-col items-center">
-<div class="bg-green-100 rounded-full p-3"><span class="text-4xl">🌿</span></div>
-<p class="font-semibold mt-2">Recycle Ranger</p>
-<div class="tooltip absolute bottom-full mb-2 w-48 bg-gray-800 text-white text-xs text-center rounded-md p-2">Score 90%+ on the recycling quiz.</div>
-</div>
-<div class="relative has-tooltip badge-card p-4 bg-white rounded-lg flex flex-col items-center">
-<div class="bg-blue-100 rounded-full p-3"><span class="text-4xl">💧</span></div>
-<p class="font-semibold mt-2">Water Guardian</p>
-<div class="tooltip absolute bottom-full mb-2 w-48 bg-gray-800 text-white text-xs text-center rounded-md p-2">Finish the Water Conservation path.</div>
-</div>
-<div class="relative has-tooltip badge-card p-4 bg-white rounded-lg flex flex-col items-center">
-<div class="bg-red-100 rounded-full p-3"><span class="text-4xl">💡</span></div>
-<p class="font-semibold mt-2">Energy Expert</p>
-<div class="tooltip absolute bottom-full mb-2 w-48 bg-gray-800 text-white text-xs text-center rounded-md p-2">Complete all energy-saving games.</div>
-</div>
-</div>
-</section>
-<section class="mb-20">
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-emerald-100 p-8 rounded-xl text-center flex flex-col items-center justify-center">
-<span class="material-icons text-emerald-600 text-5xl mb-4">emoji_events</span>
-<h3 class="text-2xl font-bold mb-2">Join a Challenge</h3>
-<p class="text-emerald-800 mb-4">New weekly challenges to test your skills and make an impact.</p>
-<a class="bg-emerald-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-emerald-600 transition-colors" href="#">Find a Challenge</a>
-</div>
-<div class="bg-blue-100 p-8 rounded-xl text-center flex flex-col items-center justify-center">
-<span class="material-icons text-blue-600 text-5xl mb-4">auto_stories</span>
-<h3 class="text-2xl font-bold mb-2">Explore Resources</h3>
-<p class="text-blue-800 mb-4">Dive deeper with articles, videos, and guides on sustainability.</p>
-<a class="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition-colors" href="#">Browse Library</a>
-</div>
-<div class="bg-purple-100 p-8 rounded-xl text-center flex flex-col items-center justify-center">
-<span class="material-icons text-purple-600 text-5xl mb-4">groups</span>
-<h3 class="text-2xl font-bold mb-2">Connect with Others</h3>
-<p class="text-purple-800 mb-4">Share ideas, join projects, and meet fellow eco-warriors.</p>
-<a class="bg-purple-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-600 transition-colors" href="#">Visit Community</a>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-gray-800 text-white">
-<div class="container mx-auto px-6 py-12">
-<div class="grid md:grid-cols-4 gap-8">
-<div>
-<h4 class="text-lg font-semibold mb-4">About Playora</h4>
-<p class="text-gray-400">Playora is an interactive platform dedicated to educating and empowering the next generation to build a sustainable future through fun and engaging activities.</p>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-<ul class="space-y-2">
-<li><a class="text-gray-400 hover:text-white" href="#">Features</a></li>
-<li><a class="text-gray-400 hover:text-white" href="#">Resources</a></li>
-<li><a class="text-gray-400 hover:text-white" href="#">Community</a></li>
-<li><a class="text-gray-400 hover:text-white" href="#">Leaderboards</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-4">Contact</h4>
-<ul class="space-y-2 text-gray-400">
-<li><a class="hover:text-white" href="mailto:hello@playora.com">hello@playora.com</a></li>
-<li>123 Eco Lane, Green City, 12345</li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-<div class="flex space-x-4">
-<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
-<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
-<a class="text-gray-400 hover:text-white" href="#"><svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.707 8.707a1 1 0 00-1.414-1.414L10 12.586 8.707 11.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg></a>
-</div>
-</div>
-</div>
-<div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-<p>© 2024 Playora. All Rights Reserved.</p>
-</div>
-</div>
-</footer>
-</body></html>
+<main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center mb-4">
+        <a class="flex items-center text-gray-500 hover:text-gray-900" href="studash.html">
+          <span class="material-icons">arrow_back</span>
+          <span class="ml-2 font-medium">Back</span>
+        </a>
+      </div>
+
+       
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#0d141b] tracking-light text-[32px] font-bold leading-tight min-w-72">Collaborate with Us</p>
+            </div>
+            <p class="text-[#0d141b] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              EcoLearn partners with NGOs and government organizations to amplify our impact on environmental education and action. Join us in fostering a greener future for
+              students.
+            </p>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Partnership Benefits</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 flex-col">
+                <div class="text-[#0d141b]" data-icon="UsersThree" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#0d141b] text-base font-bold leading-tight">Access to a Large Student Network</h2>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Connect with thousands of students passionate about environmental issues.</p>
+                </div>
+              </div>
+              <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 flex-col">
+                <div class="text-[#0d141b]" data-icon="Presentation" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#0d141b] text-base font-bold leading-tight">Enhanced Visibility and Impact</h2>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Showcase your organization's work and reach a wider audience.</p>
+                </div>
+              </div>
+              <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 flex-col">
+                <div class="text-[#0d141b]" data-icon="Tree" data-size="24px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M198.1,62.6a76,76,0,0,0-140.2,0A72.27,72.27,0,0,0,16,127.8C15.89,166.62,47.36,199,86.14,200A71.68,71.68,0,0,0,120,192.49V232a8,8,0,0,0,16,0V192.49A71.45,71.45,0,0,0,168,200l1.86,0c38.78-1,70.25-33.36,70.14-72.18A72.26,72.26,0,0,0,198.1,62.6ZM169.45,184a55.61,55.61,0,0,1-32.52-9.4q-.47-.3-.93-.57V132.94l43.58-21.78a8,8,0,1,0-7.16-14.32L136,115.06V88a8,8,0,0,0-16,0v51.06L83.58,120.84a8,8,0,1,0-7.16,14.32L120,156.94V174q-.47.27-.93.57A55.7,55.7,0,0,1,86.55,184a56,56,0,0,1-22-106.86,15.9,15.9,0,0,0,8.05-8.33,60,60,0,0,1,110.7,0,15.9,15.9,0,0,0,8.05,8.33,56,56,0,0,1-22,106.86Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h2 class="text-[#0d141b] text-base font-bold leading-tight">Support Environmental Initiatives</h2>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Collaborate on projects that make a real difference in environmental conservation.</p>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Partners</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC22-hNWhpSUET-49VsaWUMAKUroTlpyycjd5AWcD6UCqAwxMS3L4LV3Juv98dcTyYPm9tAeB6jXOa4gXUJ2dxe1JNj1EqcYHpI6pUwUgk7hi3RqsmIgBUdI7z4_zJG_bbPG8gpfkeMKQ0C83Q5TKcXYo-mxU1aVSj6IL9HzBquaKchMCO52nryG9yN4ht9Opp_AjWyOVN6K9VhXtUhcnaO8ZqOVy9Jq_9TMjl9L9aXqT6fOIq9mUx6Dq7SAWskn8-bGCR85IPfBTU");'
+                ></div>
+                <div>
+                  <p class="text-[#0d141b] text-base font-medium leading-normal">Green Earth Initiative</p>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Focuses on reforestation and biodiversity projects.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADsytHIQAv_eYNlcaF_3gEkSc7B_bRqa-VjhnouLtVfOW7YP20B3z3alrHGfRCLYqomXjq94ZIpgHIAJUmCzwQ-amFOXDgYLM71lpsM5TOHtRlwPn3GDLk6hhVEsEA5_-uta_PAz_pHrwvIpfJjuR6MJCylF6MHlUGW240tqbepJMily3EbJMSNwz45uT6XpxKDsu7SYnXibpwfhSZAaTDZOjbSOMECRleofNOow19MTcE5h4tN8qX3qAwrDF-gjr4HK8W_0MObfY");'
+                ></div>
+                <div>
+                  <p class="text-[#0d141b] text-base font-medium leading-normal">Sustainable Futures Foundation</p>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Promotes sustainable practices in schools and communities.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyNMi7WW1hk_3e4-FVfJQ5lOVeLpiVGFbEJYQ9Dz6hduzjDxQ6a9xzjfkxS1eAA88cQBbjLyAAehwDU8IeHpC-3vDXa7FCdd-N0i44VSfNt6SW5P8Jj9InY9h0W4dGuoScy7akcsQO-5K4t99fOnzAI5HSzVVdZiI6Z1zf8lgVyaQSM2Mtvz4DblRATbCHwQG7f7WELa6wgZaX-4CyYbP2C7rEBkzSWrbdb2_mx1RGHx-RwD46rlRQZG6JJWv-OaNWm51CKjyVdeQ");'
+                ></div>
+                <div>
+                  <p class="text-[#0d141b] text-base font-medium leading-normal">EcoAction Alliance</p>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Engages youth in environmental advocacy and campaigns.</p>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Success Stories</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Partnership with Green Earth Initiative</p>
+                  <p class="text-[#0d141b] text-base font-bold leading-tight">Reforestation Challenge</p>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">
+                    Students participated in a tree-planting challenge, contributing to the reforestation of 100 acres of land. This initiative not only helped restore natural
+                    habitats but also educated students about the importance of biodiversity.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkWTsXiKWiBjKCKzcH1TnJ2QIsyCM5J3eUThc0aqJmGmq21S6GtRyCCANZLLzwxW90ByfUukXIDyHdqGDtspL0C3L2WW7bFzqwtfso-27dFB0WGu18TJixYd0Zb8ycWKLnGLcvp7wrH0-TLSSQAYl-jthFUFAWkaNlitCpokiGojM92qjcPEVZgk5XpQ2SOZ-_1kSowi_fQDOOXtUhi0TduyeXkWM7Lrr-1A-WIBQ_PampcC5DoJnLPI2jhWawyW948vTO-t6MSqk");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">Collaboration with Sustainable Futures Foundation</p>
+                  <p class="text-[#0d141b] text-base font-bold leading-tight">Eco-Friendly School Project</p>
+                  <p class="text-[#4c739a] text-sm font-normal leading-normal">
+                    Students implemented sustainable practices in their schools, such as reducing waste, conserving water, and promoting renewable energy. This project led to a 20%
+                    reduction in the schools' carbon footprint and fostered a culture of sustainability.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLYgYIcUo2BEjR5AtGtPNri2p8C7tmabjn52v6RGELKOq-s6Bnp9n9gjAZ1i2uxNe2uBqPkEbBn9tfh7Gv4sQw3RHjrjfbc7e_IeB1cORz1ZFV1tvwzomC4Frroq-va5AoEuM-FKJYQ0SUYTId2jQRmOu72yWDhWld4So3E76erK-HGG5ldjGEwG9t42SiSWJMixu10tdcxGopLMMWqidt4ywTqRueazrgy2NdDdthVvPdsWs-venRrp6Xj5zWHoCeQuAZgkr3JMo");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Become a Partner</h2>
+            <p class="text-[#0d141b] text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Interested in collaborating with EcoLearn? We'd love to hear from you. Please fill out the form below, and our team will get in touch.
+            </p>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141b] text-base font-medium leading-normal pb-2">Organization Name</p>
+                <input
+                  placeholder="Enter your organization's name"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141b] focus:outline-0 focus:ring-0 border-none bg-[#e7edf3] focus:border-none h-14 placeholder:text-[#4c739a] p-4 text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141b] text-base font-medium leading-normal pb-2">Contact Person</p>
+                <input
+                  placeholder="Enter your name"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141b] focus:outline-0 focus:ring-0 border-none bg-[#e7edf3] focus:border-none h-14 placeholder:text-[#4c739a] p-4 text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141b] text-base font-medium leading-normal pb-2">Email</p>
+                <input
+                  placeholder="Enter your email"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141b] focus:outline-0 focus:ring-0 border-none bg-[#e7edf3] focus:border-none h-14 placeholder:text-[#4c739a] p-4 text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d141b] text-base font-medium leading-normal pb-2">Collaboration Proposal</p>
+                <textarea
+                  placeholder="Briefly describe your organization's mission and how we can collaborate"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141b] focus:outline-0 focus:ring-0 border-none bg-[#e7edf3] focus:border-none min-h-36 placeholder:text-[#4c739a] p-4 text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1380ec] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Submit</span>
+              </button>
+            </div>
+            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Frequently Asked Questions</h2>
+            <div class="flex flex-col p-4 gap-3">
+              <details class="flex flex-col rounded-xl border border-[#cfdbe7] bg-slate-50 px-[15px] py-[7px] group" open="">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#0d141b] text-sm font-medium leading-normal">What types of organizations can partner with EcoLearn?</p>
+                  <div class="text-[#0d141b] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#4c739a] text-sm font-normal leading-normal pb-2">
+                  We welcome partnerships with NGOs, government organizations, and other entities that share our commitment to environmental education and sustainability.
+                </p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#cfdbe7] bg-slate-50 px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#0d141b] text-sm font-medium leading-normal">How does the collaboration process work?</p>
+                  <div class="text-[#0d141b] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#4c739a] text-sm font-normal leading-normal pb-2">
+                  We welcome partnerships with NGOs, government organizations, and other entities that share our commitment to environmental education and sustainability.
+                </p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#cfdbe7] bg-slate-50 px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#0d141b] text-sm font-medium leading-normal">What resources does EcoLearn provide to its partners?</p>
+                  <div class="text-[#0d141b] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#4c739a] text-sm font-normal leading-normal pb-2">
+                  We welcome partnerships with NGOs, government organizations, and other entities that share our commitment to environmental education and sustainability.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#4c739a] text-base font-normal leading-normal min-w-40" href="#">About Us</a>
+                <a class="text-[#4c739a] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
+                <a class="text-[#4c739a] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+                <a class="text-[#4c739a] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+              </div>
+              <p class="text-[#4c739a] text-base font-normal leading-normal">@2024 EcoLearn. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </main>
+    </div>
+  </body>
+</html>
