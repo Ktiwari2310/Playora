@@ -1,22 +1,45 @@
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8" />
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-   <link as="style"
+  <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+  <link as="style"
     href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
     onload="this.rel='stylesheet'" rel="stylesheet" />
-  
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <title>Leaderboard</title>
+  <title>Compete</title>
   <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <style type="text/tailwindcss">
-   :root {
+    /* :root {
+        --primary-color: #20DF6C;
+      }
+      .bg-primary {
+        background-color: var(--primary-color);
+      }
+      .text-primary {
+        color: var(--primary-color);
+      }
+      .border-primary {
+        border-color: var(--primary-color);
+      }
+      .tab-content {
+      display: none;
+    } */
+
+    :root {
         --primary-50: #f0fdf6;
         --primary-100: #dcfce9;
         --primary-200: #bbf7d4;
@@ -29,13 +52,25 @@
         --primary-900: #14532d;
         --primary-950: #052e16;
       }
-</style>
+
+    /* Show content when radio is checked */
+    #tab-discussions:checked ~ .mt-6 #content-discussions,
+    #tab-news:checked ~ .mt-6 #content-news,
+    #tab-projects:checked ~ .mt-6 #content-projects {
+      display: block;
+    }
+    </style>
 </head>
- <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+
+<body class="bg-gray-50">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
         </a>
         <div class="flex items-center gap-4 text-gray-900">
           <div class="text-green-500">
-            <!-- <img class="w-10" src="gamification.png" alt=""> -->
+            <img class="w-10" src="gamification.png" alt="">
           </div>
           <div class="flex items-center gap-4 text-[#111811]">
             <div class="size-6">
@@ -45,12 +80,11 @@
             <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
           </div>
         </div>
-        
         <div class="flex items-center gap-8 text-gray-700 font-medium">
-          <a class="text-gray-900 font-semibold" href="">Dashboard</a>
-          <a class="hover:text-gray-900 transition-colors" href="compete.html">Compete</a>
-          <a class="hover:text-gray-900 transition-colors" href="htmlFiles/../../Common/communityHub.html">Community Hub</a>
-          <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/studash.html">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/compete.html">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Common/communityHub.html">Community Hub</a>
+          <a class="text-gray-900 font-semibold" href="">Leaderboard</a>
         </div>
 
         <div class="flex items-center space-x-4 relative">
@@ -97,8 +131,7 @@
             </div>
           </div>
         </div>
-    
-       </header> 
+      </header>
 
       <main class="flex-1 px-40 py-10">
         <div class="layout-content-container mx-auto flex max-w-4xl flex-col">

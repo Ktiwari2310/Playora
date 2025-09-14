@@ -1,26 +1,43 @@
 
+
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-   <link
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link
       as="style"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
       onload="this.rel='stylesheet'"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/png">
-    <title>Notifications</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
-      
-    </script>
-     <style type="text/tailwindcss">
-    
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Compete</title>
+  <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    /* :root {
+        --primary-color: #20DF6C;
+      }
+      .bg-primary {
+        background-color: var(--primary-color);
+      }
+      .text-primary {
+        color: var(--primary-color);
+      }
+      .border-primary {
+        border-color: var(--primary-color);
+      }
+      .tab-content {
+      display: none;
+    } */
 
     :root {
         --primary-50: #f0fdf6;
@@ -43,32 +60,31 @@
       display: block;
     }
     </style>
-  </head>
-  <body>
-    <header>    
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Spilne Sans",Lexend, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f4f0] px-10 py-3">
-   <div class="flex items-center gap-4 text-gray-900">
-          
-  
-<div class="flex items-center gap-4 text-[#111811]">
-  <!-- Replace SVG with Flaticon image -->
-  <div class="size-6">
-    <img 
-      src="../../Images/gamification (2).png" 
-      alt="Gamification Icon" 
-      class="w-full h-full object-contain"
-    />
-  </div>
-  <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
-</div>
+</head>
+
+<body class="bg-gray-50">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+        </a>
+        <div class="flex items-center gap-4 text-gray-900">
+          <div class="text-green-500">
+            <img class="w-10" src="gamification.png" alt="">
+          </div>
+          <div class="flex items-center gap-4 text-[#111811]">
+            <div class="size-6">
+              <img src="../../Images/gamification (2).png" alt="Gamification Icon"
+                class="w-full h-full object-contain" />
+            </div>
+            <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+          </div>
         </div>
         <div class="flex items-center gap-8 text-gray-700 font-medium">
-          <a class="hover:text-gray-900 transition-colors" href="studash.html">Dashboard</a>
-          <a class="text-gray-900 font-semibold" href="compete.html">Compete</a>
-          <a class="hover:text-gray-900 transition-colors" href="htmlFiles/../../Common/communityHub.html">Community Hub</a>
-          <a class="hover:text-gray-900 transition-colors " href="leaderboard.html">Leaderboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/studash.html">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/compete.html">Compete</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Common/communityHub.html">Community Hub</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/leaderboard.html">Leaderboard</a>
         </div>
 
         <div class="flex items-center space-x-4 relative">
@@ -87,20 +103,23 @@
 
             <!-- dropdown menu -->
             <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="./MyCourses/learn.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="../Student/MyCourses/climateChange.html">
                 <span class="material-symbols-outlined text-base">school</span>
                 My Courses
               </a>
               <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="MyAchievements.html">
+                href="../Student/MyAchievements.html">
                 <span class="material-symbols-outlined text-base">emoji_events</span>
                 My Achievements
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="htmFiles/../../Common/helpSupport.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="htmFiles/../../Common/helpSupport.html">
                 <span class="material-symbols-outlined text-base">help</span>
                 Help & Support
               </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="settings.html">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
+                href="settings.html">
                 <span class="material-symbols-outlined text-base">settings</span>
                 Settings
               </a>
@@ -111,7 +130,8 @@
               </a>
             </div>
           </div>
-</header>
+        </div>
+      </header>
 
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
