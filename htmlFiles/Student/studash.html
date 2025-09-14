@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-  <link
-      as="style"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
-      onload="this.rel='stylesheet'"
-      rel="stylesheet"
-    />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <title>Compete</title>
+  <title>Dashboard</title>
   <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
@@ -61,13 +61,15 @@
   <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
     style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
     <div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+        </a>
         <div class="flex items-center gap-4 text-gray-900">
           <div class="text-green-500">
             <img class="w-10" src="gamification.png" alt="">
           </div>
           <div class="flex items-center gap-4 text-[#111811]">
-            <div class="size-6">
+            <div class="size-8">
               <img src="../../Images/gamification (2).png" alt="Gamification Icon"
                 class="w-full h-full object-contain" />
             </div>
@@ -75,10 +77,11 @@
           </div>
         </div>
         <div class="flex items-center gap-8 text-gray-700 font-medium">
-          <a class="text-gray-900 font-semibold" href="">Dashboard</a>
-          <a class="" href="../Student/compete.html">Compete</a>
+          <a class="text-gray-900 font-semibold " href="../Student/studash.html">Dashboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/play.html">Play</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/compete.html">Compete</a>
           <a class="hover:text-gray-900 transition-colors" href="../Common/communityHub.html">Community Hub</a>
-          <a class="hover:text-gray-900 transition-colors " href="../Student/leaderboard.html">Leaderboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/leaderboard.html">Leaderboard</a>
         </div>
 
         <div class="flex items-center space-x-4 relative">
@@ -126,175 +129,185 @@
           </div>
         </div>
       </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <h1 class="text-[#0d141b] tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">Welcome back, Clara!</h1>
-            <p class="text-[#0d141b] text-base font-normal leading-normal pb-3 pt-1 px-4">Explore new challenges and continue your eco-journey.</p>
-            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">My Progress</h2>
-            <div class="flex flex-col gap-3 p-4">
-              <div class="flex gap-6 justify-between"><p class="text-[#0d141b] text-base font-medium leading-normal">Learning Path</p></div>
-              <div class="rounded bg-[#cfdbe7]"><div class="h-2 rounded bg-[#1380ec]" style="width: 60%;"></div></div>
-              <p class="text-[#4c739a] text-sm font-normal leading-normal">60% Complete</p>
+      <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <h1 class="text-[#0d141b] tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">Welcome
+            back, Clara!</h1>
+          <p class="text-[#0d141b] text-base font-normal leading-normal pb-3 pt-1 px-4">Explore new challenges and
+            continue your eco-journey.</p>
+          <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">My Progress
+          </h2>
+          <div class="flex flex-col gap-3 p-4">
+            <div class="flex gap-6 justify-between">
+              <p class="text-[#0d141b] text-base font-medium leading-normal">Learning Path</p>
             </div>
-            <div class="flex flex-wrap gap-4 p-4">
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfdbe7]">
-                <p class="text-[#0d141b] text-base font-medium leading-normal">Challenges Completed</p>
-                <p class="text-[#0d141b] tracking-light text-2xl font-bold leading-tight">5</p>
-              </div>
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfdbe7]">
-                <p class="text-[#0d141b] text-base font-medium leading-normal">Points Earned</p>
-                <p class="text-[#0d141b] tracking-light text-2xl font-bold leading-tight">250</p>
-              </div>
+            <div class="rounded bg-[#cfdbe7]">
+              <div class="h-2 rounded bg-[#1380ec]" style="width: 60%;"></div>
             </div>
-            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Latest Challenges</h2>
-            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-              <div class="flex items-stretch p-4 gap-3">
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBc7n97fiwk2DllTStEg6L9ssla4SCUvVck1PEUlBBkSnbBL4f2M0ofr47qUfyzrG_ypXC7wB9P1qFtbZCkBSSUUePwlOUASaZ5XcH3mvcAxZuuw_iD7D5BYuRAoU6VZZgUaPHiDs16JIYrtrfXqaXtftePd_DwNzPqNwB0MRo0img3UuGt5haSfIb0BZh_cE4_ZsDOjwyk87NYDoFGBpjXchKwPKljCBI_cW49ottmrY6pL2qWFc1wT8FlGbScrA8EYqPp-wtcTIE");'
-                  ></div>
-                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p class="text-[#0d141b] text-base font-medium leading-normal">Recycling Basics</p>
-                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Learn how to recycle effectively.</p>
-                    </div>
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
-                    >
-                      <span class="truncate">Explore </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0bGJJQt34u9DLt7f0dozeTF98-YSS1O2sj1ll2aqlm5kRek1X1wEj6xqMPw51HQlA3_OJhyMUnCfpoHfzkCGDLAwxEQlWs2vP3UiTII3z7hDzfAJuKrs0J6qdXNTf5Hz7YicbOM2s4u1IOQbsP51U3FtbmmXg5vwxlSUKsze0nllumTmhSwJ58SPwD1DTG2hwmAx4d2HM19WrW0cqNYVseVSwla5KfqahL7Z-syRwZK09xro721CDxan30gxspF9IUxjdv7lZAms");'
-                  ></div>
-                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p class="text-[#0d141b] text-base font-medium leading-normal">Water Conservation</p>
-                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Discover ways to save water.</p>
-                    </div>
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
-                    >
-                      <span class="truncate">Explore </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd7WrFr9soPW4WPrcYRiOM4xMnonQXilzH8fIL659TZ2gBS2H84rNY2bOupLxuS6MsNSzJKN-UeTzIWriGbM3b2vlH28qYimH4uUwSkUYN01-RQQTrtJMbDOi1ruXzG_43_gOv8hiZFBrrXV_nkKTWM2dKfPFkUhaREX0twk3JNaklK5Oo3nrJOZHoEJlCjZYPrCuu9EaskBao1p6GnEadTp3lOLhN3m__2Yx9kNptiuiVdh1UE3GUbKZTH8mAVlAa-ebVMrSTY6Q");'
-                  ></div>
-                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p class="text-[#0d141b] text-base font-medium leading-normal">Renewable Energy</p>
-                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Explore the world of renewable energy.</p>
-                    </div>
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
-                    >
-                      <span class="truncate">Explore </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <p class="text-[#4c739a] text-sm font-normal leading-normal">60% Complete</p>
+          </div>
+          <div class="flex flex-wrap gap-4 p-4">
+            <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfdbe7]">
+              <p class="text-[#0d141b] text-base font-medium leading-normal">Challenges Completed</p>
+              <p class="text-[#0d141b] tracking-light text-2xl font-bold leading-tight">5</p>
             </div>
-            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Educational Resources</h2>
-            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-              <div class="flex items-stretch p-4 gap-3">
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-n9Jhjh2lbpUqedbS9oS2O5S1IVkbhKXVk_o57c1idLkGN9UHaktnNkUx1ypGABxXxTATlvgKnEgO3nFSH4YVxcI_AAvHeDdh-c6SGczvUP22UUhXKHS-MTtYGKxSjH5dM8JBOOiujggPgMAq2ie49c_6xcHLpOI0RykcIeAjl0Imw6zEHwEPP_VDwFCm6Z5sSiwwgo1V4Av0rwt84OlBbThLVXz1BGL7mf_3hZElZwzLJuGgUworQDCfcE9hhPTmGYb3q81WMEU");'
-                  ></div>
-                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p class="text-[#0d141b] text-base font-medium leading-normal">Environmental Science</p>
-                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Understand the basics of environmental science.</p>
-                    </div>
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
-                    >
-                      <span class="truncate">View </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOvOO24Mxc1SBgvP-n9uDHU_ZYMU7vxZ1Zi14BFXc2d4ylGjymcFvUGrbPoyYxE_h0WZySE7SInQQrvh7rl2nDFvkDZIuWuBxqfVJccgZzwUb4PNHN0HFouJkGsFi7lnUOdx1f7cjimoS_tGIogMOTWjiSWvBF9loH7xAap3Q688DXdWuKxM024XzA6BwYP7G74HORhHCukefOaA9mGgVJDPLIqxuxY5l8EC6I9WhYtyV2IoAmJUefIVRNeX-WZBF2RYsJfNpHJD4");'
-                  ></div>
-                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p class="text-[#0d141b] text-base font-medium leading-normal">Sustainable Agriculture</p>
-                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Learn about sustainable farming practices.</p>
-                    </div>
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
-                    >
-                      <span class="truncate">View </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfAb0q1qkRMkxjv87fOof6jrIxoIXK5rASQI9Haba6UgWeMpK23EP74SvqmIDIzEEl2uStlDwVEUVtGy-xL5oJVc-K21s9qVVCeP7WwqmU6vNvTKD_jS-0z7a27TbfcfkQ5TU7lihAWZPVB9QjC3y52wejngkuV5DxV7Tb34sVduZBW4bfyStpX6-SNkQ49UpuI4aaq2mpZaz0F3YF799sekIWWS6RgU34G7YJKyfdb36XpLPHQjZDFr_zBLp9tpUwxmZBjXcaJuE");'
-                  ></div>
-                  <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
-                    <div>
-                      <p class="text-[#0d141b] text-base font-medium leading-normal">Climate Change</p>
-                      <p class="text-[#4c739a] text-sm font-normal leading-normal">Explore the causes and effects of climate change.</p>
-                    </div>
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
-                    >
-                      <span class="truncate">View </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfdbe7]">
+              <p class="text-[#0d141b] text-base font-medium leading-normal">Points Earned</p>
+              <p class="text-[#0d141b] tracking-light text-2xl font-bold leading-tight">250</p>
             </div>
-            <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Community Discussions</h2>
-            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+          </div>
+          <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Latest
+            Challenges</h2>
+          <div
+            class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+            <div class="flex items-stretch p-4 gap-3">
               <div
-                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIn7NNmsCqvdrgG5OQ6zn6TQUUeDpe8ETgc23195Tu3vqbWjYDy89sfh4yzS9sPOM0k3-3zvEevfXMy32q498GcLs9FyO5Rp-lVfxAAhZWqz_Y1asUWoo_Z13DXreyG9nZizGkkUe69Z3w2JWkbUbfGhzhf6AeYAntjgWRGFkmmN5J5fFleUlUaA4owMyIyTUtRGqqvMA9JJoa026hDSeTpVyu1F_mJGq04FD0ZOznbdlIQjD7aWfWUCmUjMW6xbdDX6S-qpY_3pM");'
-              ></div>
-              <div class="flex h-full flex-1 flex-col items-start justify-start">
-                <div class="flex w-full flex-row items-start justify-start gap-x-3">
-                  <p class="text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">Olivia</p>
-                  <p class="text-[#4c739a] text-sm font-normal leading-normal">2h ago</p>
+                class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBc7n97fiwk2DllTStEg6L9ssla4SCUvVck1PEUlBBkSnbBL4f2M0ofr47qUfyzrG_ypXC7wB9P1qFtbZCkBSSUUePwlOUASaZ5XcH3mvcAxZuuw_iD7D5BYuRAoU6VZZgUaPHiDs16JIYrtrfXqaXtftePd_DwNzPqNwB0MRo0img3UuGt5haSfIb0BZh_cE4_ZsDOjwyk87NYDoFGBpjXchKwPKljCBI_cW49ottmrY6pL2qWFc1wT8FlGbScrA8EYqPp-wtcTIE");'>
                 </div>
-                <p class="text-[#0d141b] text-sm font-normal leading-normal">Just completed the 'Sustainable Shopping' challenge! It was eye-opening.</p>
+                <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                  <div>
+                    <p class="text-[#0d141b] text-base font-medium leading-normal">Recycling Basics</p>
+                    <p class="text-[#4c739a] text-sm font-normal leading-normal">Learn how to recycle effectively.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Explore </span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
               <div
-                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPSD-rOwYIR5fdGnkL9wxybhpPd-6FFo0cEvafwbneRAQp-xhfochr8IgS8OpL_OUrJd5ubqHoo_p2pMis_xWH_9uJ5DqFSEZP3xofqM2f-FXy5Cih-KsOMAWPOA5gcf5in_0dPys471sGqAk2r25Ke-9akHFtKaHjcOTPta8BBEJ-eEdyr90jFDgWWsxbdOEDw7k96IDO0CNHhtAVlrlSUoJvYbcugZbSvtfeuo1YNhpFyfoxdnOzXbWEUj5r_1HNyzRM4EXPq9Y");'
-              ></div>
-              <div class="flex h-full flex-1 flex-col items-start justify-start">
-                <div class="flex w-full flex-row items-start justify-start gap-x-3">
-                  <p class="text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">Ethan</p>
-                  <p class="text-[#4c739a] text-sm font-normal leading-normal">4h ago</p>
+                class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0bGJJQt34u9DLt7f0dozeTF98-YSS1O2sj1ll2aqlm5kRek1X1wEj6xqMPw51HQlA3_OJhyMUnCfpoHfzkCGDLAwxEQlWs2vP3UiTII3z7hDzfAJuKrs0J6qdXNTf5Hz7YicbOM2s4u1IOQbsP51U3FtbmmXg5vwxlSUKsze0nllumTmhSwJ58SPwD1DTG2hwmAx4d2HM19WrW0cqNYVseVSwla5KfqahL7Z-syRwZK09xro721CDxan30gxspF9IUxjdv7lZAms");'>
                 </div>
-                <p class="text-[#0d141b] text-sm font-normal leading-normal">Anyone else struggling with the 'Energy Efficiency' quiz? Need some tips!</p>
+                <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                  <div>
+                    <p class="text-[#0d141b] text-base font-medium leading-normal">Water Conservation</p>
+                    <p class="text-[#4c739a] text-sm font-normal leading-normal">Discover ways to save water.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Explore </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd7WrFr9soPW4WPrcYRiOM4xMnonQXilzH8fIL659TZ2gBS2H84rNY2bOupLxuS6MsNSzJKN-UeTzIWriGbM3b2vlH28qYimH4uUwSkUYN01-RQQTrtJMbDOi1ruXzG_43_gOv8hiZFBrrXV_nkKTWM2dKfPFkUhaREX0twk3JNaklK5Oo3nrJOZHoEJlCjZYPrCuu9EaskBao1p6GnEadTp3lOLhN3m__2Yx9kNptiuiVdh1UE3GUbKZTH8mAVlAa-ebVMrSTY6Q");'>
+                </div>
+                <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                  <div>
+                    <p class="text-[#0d141b] text-base font-medium leading-normal">Renewable Energy</p>
+                    <p class="text-[#4c739a] text-sm font-normal leading-normal">Explore the world of renewable energy.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Explore </span>
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="flex px-4 py-3 justify-end">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">View More</span>
-              </button>
+          </div>
+          <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Educational
+            Resources</h2>
+          <div
+            class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+            <div class="flex items-stretch p-4 gap-3">
+              <div
+                class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-n9Jhjh2lbpUqedbS9oS2O5S1IVkbhKXVk_o57c1idLkGN9UHaktnNkUx1ypGABxXxTATlvgKnEgO3nFSH4YVxcI_AAvHeDdh-c6SGczvUP22UUhXKHS-MTtYGKxSjH5dM8JBOOiujggPgMAq2ie49c_6xcHLpOI0RykcIeAjl0Imw6zEHwEPP_VDwFCm6Z5sSiwwgo1V4Av0rwt84OlBbThLVXz1BGL7mf_3hZElZwzLJuGgUworQDCfcE9hhPTmGYb3q81WMEU");'>
+                </div>
+                <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                  <div>
+                    <p class="text-[#0d141b] text-base font-medium leading-normal">Environmental Science</p>
+                    <p class="text-[#4c739a] text-sm font-normal leading-normal">Understand the basics of environmental
+                      science.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">View </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOvOO24Mxc1SBgvP-n9uDHU_ZYMU7vxZ1Zi14BFXc2d4ylGjymcFvUGrbPoyYxE_h0WZySE7SInQQrvh7rl2nDFvkDZIuWuBxqfVJccgZzwUb4PNHN0HFouJkGsFi7lnUOdx1f7cjimoS_tGIogMOTWjiSWvBF9loH7xAap3Q688DXdWuKxM024XzA6BwYP7G74HORhHCukefOaA9mGgVJDPLIqxuxY5l8EC6I9WhYtyV2IoAmJUefIVRNeX-WZBF2RYsJfNpHJD4");'>
+                </div>
+                <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                  <div>
+                    <p class="text-[#0d141b] text-base font-medium leading-normal">Sustainable Agriculture</p>
+                    <p class="text-[#4c739a] text-sm font-normal leading-normal">Learn about sustainable farming
+                      practices.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">View </span>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-slate-50 shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-40">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl flex flex-col"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfAb0q1qkRMkxjv87fOof6jrIxoIXK5rASQI9Haba6UgWeMpK23EP74SvqmIDIzEEl2uStlDwVEUVtGy-xL5oJVc-K21s9qVVCeP7WwqmU6vNvTKD_jS-0z7a27TbfcfkQ5TU7lihAWZPVB9QjC3y52wejngkuV5DxV7Tb34sVduZBW4bfyStpX6-SNkQ49UpuI4aaq2mpZaz0F3YF799sekIWWS6RgU34G7YJKyfdb36XpLPHQjZDFr_zBLp9tpUwxmZBjXcaJuE");'>
+                </div>
+                <div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+                  <div>
+                    <p class="text-[#0d141b] text-base font-medium leading-normal">Climate Change</p>
+                    <p class="text-[#4c739a] text-sm font-normal leading-normal">Explore the causes and effects of
+                      climate change.</p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">View </span>
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+          <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Community
+            Discussions</h2>
+          <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIn7NNmsCqvdrgG5OQ6zn6TQUUeDpe8ETgc23195Tu3vqbWjYDy89sfh4yzS9sPOM0k3-3zvEevfXMy32q498GcLs9FyO5Rp-lVfxAAhZWqz_Y1asUWoo_Z13DXreyG9nZizGkkUe69Z3w2JWkbUbfGhzhf6AeYAntjgWRGFkmmN5J5fFleUlUaA4owMyIyTUtRGqqvMA9JJoa026hDSeTpVyu1F_mJGq04FD0ZOznbdlIQjD7aWfWUCmUjMW6xbdDX6S-qpY_3pM");'>
+            </div>
+            <div class="flex h-full flex-1 flex-col items-start justify-start">
+              <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                <p class="text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">Olivia</p>
+                <p class="text-[#4c739a] text-sm font-normal leading-normal">2h ago</p>
+              </div>
+              <p class="text-[#0d141b] text-sm font-normal leading-normal">Just completed the 'Sustainable Shopping'
+                challenge! It was eye-opening.</p>
+            </div>
+          </div>
+          <div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPSD-rOwYIR5fdGnkL9wxybhpPd-6FFo0cEvafwbneRAQp-xhfochr8IgS8OpL_OUrJd5ubqHoo_p2pMis_xWH_9uJ5DqFSEZP3xofqM2f-FXy5Cih-KsOMAWPOA5gcf5in_0dPys471sGqAk2r25Ke-9akHFtKaHjcOTPta8BBEJ-eEdyr90jFDgWWsxbdOEDw7k96IDO0CNHhtAVlrlSUoJvYbcugZbSvtfeuo1YNhpFyfoxdnOzXbWEUj5r_1HNyzRM4EXPq9Y");'>
+            </div>
+            <div class="flex h-full flex-1 flex-col items-start justify-start">
+              <div class="flex w-full flex-row items-start justify-start gap-x-3">
+                <p class="text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">Ethan</p>
+                <p class="text-[#4c739a] text-sm font-normal leading-normal">4h ago</p>
+              </div>
+              <p class="text-[#0d141b] text-sm font-normal leading-normal">Anyone else struggling with the 'Energy
+                Efficiency' quiz? Need some tips!</p>
+            </div>
+          </div>
+          <div class="flex px-4 py-3 justify-end">
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#e7edf3] text-[#0d141b] text-sm font-bold leading-normal tracking-[0.015em]">
+              <span class="truncate">View More</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
