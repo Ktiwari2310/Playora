@@ -139,86 +139,208 @@
             <p class="mt-2 text-lg text-gray-600">Join challenges and competitions to earn rewards and climb the
               leaderboard.</p>
           </div>
+
           <div class="border-b border-gray-200">
             <nav aria-label="Tabs" class="-mb-px flex space-x-8">
-              <a class="border-green-500 text-green-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
-                href="#"> Individual Challenges </a>
-              <a class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
-                href="#"> School vs. School </a>
-              <a class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
-                href="#"> Team Challenges </a>
+              <label for="tab-individual"
+                class="cursor-pointer border-green-500 text-green-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                id="label-individual">Individual Challenges</label>
+              <label for="tab-school"
+                class="cursor-pointer border-transparent text-gray-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                id="label-school">School vs. School</label>
+              <label for="tab-team"
+                class="cursor-pointer border-transparent text-gray-500 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                id="label-team">Team Challenges</label>
             </nav>
           </div>
+
           <div class="mt-8">
-            <h2 class="text-2xl font-bold text-gray-900 tracking-tight">Current Challenges</h2>
-            <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div
-                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                <div class="h-48 w-full bg-cover bg-center"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB232sg3OmNkK6dnfwTblwg8nnLu-84Re9CdasYvSq2OVn3ObKpb50t-aQ7RxgdIA5aRz6BkL6wbaTNxUomVWfMI7NZUCqWLh9uKEHKBFvUGNXSXJiLFjrlXj00zUIWvUtGJcIgbRRyk1nomXuhqS8xNzCv4Xmv7HDUH_2ez3_26H76tIEYd-Nhop2Sss4gn0iO2l_-w43G9PHM3SkUMRVi7RALQzRPKYmI-nSs9tjznv2mJE0ErFpQx12mynGEezTzQfqTHQ2mjFqo");'>
+            <input type="radio" name="tabs" id="tab-individual" class="hidden" checked>
+            <input type="radio" name="tabs" id="tab-school" class="hidden">
+            <input type="radio" name="tabs" id="tab-team" class="hidden">
+
+            <!-- Individual Challenges (Same as Before) -->
+            <div id="content-individual" class="block">
+              <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div
+                  class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                  <div class="h-48 w-full bg-cover bg-center"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB232sg3OmNkK6dnfwTblwg8nnLu-84Re9CdasYvSq2OVn3ObKpb50t-aQ7RxgdIA5aRz6BkL6wbaTNxUomVWfMI7NZUCqWLh9uKEHKBFvUGNXSXJiLFjrlXj00zUIWvUtGJcIgbRRyk1nomXuhqS8xNzCv4Xmv7HDUH_2ez3_26H76tIEYd-Nhop2Sss4gn0iO2l_-w43G9PHM3SkUMRVi7RALQzRPKYmI-nSs9tjznv2mJE0ErFpQx12mynGEezTzQfqTHQ2mjFqo");'>
+                  </div>
+                  <div class="p-6">
+                    <p class="text-sm font-medium text-green-600">Ends in 7 days</p>
+                    <h3 class="mt-2 text-lg font-bold text-gray-900">Eco-Warrior Quiz Challenge</h3>
+                    <p class="mt-2 text-sm text-gray-600">Test your knowledge on environmental issues and compete for
+                      the top spot.</p>
+                    <a class="mt-4 inline-block rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600"
+                      href="#">View Challenge</a>
+                  </div>
                 </div>
-                <div class="p-6">
-                  <p class="text-sm font-medium text-green-600">Ends in 7 days</p>
-                  <h3 class="mt-2 text-lg font-bold text-gray-900">Eco-Warrior Quiz Challenge</h3>
-                  <p class="mt-2 text-sm text-gray-600">Test your knowledge on environmental issues and compete for the
-                    top spot.</p>
-                  <a class="mt-4 inline-block rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600"
-                    href="#">View Challenge</a>
+
+                <div
+                  class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                  <div class="h-48 w-full bg-cover bg-center"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9ZWBXH6x03bEXn1L8sATp5E8s_BKFLLZ3oPPmOOVBOCLnoUdl02KxzZEcVA568--G_tHLeaN0ah2cijYSn_qWMx6bFKEEX51-8OialqITrMNONUoQq6v8Pwiucja2TCaS_Qm2pPiO4TqU2_lQ6HJKMlbLV3XRksTPTtRoulxL_WikIdqXyKqEuom3pVYJnzpyVunbkIpOoagsnw-MFs10aKfEF4KMZWmetlm2Z2nDKZbb_DWId8hpN256JqF8ZOyQZMWXkQg-QH54");'>
+                  </div>
+                  <div class="p-6">
+                    <p class="text-sm font-medium text-green-600">Ends in 14 days</p>
+                    <h3 class="mt-2 text-lg font-bold text-gray-900">Sustainable Living Challenge</h3>
+                    <p class="mt-2 text-sm text-gray-600">Earn points by completing daily sustainable actions like
+                      reducing waste and saving energy.</p>
+                    <a class="mt-4 inline-block rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600"
+                      href="#">View Challenge</a>
+                  </div>
                 </div>
               </div>
-              <div
-                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                <div class="h-48 w-full bg-cover bg-center"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9ZWBXH6x03bEXn1L8sATp5E8s_BKFLLZ3oPPmOOVBOCLnoUdl02KxzZEcVA568--G_tHLeaN0ah2cijYSn_qWMx6bFKEEX51-8OialqITrMNONUoQq6v8Pwiucja2TCaS_Qm2pPiO4TqU2_lQ6HJKMlbLV3XRksTPTtRoulxL_WikIdqXyKqEuom3pVYJnzpyVunbkIpOoagsnw-MFs10aKfEF4KMZWmetlm2Z2nDKZbb_DWId8hpN256JqF8ZOyQZMWXkQg-QH54");'>
-                </div>
-                <div class="p-6">
-                  <p class="text-sm font-medium text-green-600">Ends in 14 days</p>
-                  <h3 class="mt-2 text-lg font-bold text-gray-900">Sustainable Living Challenge</h3>
-                  <p class="mt-2 text-sm text-gray-600">Earn points by completing daily sustainable actions like
-                    reducing waste and saving energy.</p>
-                  <a class="mt-4 inline-block rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600"
-                    href="#">View Challenge</a>
+              <div class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-900 tracking-tight">Upcoming Challenges</h2>
+                <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+                  <div
+                    class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                    <div class="h-48 w-full bg-cover bg-center"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkrps0SEucVpKFaPZWGJ-lXY_IZdptRICXjNOGlQ6tSMDxcn1j_4K7WucF7kDA3D5Wx1yXxG15kBoFS4wSco1zxO1QNbRy58mDFqCTxbFjsFJGRG7S_nCxJ04vnrPwNA7sXBHiUHnLh3HaG3TOmBIwO_JXaZ7XvRdOC5xAxpLrwsZwQHrgZl25ddxQH4inD_LC2RkTtPbTooRzCsaACEQUH8OlZYbNwUll6GZ3uUNDC2r1AHVCKkC2SWwjl47cp1nKJT0O0WK7R5yT");'>
+                    </div>
+                    <div class="p-6">
+                      <p class="text-sm font-medium text-blue-600">Starts in 3 days</p>
+                      <h3 class="mt-2 text-lg font-bold text-gray-900">Climate Change Awareness Campaign</h3>
+                      <p class="mt-2 text-sm text-gray-600">Create and share content to raise awareness about climate
+                        change and its impact.</p>
+                      <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+                        href="#">Get Notified</a>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                    <div class="h-48 w-full bg-cover bg-center"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnLYvvIhBq2g5_wYFB8dR4pggVssINHHUWgkZlcfTyGlJdhEVQIO98jKJp-wu4FuBku_KLjzCNGI1BXJtXfRXnmlvu5-Xg4boeTFkf2o-0sprkKc_VAj1Mi_i7TKuoUi_D-7da_hsSf7uHd7FGME0RThIInQu5HMUhg4AvjgVXNeibsWbHFF76brTqBY6teIugzakJgSizUsuWmeRi_k_J2oXTqclYLFgQVax5qfzQjk0GCW4YTvFQPNQQ7HopcQPlbNVh7Iu1o3kT");'>
+                    </div>
+                    <div class="p-6">
+                      <p class="text-sm font-medium text-blue-600">Starts in 10 days</p>
+                      <h3 class="mt-2 text-lg font-bold text-gray-900">Biodiversity Conservation Challenge</h3>
+                      <p class="mt-2 text-sm text-gray-600">Participate in activities that promote biodiversity and
+                        protect endangered species.</p>
+                      <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+                        href="#">Get Notified</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="mt-12">
-            <h2 class="text-2xl font-bold text-gray-900 tracking-tight">Upcoming Challenges</h2>
-            <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div
-                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                <div class="h-48 w-full bg-cover bg-center"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkrps0SEucVpKFaPZWGJ-lXY_IZdptRICXjNOGlQ6tSMDxcn1j_4K7WucF7kDA3D5Wx1yXxG15kBoFS4wSco1zxO1QNbRy58mDFqCTxbFjsFJGRG7S_nCxJ04vnrPwNA7sXBHiUHnLh3HaG3TOmBIwO_JXaZ7XvRdOC5xAxpLrwsZwQHrgZl25ddxQH4inD_LC2RkTtPbTooRzCsaACEQUH8OlZYbNwUll6GZ3uUNDC2r1AHVCKkC2SWwjl47cp1nKJT0O0WK7R5yT");'>
+
+            <!-- School vs School Content -->
+            <div id="content-school" class="hidden">
+              <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div
+                  class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                  <div class="h-48 w-full bg-cover bg-center"
+                    style='background-image: url("https://images.unsplash.com/photo-1607746882042-944635dfe10e");'>
+                  </div>
+                  <div class="p-6">
+                    <p class="text-sm font-medium text-blue-600">Ongoing</p>
+                    <h3 class="mt-2 text-lg font-bold text-gray-900">Inter-School Sustainability Challenge</h3>
+                    <p class="mt-2 text-sm text-gray-600">Schools compete by implementing sustainable practices in their
+                      campus and presenting their results.</p>
+                    <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+                      href="#">View Details</a>
+                  </div>
                 </div>
-                <div class="p-6">
-                  <p class="text-sm font-medium text-blue-600">Starts in 3 days</p>
-                  <h3 class="mt-2 text-lg font-bold text-gray-900">Climate Change Awareness Campaign</h3>
-                  <p class="mt-2 text-sm text-gray-600">Create and share content to raise awareness about climate change
-                    and its impact.</p>
-                  <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
-                    href="#">Get Notified</a>
-                </div>
-              </div>
-              <div
-                class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                <div class="h-48 w-full bg-cover bg-center"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnLYvvIhBq2g5_wYFB8dR4pggVssINHHUWgkZlcfTyGlJdhEVQIO98jKJp-wu4FuBku_KLjzCNGI1BXJtXfRXnmlvu5-Xg4boeTFkf2o-0sprkKc_VAj1Mi_i7TKuoUi_D-7da_hsSf7uHd7FGME0RThIInQu5HMUhg4AvjgVXNeibsWbHFF76brTqBY6teIugzakJgSizUsuWmeRi_k_J2oXTqclYLFgQVax5qfzQjk0GCW4YTvFQPNQQ7HopcQPlbNVh7Iu1o3kT");'>
-                </div>
-                <div class="p-6">
-                  <p class="text-sm font-medium text-blue-600">Starts in 10 days</p>
-                  <h3 class="mt-2 text-lg font-bold text-gray-900">Biodiversity Conservation Challenge</h3>
-                  <p class="mt-2 text-sm text-gray-600">Participate in activities that promote biodiversity and protect
-                    endangered species.</p>
-                  <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
-                    href="#">Get Notified</a>
+
+                <div
+                  class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                  <div class="h-48 w-full bg-cover bg-center"
+                    style='background-image: url("https://images.unsplash.com/photo-1581092795360-9a33a16b7b77");'>
+                  </div>
+                  <div class="p-6">
+                    <p class="text-sm font-medium text-blue-600">Ongoing</p>
+                    <h3 class="mt-2 text-lg font-bold text-gray-900">Tech Innovation Battle</h3>
+                    <p class="mt-2 text-sm text-gray-600">Compete in developing the most innovative tech solutions for
+                      school challenges.</p>
+                    <a class="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600"
+                      href="#">View Details</a>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- Team Challenges Content -->
+            <div id="content-team" class="hidden">
+              <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div
+                  class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                  <div class="h-48 w-full bg-cover bg-center"
+                    style='background-image: url("https://images.unsplash.com/photo-1521791136064-7986c2920216");'>
+                  </div>
+                  <div class="p-6">
+                    <p class="text-sm font-medium text-purple-600">Ongoing</p>
+                    <h3 class="mt-2 text-lg font-bold text-gray-900">Renewable Energy Project</h3>
+                    <p class="mt-2 text-sm text-gray-600">Teams collaborate to develop renewable energy prototypes and
+                      showcase them for awards.</p>
+                    <a class="mt-4 inline-block rounded-lg bg-purple-500 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-600"
+                      href="#">Participate Now</a>
+                  </div>
+                </div>
+
+                <div
+                  class="group relative overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                  <div class="h-48 w-full bg-cover bg-center"
+                    style='background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d");'>
+                  </div>
+                  <div class="p-6">
+                    <p class="text-sm font-medium text-purple-600">Ongoing</p>
+                    <h3 class="mt-2 text-lg font-bold text-gray-900">Social Impact Hackathon</h3>
+                    <p class="mt-2 text-sm text-gray-600">Collaborate in teams to solve pressing social issues with
+                      innovative tech solutions.</p>
+                    <a class="mt-4 inline-block rounded-lg bg-purple-500 px-4 py-2 text-sm font-semibold text-white hover:bg-purple-600"
+                      href="#">Participate Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </main>
     </div>
   </div>
+
+  <script>
+    const labels = document.querySelectorAll('label[for^="tab-"]');
+    const contents = {
+      'tab-individual': document.getElementById('content-individual'),
+      'tab-school': document.getElementById('content-school'),
+      'tab-team': document.getElementById('content-team'),
+    };
+
+    function resetTabs() {
+      labels.forEach(l => {
+        l.classList.remove('border-green-500', 'text-green-600');
+        l.classList.add('text-gray-500', 'border-transparent');
+      });
+      for (const key in contents) {
+        contents[key].classList.add('hidden');
+        contents[key].classList.remove('block');
+      }
+    }
+
+    labels.forEach(label => {
+      label.addEventListener('click', () => {
+        resetTabs();
+        label.classList.remove('text-gray-500', 'border-transparent');
+        label.classList.add('border-green-500', 'text-green-600');
+        const targetId = label.getAttribute('for');
+        contents[targetId].classList.remove('hidden');
+        contents[targetId].classList.add('block');
+      });
+    });
+
+    // Initialize default active state
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('tab-individual').checked = true;
+      document.getElementById('label-individual').classList.add('border-green-500', 'text-green-600');
+      contents['tab-individual'].classList.remove('hidden');
+      contents['tab-individual'].classList.add('block');
+    });
+  </script>
 
 </body>
 
