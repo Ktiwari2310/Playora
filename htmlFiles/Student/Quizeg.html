@@ -130,89 +130,79 @@
         </div>
       </header>
 
-  <!-- Main content (unchanged) -->
-  <main class="max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold">Climate Change Challenge</h1>
-    <div class="flex justify-between items-center">
-      <p class="text-gray-500 mb-8">Quiz</p>
-      <p class="text-gray-500 mb-8 font-medium">Total Questions: 10</p>
-    </div>
-    <div class="mb-8">
-      <div class="flex justify-between items-center mb-2">
-        <span class="font-medium">Progress</span>
-        <span class="text-gray-500">30%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2.5">
-        <div class="bg-gray-800 h-2.5 rounded-full" style="width: 30%"></div>
-      </div>
-    </div>
-    <div class="grid grid-cols-3 gap-8 mb-12">
-      <div class="bg-gray-100 p-6 rounded-lg text-center">
-        <p class="text-5xl font-bold">05</p>
-        <p class="text-gray-500">Minutes</p>
-      </div>
-      <div class="bg-gray-100 p-6 rounded-lg text-center">
-        <p class="text-5xl font-bold">30</p>
-        <p class="text-gray-500">Seconds</p>
-      </div>
-      <div class="bg-blue-100 p-6 rounded-lg text-center">
-        <p class="text-5xl font-bold text-blue-600">30</p>
-        <p class="text-gray-500">Score</p>
-      </div>
-    </div>
-    <h2 class="text-2xl font-semibold mb-6">What is the primary cause of global warming?</h2>
-    <div class="space-y-4">
-      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-        <input checked class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause"
-          type="radio" />
-        <span class="ml-4 text-lg">Deforestation</span>
-      </label>
-      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-        <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio" />
-        <span class="ml-4 text-lg">Burning of fossil fuels</span>
-      </label>
-      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-        <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio" />
-        <span class="ml-4 text-lg">Industrial waste</span>
-      </label>
-      <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
-        <input class="h-5 w-5 text-green-600 border-gray-300 focus:ring-green-500" name="warming-cause" type="radio" />
-        <span class="ml-4 text-lg">Agricultural practices</span>
-      </label>
-    </div>
-    <div class="flex justify-between items-center mt-12">
-      <button class="flex items-center text-gray-600 hover:text-gray-900">
-        <span class="material-icons">chevron_left</span>
-        <span>Previous Question</span>
-      </button>
-      <div class="flex items-center space-x-4">
-        <p class="text-gray-600">Earned Eco-Points: 10</p>
-        <button
-          class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors flex items-center">
-          <span>Next Question</span>
-          <span class="material-icons ml-2">chevron_right</span>
-        </button>
-      </div>
-    </div>
-  </main>
-  </div>
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h1 class="text-3xl font-bold text-gray-800">Climate Change Challenge</h1>
+<p class="text-gray-500 mt-1">Quiz</p>
+</div>
+<p class="text-gray-500">Total Questions: 10</p>
+</div>
+<div class="mb-8">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-medium text-gray-700">Progress</span>
+<span class="text-sm font-medium text-gray-700">30%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-gray-800 h-2.5 rounded-full" style="width: 30%"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+<div class="bg-gray-100 p-6 rounded-lg text-center">
+<p class="text-4xl font-bold text-gray-800">05</p>
+<p class="text-gray-500">Minutes</p>
+</div>
+<div class="bg-gray-100 p-6 rounded-lg text-center">
+<p class="text-4xl font-bold text-gray-800">30</p>
+<p class="text-gray-500">Seconds</p>
+</div>
+<div class="bg-blue-100 border border-blue-200 p-6 rounded-lg text-center">
+<p class="text-4xl font-bold text-blue-600">30</p>
+<p class="text-blue-500">Score</p>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-semibold text-gray-800 mb-6">What is the primary cause of global warming?</h2>
+<div class="space-y-4">
+<label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer  hover:bg-green-5">
+<input checked="" class="form-radio h-5 w-5 text-green-600" name="question" type="radio"/>
+<span class="ml-4 text-gray-700">Deforestation</span>
+</label>
+<label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+<input class="form-radio h-5 w-5 text-green-600" name="question" type="radio"/>
+<span class="ml-4 text-gray-700">Burning of fossil fuels</span>
+</label>
+<label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+<input class="form-radio h-5 w-5 text-green-600" name="question" type="radio"/>
+<span class="ml-4 text-gray-700">Industrial waste</span>
+</label>
+<label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+<input class="form-radio h-5 w-5 text-green-600" name="question" type="radio"/>
+<span class="ml-4 text-gray-700">Agricultural practices</span>
+</label>
+</div>
+</div>
+<div class="mt-10 flex justify-between items-center">
+<button class="flex items-center text-gray-600 hover:text-gray-900">
+<span class="material-icons text-lg">chevron_left</span>
+<span class="ml-1">Previous Question</span>
+</button>
+<div class="flex items-center space-x-4">
+<p class="text-gray-600">Earned Eco-Points: <span class="font-bold text-gray-800">10</span></p>
+<a href="quizres.html">
 
-  <!-- Toggle Script -->
-  <script>
-    const profileBtn = document.getElementById("profile-btn");
-    const dropdownMenu = document.getElementById("dropdown-menu");
+<button class="bg-gray-200 text-gray-700 font-medium py-2 px-6 rounded-lg hover:bg-gray-300">Submit Now</button>
 
-    profileBtn.addEventListener("click", () => {
-      dropdownMenu.classList.toggle("hidden");
-    });
+</a>
+<button class="bg-green-600 text-white font-medium py-2 px-6 rounded-lg hover:bg-green-700 flex items-center">
+<span>Next Question</span>
+<span class="material-icons text-lg ml-1">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
 
-    // Optional: close dropdown if click outside
-    window.addEventListener("click", (e) => {
-      if (!profileBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add("hidden");
-      }
-    });
-  </script>
-</body>
-
-</html>
+</body></html>
