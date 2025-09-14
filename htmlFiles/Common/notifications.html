@@ -133,119 +133,102 @@
         </div>
       </header>
 
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <div class="flex min-w-72 flex-col gap-3">
-                <p class="text-[#111811] tracking-light text-[32px] font-bold leading-tight">Notifications</p>
-                <p class="text-[#618961] text-sm font-normal leading-normal">Stay updated on your progress and activities</p>
+        <main class="flex-1 px-40 py-10">
+        <div class="layout-content-container mx-auto flex max-w-4xl flex-col gap-8">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <div class="flex items-center space-x-4 relative">
+                <a class="material-icons text-gray-600">notifications</a>
+                <h1 class="text-4xl font-bold tracking-tight text-primary-950">Notifications</h1>
               </div>
             </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex items-center gap-4">
-                <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="Trophy" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-28.49,64.64-63.51,64.9H128a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col justify-center">
-                  <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">New Challenge</p>
-                  <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">New challenge available: 'Ocean Conservation'</p>
-                </div>
-              </div>
-              <div class="shrink-0"><p class="text-[#618961] text-sm font-normal leading-normal">2d ago</p></div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex items-center gap-4">
-                <div
-                  class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12"
-                  data-icon="PresentationChart"
-                  data-size="24px"
-                  data-weight="regular"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col justify-center">
-                  <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">Quiz Result</p>
-                  <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">You scored 90% in the 'Climate Change' quiz</p>
-                </div>
-              </div>
-              <div class="shrink-0"><p class="text-[#618961] text-sm font-normal leading-normal">3d ago</p></div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex items-center gap-4">
-                <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="Medal" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96ZM168,227.06l-36.43-18.21a8,8,0,0,0-7.16,0L88,227.06V174.37a87.89,87.89,0,0,0,80,0ZM128,152A56,56,0,1,0,72,96,56.06,56.06,0,0,0,128,152Zm0-96A40,40,0,1,1,88,96,40,40,0,0,1,128,56Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col justify-center">
-                  <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">Badge Earned</p>
-                  <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">You've earned the 'Eco-Warrior' badge</p>
+            <div class="flex flex-col gap-6">
+              <div>
+                <h3 class="px-4 pb-3 text-lg font-bold text-primary-950">New</h3>
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="group flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:bg-primary-100/50 hover:shadow-md">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-500 text-white">
+                      <span class="material-symbols-outlined text-2xl"> workspace_premium </span></div>
+                    <div class="flex-1">
+                      <p class="font-semibold text-gray-800">Badge Earned</p>
+                      <p class="text-sm text-gray-600">You've earned the 'Eco-Warrior' badge for completing 10 quizzes.
+                      </p>
+                      <p class="mt-1 text-xs font-medium text-primary-700">2 minutes ago</p>
+                    </div>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 opacity-0 transition-all group-hover:opacity-100 hover:bg-white hover:text-gray-600"><span
+                        class="material-symbols-outlined text-xl"> close </span></button>
+                  </div>
+                  <div
+                    class="group flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:bg-primary-100/50 hover:shadow-md">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary-500 text-white">
+                      <span class="material-symbols-outlined text-2xl"> flag </span></div>
+                    <div class="flex-1">
+                      <p class="font-semibold text-gray-800">New Challenge</p>
+                      <p class="text-sm text-gray-600">A new challenge, 'Sustainable Living', is now available.</p>
+                      <p class="mt-1 text-xs font-medium text-gray-400">15 minutes ago</p>
+                    </div>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 opacity-0 transition-all group-hover:opacity-100 hover:bg-gray-100 hover:text-gray-600"><span
+                        class="material-symbols-outlined text-xl"> close </span></button>
+                  </div>
                 </div>
               </div>
-              <div class="shrink-0"><p class="text-[#618961] text-sm font-normal leading-normal">1w ago</p></div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex items-center gap-4">
-                <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="Users" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col justify-center">
-                  <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">Competition Update</p>
-                  <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">The 'Sustainability Showdown' competition starts next week</p>
+              <div>
+                <h3 class="px-4 pb-3 text-lg font-bold text-primary-950">Earlier</h3>
+                <div class="flex flex-col gap-2">
+                  <div
+                    class="group flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:bg-primary-100/50 hover:shadow-md">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-500 text-white">
+                      <span class="material-symbols-outlined text-2xl"> settings </span></div>
+                    <div class="flex-1">
+                      <p class="font-semibold text-gray-800">System Update</p>
+                      <p class="text-sm text-gray-600">System update: Improved quiz performance and bug fixes.</p>
+                      <p class="mt-1 text-xs font-medium text-gray-400">1 hour ago</p>
+                    </div>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 opacity-0 transition-all group-hover:opacity-100 hover:bg-gray-100 hover:text-gray-600"><span
+                        class="material-symbols-outlined text-xl"> close </span></button>
+                  </div>
+                  <div
+                    class="group flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:bg-primary-100/50 hover:shadow-md">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary-400 text-white">
+                      <span class="material-symbols-outlined text-2xl"> mail </span></div>
+                    <div class="flex-1">
+                      <p class="font-semibold text-gray-800">New Message</p>
+                      <p class="text-sm text-gray-600">Message from Alex: 'Great job on the last quiz!'</p>
+                      <p class="mt-1 text-xs font-medium text-gray-400">3 hours ago</p>
+                    </div>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 opacity-0 transition-all group-hover:opacity-100 hover:bg-gray-100 hover:text-gray-600"><span
+                        class="material-symbols-outlined text-xl"> close </span></button>
+                  </div>
+                  <div
+                    class="group flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:bg-primary-100/50 hover:shadow-md">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-500 text-white">
+                      <span class="material-symbols-outlined text-2xl"> military_tech </span></div>
+                    <div class="flex-1">
+                      <p class="font-semibold text-gray-800">Level Up</p>
+                      <p class="text-sm text-gray-600">You've reached level 5 in the 'Climate Change' module.</p>
+                      <p class="mt-1 text-xs font-medium text-gray-400">Yesterday</p>
+                    </div>
+                    <button
+                      class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 opacity-0 transition-all group-hover:opacity-100 hover:bg-gray-100 hover:text-gray-600"><span
+                        class="material-symbols-outlined text-xl"> close </span></button>
+                  </div>
                 </div>
               </div>
-              <div class="shrink-0"><p class="text-[#618961] text-sm font-normal leading-normal">2w ago</p></div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex items-center gap-4">
-                <div class="text-[#111811] flex items-center justify-center rounded-lg bg-[#f0f4f0] shrink-0 size-12" data-icon="Leaf" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.5-19.51C81,210.73,97.09,215.37,113,215.94q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77l88.63-88.62a8,8,0,0,0-11.32-11.32L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.6-56.44,141.31-54.06C210.2,114.89,190.22,167.41,153.75,189.5Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="flex flex-col justify-center">
-                  <p class="text-[#111811] text-base font-medium leading-normal line-clamp-1">Eco-Points Earned</p>
-                  <p class="text-[#618961] text-sm font-normal leading-normal line-clamp-2">You've earned 50 Eco-Points for completing the 'Recycling' module</p>
-                </div>
-              </div>
-              <div class="shrink-0"><p class="text-[#618961] text-sm font-normal leading-normal">3w ago</p></div>
             </div>
           </div>
-        </div>
-      </div>
+      </main>
     </div>
-  </body>
-  
-  <!-- Toggle Script -->
-  <script>
-    const profileBtn = document.getElementById("profile-btn");
-    const dropdownMenu = document.getElementById("dropdown-menu");
+  </div>
+</body>
 
-    profileBtn.addEventListener("click", () => {
-      dropdownMenu.classList.toggle("hidden");
-    });
-
-    // Optional: close dropdown if click outside
-    window.addEventListener("click", (e) => {
-      if (!profileBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add("hidden");
-      }
-    });
-  </script>
 </html>
