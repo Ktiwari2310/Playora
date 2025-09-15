@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Sort & Quiz 🌍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            color: white;
+            margin: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .game-container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #2E8B57;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .score {
+            font-size: 1.5em;
+            color: #FF6B6B;
+            font-weight: bold;
+        }
+
+        .game-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .bins-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .bin {
+            width: 180px;
+            height: 200px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 4px solid transparent;
+        }
+
+        .bin.recycle {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+        }
+
+        .bin.compost {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+        }
+
+        .bin.wet-waste {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+        }
+
+        .bin:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .bin.drag-over {
+            border-color: #FFD700;
+            animation: pulse 0.5s infinite;
+        }
+
+        .bin.correct {
+            animation: celebration 0.6s ease-in-out;
+        }
+
+        .bin.incorrect {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .item-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .waste-item {
+            font-size: 4em;
+            cursor: grab;
+            user-select: none;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .waste-item:hover {
+            transform: scale(1.1);
+        }
+
+        .waste-item:active {
+            cursor: grabbing;
+            transform: scale(0.95);
+        }
+
+        .item-name {
+            font-size: 1.5em;
+            color: #2E8B57;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .hint {
+            background: #FFE4B5;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-size: 1.3em;
+            color: #D2691E;
+            border: 3px solid #DEB887;
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .quiz-question {
+            font-size: 1.4em;
+            color: #2E8B57;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .quiz-option {
+            background: #E6F3FF;
+            border: 3px solid #87CEEB;
+            padding: 15px 20px;
+            border-radius: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .quiz-option:hover {
+            background: #B0E0E6;
+            transform: translateY(-2px);
+        }
+
+        .quiz-option.correct {
+            background: #90EE90;
+            border-color: #32CD32;
+        }
+
+        .quiz-option.incorrect {
+            background: #FFB6C1;
+            border-color: #FF69B4;
+        }
+
+        .results-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .badge {
+            font-size: 6em;
+            margin: 20px 0;
+            animation: bounce 1s infinite;
+        }
+
+        .final-score {
+            font-size: 2em;
+            color: #FF6B6B;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .restart-btn {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .restart-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #E0E0E0;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .confetti {
+            position: fixed;
+            top: -10px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .instructions {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            z-index: 200;
+            max-width: 90vw;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .instructions h2 {
+            color: #2E8B57;
+            margin-bottom: 20px;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+        }
+
+        .instructions p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes celebration {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1) rotate(-5deg);
+            }
+
+            75% {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .bins-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bin {
+                width: 150px;
+                height: 180px;
+            }
+
+            .waste-item {
+                font-size: 3em;
+            }
+
+            .quiz-options {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🌍 Eco Sort & Quiz 🌍</h1>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+        </div>
+
+        <!-- Sorting Game -->
+        <div id="sorting-game" class="game-area">
+            <div class="bins-container">
+                <div class="bin recycle" data-bin="recycle">
+                    <div style="font-size: 3em;">♻️</div>
+                    <div>RECYCLE</div>
+                    <!-- <div style="font-size: 0.8em; margin-top: 5px;">Plastic, Glass, Paper</div> -->
+                </div>
+                <div class="bin compost" data-bin="compost">
+                    <div style="font-size: 3em;">🌱</div>
+                    <div>COMPOST</div>
+                    <!-- <div style="font-size: 0.8em; margin-top: 5px;">Food Scraps, Leaves</div> -->
+                </div>
+                <div class="bin wet-waste" data-bin="wet-waste">
+                    <div style="font-size: 3em;">💧</div>
+                    <div>WET WASTE</div>
+                    <!-- <div style="font-size: 0.8em; margin-top: 5px;">Liquid Waste</div> -->
+                </div>
+            </div>
+
+            <div class="item-container">
+                <div class="waste-item" id="current-item" draggable="true"></div>
+                <div class="item-name" id="item-name"></div>
+                <div class="hint" id="hint"></div>
+            </div>
+        </div>
+
+        <!-- Quiz Game -->
+        <div id="quiz-game" class="game-area hidden">
+            <div class="quiz-container">
+                <h2 style="color: #2E8B57; margin-bottom: 20px;">🧠 Eco Quiz Time! 🧠</h2>
+                <div class="quiz-question" id="quiz-question"></div>
+                <div class="quiz-options" id="quiz-options"></div>
+            </div>
+        </div>
+        <div id="instructionsModal" class="instructions">
+            <h2>🎮 How to Play</h2>
+            <p>🎯 <strong>Drag waste items</strong> to the correct bins!</p>
+            <p>♻️ <strong>Recycle:</strong> Plastic bottles, paper, glass</p>
+            <p>🌱 <strong>Compost:</strong> Food scraps, fruit peels</p>
+            <p>💧 <strong>Wet Waste:</strong> Leftovers, wet food items</p>
+            <p>⏰ You have <strong>90 seconds</strong> to sort as many items as possible!</p>
+            <p>🏆 After the game, test your knowledge with a fun quiz!</p>
+            <button class="btn btn-primary" onclick="startGame()">🚀 Start Playing!</button>
+        </div>
+        <!-- Results -->
+        <div id="results" class="game-area hidden">
+            <div class="results-container">
+                <h2 style="color: #2E8B57; margin-bottom: 20px;">🎉 Amazing Work! 🎉</h2>
+                <div class="badge" id="badge"></div>
+                <div id="badge-name" style="font-size: 1.5em; color: #2E8B57; font-weight: bold; margin-bottom: 20px;">
+                </div>
+                <div class="final-score">Final Score: <span id="final-score">0</span></div>
+                <div style="font-size: 1.2em; color: #666; margin: 20px 0;">
+                    You're helping save our planet! 🌍✨
+                </div>
+                <button class="restart-btn" onclick="restartGame()">Play Again! 🎮</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wasteItems = [
+            { emoji: "🍌", name: "Banana Peel", type: "compost", hint: "Fruit peels make great compost! 🌱" },
+            { emoji: "🥤", name: "Plastic Bottle", type: "recycle", hint: "Plastic bottles can be recycled! ♻️" },
+            { emoji: "📰", name: "Newspaper", type: "recycle", hint: "Paper goes to recycling! 📄" },
+            { emoji: "🥛", name: "Milk Carton", type: "wet-waste", hint: "Liquid containers go to wet waste! 💧" },
+            { emoji: "🍎", name: "Apple Core", type: "compost", hint: "Apple cores decompose naturally! 🌱" },
+            { emoji: "🍾", name: "Glass Bottle", type: "recycle", hint: "Glass can be recycled many times! ♻️" },
+            { emoji: "🍞", name: "Bread Crumbs", type: "compost", hint: "Food scraps make good compost! 🌱" },
+            { emoji: "🥫", name: "Tin Can", type: "recycle", hint: "Metal cans are recyclable! ♻️" },
+            { emoji: "🧃", name: "Juice Box", type: "wet-waste", hint: "Liquid containers go to wet waste! 💧" },
+            { emoji: "🍋", name: "Lemon Peel", type: "compost", hint: "Citrus peels are great for compost! 🌱" },
+            { emoji: "📦", name: "Cardboard Box", type: "recycle", hint: "Cardboard is recyclable! ♻️" },
+            { emoji: "🥗", name: "Salad Leftovers", type: "compost", hint: "Vegetable scraps go to compost! 🌱" },
+            { emoji: "🥤", name: "Soda Can", type: "recycle", hint: "Aluminum cans are recyclable! ♻️" },
+            { emoji: "☕", name: "Coffee Grounds", type: "compost", hint: "Coffee grounds make excellent compost! 🌱" },
+            { emoji: "🧈", name: "Yogurt Container", type: "wet-waste", hint: "Dairy containers go to wet waste! 💧" }
+        ];
+
+        const quizQuestions = [
+            {
+                question: "Where should you put a plastic water bottle?",
+                options: ["Recycle ♻️", "Compost 🌱", "Wet Waste 💧"],
+                correct: 0
+            },
+            {
+                question: "What happens to banana peels?",
+                options: ["Recycle ♻️", "Compost 🌱", "Wet Waste 💧"],
+                correct: 1
+            },
+            {
+                question: "Where do glass bottles belong?",
+                options: ["Recycle ♻️", "Compost 🌱", "Wet Waste 💧"],
+                correct: 0
+            },
+            {
+                question: "What should you do with apple cores?",
+                options: ["Recycle ♻️", "Compost 🌱", "Wet Waste 💧"],
+                correct: 1
+            },
+            {
+                question: "Where do milk cartons go?",
+                options: ["Recycle ♻️", "Compost 🌱", "Wet Waste 💧"],
+                correct: 2
+            },
+            {
+                question: "Which TWO items can go into the recycle bin?",
+                options: ["Plastic Bottle 🥤 & Banana Peel 🍌", "Tin Can 🥫 & Glass Bottle 🍾", "Apple Core 🍎 & Salad 🥗"],
+                correct: 1
+            },
+            {
+                question: "Which waste is BEST suited for composting?",
+                options: ["Food scraps like bread crumbs 🍞", "Empty soda cans 🥤", "Glass bottles 🍾"],
+                correct: 0
+            },
+            {
+                question: "Why should glass bottles go into recycling?",
+                options: [
+                    "They cannot be reused",
+                    "They can be recycled infinitely without losing quality",
+                    "They dissolve in water"
+                ],
+                correct: 1
+            },
+            {
+                question: "If you mix compost waste with plastic bottles, what happens?",
+                options: [
+                    "Compost becomes less useful 🌱",
+                    "It becomes better fertilizer",
+                    "It turns into wet waste"
+                ],
+                correct: 0
+            }
+
+        ];
+
+        let currentItemIndex = 0;
+        let score = 0;
+        let gameItems = [];
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        function initGame() {
+            gameItems = shuffleArray(wasteItems).slice(0, 5);
+            currentItemIndex = 0;
+            score = 0;
+            updateScore();
+            updateProgress();
+            displayCurrentItem();
+            setupDragAndDrop();
+        }
+
+        function displayCurrentItem() {
+            if (currentItemIndex >= gameItems.length) {
+                startQuiz();
+                return;
+            }
+
+            const item = gameItems[currentItemIndex];
+            document.getElementById('current-item').textContent = item.emoji;
+            document.getElementById('item-name').textContent = item.name;
+            document.getElementById('hint').style.display = 'none';
+        }
+
+        function updateScore() {
+            document.getElementById('score').textContent = score;
+        }
+
+        function updateProgress() {
+            const progress = (currentItemIndex / gameItems.length) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+        }
+
+        function setupDragAndDrop() {
+            const item = document.getElementById('current-item');
+            const bins = document.querySelectorAll('.bin');
+
+            // Touch and mouse events for dragging
+            let isDragging = false;
+            let dragElement = null;
+
+            item.addEventListener('dragstart', (e) => {
+                isDragging = true;
+                dragElement = e.target;
+            });
+
+            // Mouse events for better mobile support
+            item.addEventListener('mousedown', startDrag);
+            item.addEventListener('touchstart', startDrag, { passive: false });
+
+            function startDrag(e) {
+                e.preventDefault();
+                isDragging = true;
+                dragElement = e.target;
+
+                const moveHandler = (e) => {
+                    if (!isDragging) return;
+
+                    const touch = e.touches ? e.touches[0] : e;
+                    const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+                    const bin = elementBelow?.closest('.bin');
+
+                    // Highlight bin on hover
+                    bins.forEach(b => b.classList.remove('drag-over'));
+                    if (bin) {
+                        bin.classList.add('drag-over');
+                    }
+                };
+
+                const endHandler = (e) => {
+                    if (!isDragging) return;
+
+                    const touch = e.changedTouches ? e.changedTouches[0] : e;
+                    const elementBelow = document.elementFromPoint(touch.clientX, touch.clientY);
+                    const bin = elementBelow?.closest('.bin');
+
+                    if (bin) {
+                        handleDrop(bin);
+                    }
+
+                    isDragging = false;
+                    dragElement = null;
+                    bins.forEach(b => b.classList.remove('drag-over'));
+
+                    document.removeEventListener('mousemove', moveHandler);
+                    document.removeEventListener('mouseup', endHandler);
+                    document.removeEventListener('touchmove', moveHandler);
+                    document.removeEventListener('touchend', endHandler);
+                };
+
+                document.addEventListener('mousemove', moveHandler);
+                document.addEventListener('mouseup', endHandler);
+                document.addEventListener('touchmove', moveHandler, { passive: false });
+                document.addEventListener('touchend', endHandler);
+            }
+
+            bins.forEach(bin => {
+                bin.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    bin.classList.add('drag-over');
+                });
+
+                bin.addEventListener('dragleave', () => {
+                    bin.classList.remove('drag-over');
+                });
+
+                bin.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    handleDrop(bin);
+                });
+
+                // Click handler for accessibility
+                bin.addEventListener('click', () => {
+                    if (dragElement) {
+                        handleDrop(bin);
+                    }
+                });
+            });
+        }
+
+        function handleDrop(bin) {
+            const binType = bin.dataset.bin;
+            const currentItem = gameItems[currentItemIndex];
+            const isCorrect = currentItem.type === binType;
+
+            bin.classList.remove('drag-over');
+
+            if (isCorrect) {
+                score += 10;
+                bin.classList.add('correct');
+                playSound('correct');
+                createConfetti();
+
+                setTimeout(() => {
+                    bin.classList.remove('correct');
+                    nextItem();
+                }, 800);
+            } else {
+                bin.classList.add('incorrect');
+                playSound('incorrect');
+                showHint(currentItem.hint);
+
+                setTimeout(() => {
+                    bin.classList.remove('incorrect');
+                }, 500);
+            }
+
+            updateScore();
+        }
+
+        function showHint(hintText) {
+            const hint = document.getElementById('hint');
+            hint.textContent = hintText;
+            hint.style.display = 'block';
+
+            setTimeout(() => {
+                hint.style.display = 'none';
+            }, 3000);
+        }
+
+        function nextItem() {
+            currentItemIndex++;
+            updateProgress();
+            displayCurrentItem();
+        }
+
+        function playSound(type) {
+            // Create audio context for sound feedback
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            if (type === 'correct') {
+                oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
+                oscillator.frequency.setValueAtTime(554.37, audioContext.currentTime + 0.1);
+                oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.2);
+            } else {
+                oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+            }
+
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.5);
+        }
+
+        function createConfetti() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
+            for (let i = 0; i < 15; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * window.innerWidth + 'px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = confetti.style.height = Math.random() * 10 + 5 + 'px';
+
+                document.body.appendChild(confetti);
+
+                const animation = confetti.animate([
+                    { transform: 'translateY(-10px) rotate(0deg)', opacity: 1 },
+                    { transform: `translateY(${window.innerHeight}px) rotate(360deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 2000 + 1000,
+                    easing: 'ease-out'
+                });
+
+                animation.onfinish = () => confetti.remove();
+            }
+        }
+
+        function startQuiz() { 
+    document.getElementById('sorting-game').classList.add('hidden');
+    document.getElementById('quiz-game').classList.remove('hidden');
+
+    // 👇 shuffle and pick only 6 random questions
+    quizSet = shuffleArray(quizQuestions).slice(0, 5);
+
+    currentQuizIndex = 0;
+    quizScore = 0;
+    displayQuizQuestion();
+}
+
+
+       function displayQuizQuestion() {
+    if (currentQuizIndex >= quizSet.length) {
+        showResults();
+        return;
+    }
+
+    const question = quizSet[currentQuizIndex];
+    document.getElementById('quiz-question').textContent = question.question;
+
+    const optionsContainer = document.getElementById('quiz-options');
+    optionsContainer.innerHTML = '';
+
+    question.options.forEach((option, index) => {
+        const button = document.createElement('div');
+        button.className = 'quiz-option';
+        button.textContent = option;
+        button.addEventListener('click', () => selectQuizAnswer(index, question.correct));
+        optionsContainer.appendChild(button);
+    });
+}
+
+
+        function selectQuizAnswer(selected, correct) {
+            const options = document.querySelectorAll('.quiz-option');
+
+            options.forEach((option, index) => {
+                if (index === correct) {
+                    option.classList.add('correct');
+                } else if (index === selected && selected !== correct) {
+                    option.classList.add('incorrect');
+                }
+                option.style.pointerEvents = 'none';
+            });
+
+            if (selected === correct) {
+                score += 15;
+                quizScore++;
+                playSound('correct');
+            } else {
+                playSound('incorrect');
+            }
+
+            updateScore();
+
+            setTimeout(() => {
+                currentQuizIndex++;
+                displayQuizQuestion();
+            }, 1500);
+        }
+
+        function showResults() {
+            document.getElementById('quiz-game').classList.add('hidden');
+            document.getElementById('results').classList.remove('hidden');
+
+            document.getElementById('final-score').textContent = score;
+
+            // Determine badge based on performance
+            let badge, badgeName;
+            const totalPossible = (gameItems.length * 10) + (quizQuestions.length * 15);
+            const percentage = (score / totalPossible) * 100;
+
+            if (percentage >= 90) {
+                badge = "🏆";
+                badgeName = "Planet Protector!";
+            } else if (percentage >= 70) {
+                badge = "♻️";
+                badgeName = "Recycling Hero!";
+            } else if (percentage >= 50) {
+                badge = "🌍";
+                badgeName = "Eco Starter!";
+            } else {
+                badge = "🌱";
+                badgeName = "Earth Friend!";
+            }
+
+            document.getElementById('badge').textContent = badge;
+            document.getElementById('badge-name').textContent = badgeName;
+
+            createConfetti();
+        }
+
+        function restartGame() {
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('sorting-game').classList.remove('hidden');
+            initGame();
+        }
+
+        // Initialize the game when page loads
+        window.addEventListener('load', initGame);
+        function startGame() {
+            document.getElementById('instructionsModal').style.display = 'none';
+            gameState.gameRunning = true;
+            gameState.score = 0;
+            gameState.timeLeft = 90;
+            gameState.itemsSorted = [];
+            updateDisplay();
+            startTimer();
+            spawnItems();
+        }
+        function showInstructions() {
+            document.getElementById('resultsModal').classList.add('hidden');
+            document.getElementById('instructionsModal').style.display = 'block';
+        }// Initialize game on load
+        window.addEventListener('load', () => {
+            // Ensure instructions are shown on start
+            document.getElementById('instructionsModal').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

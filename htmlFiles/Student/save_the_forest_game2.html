@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the Forest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .game-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #32CD32, #228B22);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            color: white;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .timer {
+            background: #FF6347;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: inline-block;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .forest-container {
+            background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 30%, #90EE90 100%);
+            height: 300px;
+            border-radius: 20px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to top, #8B4513, #D2691E);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 80px;
+            font-size: 3em;
+            animation: grow 1s ease-out;
+            cursor: pointer;
+        }
+
+        @keyframes grow {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.2) rotate(5deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .quiz-container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            font-size: 1.3em;
+            color: #2F4F4F;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .option-btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .option-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .option-btn:active {
+            transform: translateY(0);
+        }
+
+        .feedback {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .correct {
+            background: #90EE90;
+            color: #006400;
+        }
+
+        .incorrect {
+            background: #FFB6C1;
+            color: #8B0000;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #228B22;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .end-screen {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            padding: 40px;
+            border-radius: 20px;
+            color: #333;
+        }
+
+        .badge {
+            font-size: 4em;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #FFD700;
+            animation: fall 3s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .play-again-btn {
+            background: #32CD32;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .play-again-btn:hover {
+            background: #228B22;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2em;
+            }
+
+            .forest-container {
+                height: 250px;
+            }
+
+            .tree {
+                font-size: 2.5em;
+            }
+
+            .options {
+                gap: 10px;
+            }
+
+            .option-btn {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="title">🌳 Save the Forest! 🌳</h1>
+            <div class="timer" id="timer">Time: 60s</div>
+        </div>
+
+        <div class="forest-container" id="forest">
+            <div class="ground"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number" id="trees-planted">0</div>
+                <div class="stat-label">Trees Planted</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="current-question">1</div>
+                <div class="stat-label">Question</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="score">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+        </div>
+
+        <div class="quiz-container" id="quiz-container">
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <div class="feedback hidden" id="feedback"></div>
+        </div>
+
+        <div class="end-screen hidden" id="end-screen">
+            <h2>🎉 Congratulations! 🎉</h2>
+            <div class="badge" id="badge">🏆</div>
+            <div id="final-message"></div>
+            <button class="play-again-btn" onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+    // 🌱 Easy
+    {
+        question: "Which is better for the environment?",
+        options: ["A) Reusable bag", "B) Plastic bag"],
+        correct: 0,
+        hint: "Reusable bags reduce single-use plastic waste. 👜"
+    },
+    {
+        question: "What happens when we plant trees?",
+        options: ["A) Nothing special", "B) Clean the air"],
+        correct: 1,
+        hint: "Trees absorb carbon dioxide and give us oxygen! 🌳"
+    },
+    {
+        question: "What's the best way to travel short distances?",
+        options: ["A) Walk or bike", "B) Drive a car"],
+        correct: 0,
+        hint: "Walking and cycling reduce pollution and save fuel. 🚴"
+    },
+
+    // ⚖️ Medium
+    {
+        question: "Which saves more energy?",
+        options: ["A) LED bulb", "B) Incandescent bulb"],
+        correct: 0,
+        hint: "LED bulbs use up to 80% less energy. 💡"
+    },
+    {
+        question: "What should you do with e-waste (like old phones)?",
+        options: ["A) Throw in dustbin", "B) Send for recycling"],
+        correct: 1,
+        hint: "E-waste contains harmful chemicals—recycling is safest. 📱"
+    },
+    {
+        question: "Which gas causes the greenhouse effect the most?",
+        options: ["A) Oxygen", "B) Carbon dioxide"],
+        correct: 1,
+        hint: "CO₂ traps heat and contributes to global warming. 🌍"
+    },
+    {
+        question: "Which farming practice is eco-friendly?",
+        options: ["A) Organic farming", "B) Heavy pesticide use"],
+        correct: 0,
+        hint: "Organic farming avoids harmful chemicals. 🌾"
+    },
+    {
+        question: "What should you do with leftover food?",
+        options: ["A) Compost it", "B) Throw it in plastic bags"],
+        correct: 0,
+        hint: "Composting enriches the soil. 🍃"
+    },
+
+    // 🔥 Hard
+    {
+        question: "Which renewable energy source is most used worldwide?",
+        options: ["A) Hydropower", "B) Solar power"],
+        correct: 0,
+        hint: "Hydropower still produces the most renewable electricity. 💧"
+    },
+    {
+        question: "Which layer of the atmosphere protects us from UV rays?",
+        options: ["A) Ozone layer", "B) Troposphere"],
+        correct: 0,
+        hint: "The ozone layer blocks harmful UV radiation. ☀️"
+    },
+    {
+        question: "Which international agreement aims to reduce climate change?",
+        options: ["A) Paris Agreement", "B) Kyoto Food Pact"],
+        correct: 0,
+        hint: "Paris Agreement unites countries against climate change. 🌍"
+    },
+    {
+        question: "Which of these is a non-biodegradable item?",
+        options: ["A) Banana peel", "B) Plastic straw"],
+        correct: 1,
+        hint: "Plastic doesn’t decompose naturally. ♻️"
+    },
+    {
+        question: "Which country leads in solar energy production?",
+        options: ["A) China", "B) India"],
+        correct: 0,
+        hint: "China is currently the global leader in solar power. ☀️"
+    },
+    {
+        question: "What is the main cause of ocean acidification?",
+        options: ["A) Plastic waste", "B) Excess CO₂"],
+        correct: 1,
+        hint: "CO₂ dissolves into seawater, making it acidic. 🌊"
+    },
+    {
+        question: "Which practice reduces deforestation the most?",
+        options: ["A) Using recycled paper", "B) Burning waste"],
+        correct: 0,
+        hint: "Recycled paper means fewer trees are cut. 📄"
+    },
+    {
+        question: "Which animal is a key indicator of ecosystem health?",
+        options: ["A) Frog", "B) Dog"],
+        correct: 0,
+        hint: "Frogs are very sensitive to pollution and habitat change. 🐸"
+    },
+    {
+        question: "Which energy is NOT renewable?",
+        options: ["A) Wind", "B) Coal"],
+        correct: 1,
+        hint: "Coal is a fossil fuel and non-renewable. ⛏️"
+    },
+    {
+        question: "Which type of plastic can be recycled most easily?",
+        options: ["A) PET (water bottles)", "B) Thermoset plastics"],
+        correct: 0,
+        hint: "PET bottles are widely recycled into new products. 🍼"
+    },
+    {
+        question: "What is the main cause of species extinction today?",
+        options: ["A) Habitat loss", "B) Earthquakes"],
+        correct: 0,
+        hint: "Human-driven habitat loss is the biggest threat. 🦋"
+    }
+];
+
+
+        let currentQuestion = 0;
+        let score = 0;
+        let treesPlanted = 0;
+        let timeLeft = 60;
+        let gameActive = true;
+        let timer;
+
+        // Audio context for sound effects
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playPlantSound() {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
+            oscillator.frequency.exponentialRampToValueAtTime(880, audioContext.currentTime + 0.1);
+            oscillator.frequency.exponentialRampToValueAtTime(440, audioContext.currentTime + 0.2);
+
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.3);
+        }
+
+        function playSuccessSound() {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.frequency.setValueAtTime(523, audioContext.currentTime);
+            oscillator.frequency.setValueAtTime(659, audioContext.currentTime + 0.1);
+            oscillator.frequency.setValueAtTime(784, audioContext.currentTime + 0.2);
+
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.4);
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer').textContent = `Time: ${timeLeft}s`;
+
+                if (timeLeft <= 10) {
+                    document.getElementById('timer').style.background = '#FF4500';
+                }
+
+                if (timeLeft <= 0) {
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function plantTree() {
+            treesPlanted++;
+
+            const forest = document.getElementById('forest');
+            const tree = document.createElement('div');
+            tree.className = 'tree';
+            tree.textContent = '🌳';
+
+            // Random position for the tree
+            const leftPosition = Math.random() * 80 + 10; // 10% to 90% from left
+            tree.style.left = leftPosition + '%';
+
+            forest.appendChild(tree);
+
+            // Update stats
+            document.getElementById('trees-planted').textContent = treesPlanted;
+
+            // Play plant sound
+            playPlantSound();
+
+            // Add sparkle effect
+            createSparkles(tree);
+        }
+
+        function createSparkles(tree) {
+            for (let i = 0; i < 5; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.textContent = '✨';
+                sparkle.style.position = 'absolute';
+                sparkle.style.left = tree.style.left;
+                sparkle.style.bottom = '160px';
+                sparkle.style.fontSize = '1em';
+                sparkle.style.animation = `sparkle 1s ease-out ${i * 0.1}s`;
+                sparkle.style.pointerEvents = 'none';
+
+                document.getElementById('forest').appendChild(sparkle);
+
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        }
+        let shuffledQuestions = [];
+let currentQuestionIndex = 0;
+
+function startQuiz() {
+    shuffledQuestions = shuffleArray([...questions]); // randomize
+    currentQuestionIndex = 0;
+    displayQuestion();
+}
+
+        function displayQuestion() {
+            if (currentQuestion >= questions.length) {
+                currentQuestion = 0; // Loop back to start
+                 shuffledQuestions = shuffleArray([...questions]); // reshuffle for next round
+            }
+
+            const q = questions[currentQuestion];
+            document.getElementById('question').textContent = q.question;
+            document.getElementById('current-question').textContent = currentQuestion + 1;
+
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'option-btn';
+                button.textContent = option;
+                button.onclick = () => selectAnswer(index);
+                optionsContainer.appendChild(button);
+            });
+
+            document.getElementById('feedback').classList.add('hidden');
+            currentQuestionIndex++; // move to next for future
+        }
+
+        function selectAnswer(selectedIndex) {
+            if (!gameActive) return;
+
+            const q = questions[currentQuestion];
+            const feedback = document.getElementById('feedback');
+
+            if (selectedIndex === q.correct) {
+                feedback.textContent = "🎉 Correct! You planted a tree! 🌱";
+                feedback.className = 'feedback correct';
+                score += 10;
+                plantTree();
+                playSuccessSound();
+
+                setTimeout(() => {
+                    currentQuestion++;
+                    displayQuestion();
+                }, 2000);
+            } else {
+                score -= 10;
+                feedback.textContent = q.hint;
+                feedback.className = 'feedback incorrect';
+                setTimeout(() => {
+                    currentQuestion++;
+                    displayQuestion();
+                }, 4000);
+            }
+
+            feedback.classList.remove('hidden');
+            document.getElementById('score').textContent = score;
+        }
+
+        function createConfetti() {
+            const colors = ['#FFD700', '#FF69B4', '#00CED1', '#98FB98', '#DDA0DD'];
+
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                document.body.appendChild(confetti);
+
+                setTimeout(() => confetti.remove(), 3000);
+            }
+        }
+
+        function getBadge() {
+            if (treesPlanted >= 6) return { emoji: '🌟', title: 'Forest Champion' };
+            if (treesPlanted >= 4) return { emoji: '🏆', title: 'Tree Hero' };
+            if (treesPlanted >= 3) return { emoji: '🥇', title: 'Forest Protector' };
+            if (treesPlanted >= 1) return { emoji: '🥈', title: 'Nature Helper' };
+            return { emoji: '🥉', title: 'Tree Friend' };
+        }
+
+        function endGame() {
+            gameActive = false;
+            clearInterval(timer);
+
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('end-screen').classList.remove('hidden');
+
+            const badge = getBadge();
+            document.getElementById('badge').textContent = badge.emoji;
+            document.getElementById('final-message').innerHTML = `
+                <h3>🌳 Your Forest Results 🌳</h3>
+                <p><strong>Trees Planted:</strong> ${treesPlanted}</p>
+                <p><strong>Final Score:</strong> ${score}</p>
+                <p><strong>Badge Earned:</strong> ${badge.title}</p>
+                <br>
+                <p>Great job protecting our planet! Every tree makes a difference! 🌍</p>
+            `;
+
+            createConfetti();
+            playSuccessSound();
+        }
+
+        function restartGame() {
+            // Reset game state
+            currentQuestion = 0;
+            score = 0;
+            treesPlanted = 0;
+            timeLeft = 60;
+            gameActive = true;
+
+            // Clear forest
+            const forest = document.getElementById('forest');
+            const trees = forest.querySelectorAll('.tree');
+            trees.forEach(tree => tree.remove());
+
+            // Reset UI
+            document.getElementById('trees-planted').textContent = '0';
+            document.getElementById('score').textContent = '0';
+            document.getElementById('timer').textContent = 'Time: 60s';
+            document.getElementById('timer').style.background = '#FF6347';
+
+            document.getElementById('end-screen').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+
+            // Start new game
+            displayQuestion();
+            startTimer();
+        }
+
+        // Add CSS for sparkle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkle {
+                0% {
+                    transform: translateY(0) scale(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-50px) scale(1);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize game
+        window.addEventListener('load', () => {
+            displayQuestion();
+            startTimer();
+        });
+
+        // Enable audio on first user interaction
+        document.addEventListener('click', () => {
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+        }, { once: true });
+    </script>
+</body>
+
+</html>
