@@ -352,8 +352,8 @@
             </div>
         </div>
     </footer>
-    <!-- Popup Modal -->
-<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+ <!-- Popup Modal -->
+<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50 hidden">
   <div class="bg-white rounded-xl shadow-lg p-8 max-w-sm w-full text-center">
     <h2 class="text-xl font-semibold text-gray-800 mb-4">Register / Sign in</h2>
     <p class="text-gray-600 mb-8">Unlock this feature and more by creating an account or signing in.</p>
@@ -370,13 +370,18 @@
 
 <script>
   function showPopup() {
-    document.getElementById('popupModal').classList.remove('hidden');
+    const modal = document.getElementById('popupModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
   }
 
   function hidePopup() {
-    document.getElementById('popupModal').classList.add('hidden');
+    const modal = document.getElementById('popupModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
   }
 </script>
+
 
 </body>
 
