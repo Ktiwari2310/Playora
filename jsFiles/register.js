@@ -33,7 +33,7 @@ submit.addEventListener("click", function (event) {
       const user = userCredential.user;
       alert("User registered successfully!");
       console.log(user);
-      window.location.href=""
+      window.location.href = "../Student/studash.html"; 
     })
     .catch((error) => {
       // Handle errors
