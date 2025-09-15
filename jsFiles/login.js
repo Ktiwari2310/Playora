@@ -24,8 +24,8 @@ const submit = document.getElementById('continueBtn');
 submit.addEventListener("click", function (event) {
   event.preventDefault();
 
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  const email = document.getElementById('emaillogin').value;
+  const password = document.getElementById('passwordlogin').value;
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -33,7 +33,7 @@ submit.addEventListener("click", function (event) {
       const user = userCredential.user;
       alert("User signed in successfully!");
       console.log(user);
-      window.location.href=""
+      window.location.href = "../Student/studash.html"; // adjust path as needed
     })
     .catch((error) => {
       // Handle errors

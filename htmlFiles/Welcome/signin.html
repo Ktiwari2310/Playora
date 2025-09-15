@@ -10,6 +10,7 @@
     <title>Sign In</title>
     <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+     <script type="module" src="../../jsFiles/login.js" defer></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body class="bg-gradient-to-br from-green-50 to-white min-h-screen flex flex-col">
@@ -59,7 +60,7 @@
         <div class="mb-4">
           <input
             type="email"
-            id="email"
+            id="emaillogin"
             placeholder="Email Address"
             autocomplete="email"
             class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
@@ -70,7 +71,7 @@
 <div class="mb-6 relative">
   <input
     type="password"
-    id="password"
+    id="passwordlogin"
     placeholder="Password"
     autocomplete="current-password"
     class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
