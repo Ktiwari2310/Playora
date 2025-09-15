@@ -1,17 +1,22 @@
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8" />
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-  <link as="style"
-    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
-    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
   <link as="style"
     href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
     onload="this.rel='stylesheet'" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <title>Play</title>
+  <title>Compete</title>
   <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
@@ -61,8 +66,7 @@
   <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
     style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
     <div class="layout-container flex h-full grow flex-col">
-      <header
-        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
         </a>
         <div class="flex items-center gap-4 text-gray-900">
           <div class="text-green-500">
@@ -78,10 +82,10 @@
         </div>
         <div class="flex items-center gap-8 text-gray-700 font-medium">
           <a class="hover:text-gray-900 transition-colors" href="../Student/studash.html">Dashboard</a>
-          <a class="text-gray-900 font-semibold" href="../Student/play.html">Play</a>
-          <a class="hover:text-gray-900 transition-colors" href="../Student/compete.html">Compete</a>
+          <a class="text-gray-900 font-semibold" href="">Play</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/compete.html">Compete</a>  
           <a class="hover:text-gray-900 transition-colors" href="../Common/communityHub.html">Community Hub</a>
-          <a class="thover:text-gray-900 transition-colors" href="../Student/leaderboard.html">Leaderboard</a>
+          <a class="hover:text-gray-900 transition-colors" href="../Student/leaderboard.html">Leaderboard</a>
         </div>
 
         <div class="flex items-center space-x-4 relative">
@@ -101,12 +105,12 @@
             <!-- dropdown menu -->
             <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
               <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="./MyCourses/learn.html">
+                href="../Student/MyCourses/climateChange.html">
                 <span class="material-symbols-outlined text-base">school</span>
                 My Courses
               </a>
               <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="MyAchievements.html">
+                href="../Student/MyAchievements.html">
                 <span class="material-symbols-outlined text-base">emoji_events</span>
                 My Achievements
               </a>
@@ -116,12 +120,12 @@
                 Help & Support
               </a>
               <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                href="settings.html">
+                href="htmlFiles/../../Student/settings.html">
                 <span class="material-symbols-outlined text-base">settings</span>
                 Settings
               </a>
               <div class="my-1 border-t border-gray-100"></div>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="#">
+              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="../../index.html">
                 <span class="material-symbols-outlined text-base">logout</span>
                 Sign Out
               </a>
@@ -129,119 +133,82 @@
           </div>
         </div>
       </header>
-    
-<main class="flex flex-1 justify-center py-16 px-6">
-    <div class="layout-content-container flex w-full max-w-5xl flex-col">
-        <div class="mb-12 text-center">
-            <h1 class="text-5xl font-bold leading-tight tracking-tighter text-primary-900">Select a Game</h1>
-            <p class="mt-2 text-lg text-primary-800/80">Choose from our exciting games and start playing!</p>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#0e1a13] tracking-light text-[32px] font-bold leading-tight">Games and Quizzes</p>
+                <p class="text-[#51946c] text-sm font-normal leading-normal">Test your eco-knowledge and have fun with our interactive games and quizzes.</p>
+              </div>
+           
+           
+            </div>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFC4_Fos1U5dBfIIRUpDU9_n0se0mFHqlCKZVAh81Hj1Ki_fAzkfQeIuInl-eD4BXtuOEt3pzuqbqz2xD8H2woxIdNiT0EmIta_SujvQvACRqWjmn3w_jIabq9V9A5mametqU18EUHgIZ_YtgMik9xmuxZNnyeHCXEE2gziFKlAUyXTSxSkcAmpl72eXJ5P1-QCCmqIwtzwcU0KloCdCnPANt0oxlslx03x5S4pAlaDqlhZSLxLZxcVZbcHyEI3nadisCMFdYgeDs");'
+                ></div>
+                <div>
+                  <p class="text-[#0e1a13] text-base font-medium leading-normal">Eco Warriors</p>
+                  <p class="text-[#51946c] text-sm font-normal leading-normal">A strategy game where you build and manage an eco-friendly city.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_vlhTMJJh1opkFxiugY03LFzNdPvd9fZUalbi4iuvBJoZgxgkRZ8CKlQuIE41PBzSnIe68_26yn5VqFI7HkEM0yjl05U6UZlus7B6zEm28S78l47LPZT5tZAKxyMBvNFKggO63jvvmwdDNN14ffvJLj4a85LXCRlrbFhpfYV5ElcYLi2e-J5LVxbmHDAQ7HXzDCHCG50lAjIhftliuDH2EFfzH9ZC9VL5619G64qohLEVMxbI-DZjjj2wINLVOr0wY6UOAoN-wTU");'
+                ></div>
+                <div>
+                  <p class="text-[#0e1a13] text-base font-medium leading-normal">Recycling Challenge</p>
+                  <p class="text-[#51946c] text-sm font-normal leading-normal">Learn about recycling through this interactive challenge.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0nteULvkbbtw7y_DM2dT2iI9cO8Ng4C7RfRpiHzClE_sytsiybKow3NgfVV5nBQDY15FpQRh3RmHCMbb9BHs_y13SKdAyCeSwqL3b_ciF6O8umwQ8YDMb6564PDpmDliiihicanc3AXUG79DJhrJlZHxwY_bEH1vGBK3fVgS_5IvUW2b38ulK_I_5DbT4tRCIaAn-q_uyDhSvgwypsz8SbYgbHciNjMB7KPStAdy0faeNeASXfyufqlixrMqQf9CLWLqgANKtCOA");'
+                ></div>
+                <div>
+                  <p class="text-[#0e1a13] text-base font-medium leading-normal">Water Conservation Quiz</p>
+                  <p class="text-[#51946c] text-sm font-normal leading-normal">Test your knowledge on water conservation.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApqj8ZFScU6qwqx4s-7dUnS71LaeRmBzG5HIK3KysYwEdd_Lu3TZ-4mY4GK03wTAWm218L0MqoUhm60ut5dWgz8vG5eZ_AllahhmiCntE5GzvpFK5CJtkLMyIQ7xumy-pP7Iwt247VY1oEjanBuBevTCBBVXkk9ucpWnIBVyD-Wz9UWyh8aAeEhhv6vs6w3oIAMkgZ4sNn79S9Zx8DWLgXXjLVlHa_ysrSDsZzIltjWdpgM7ksgScPH6xOsiQjKuvmV6hiOYDYC1Q");'
+                ></div>
+                <div>
+                  <p class="text-[#0e1a13] text-base font-medium leading-normal">Sustainable Living Game</p>
+                  <p class="text-[#51946c] text-sm font-normal leading-normal">Explore sustainable practices in this engaging game.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <a href="Quizeg.html"><div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCejqd6xNqoyHRH4x2QXqhokuim3IxOArajNnSWrMcvjNRgiXPegTS5TdHM5rH2q89YeVWqK_7SDr6oj7YnqDaGhsi5bcY1gLB_ixL59ajTyyuxImvBx8FneG5lcOa__oTreMsZsvxqRFyWlO4MQ7X8IoEopGtGh3bxSiAOh1Fl7XW3cX-KRFqvGFe3ExBP1ytTXQlOM2PWYyZ6rkdkdJRU0olPg6LJUau4W6-NJHpwCeU0Wwl2aI219pyyE_i0tH-hyp5DYlV2sAo");'
+                ></div>
+                
+                <a href="Quizeg.html"><div>
+                  <p class="text-[#0e1a13] text-base font-medium leading-normal">Climate Change Challenge</p>
+                  <p class="text-[#51946c] text-sm font-normal leading-normal">Quiz on the causes and effects of climate change.</p>
+                </div>
+              </div></a>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwmQ3mQNenEXrYMNi-vN8WMounBGVFP-Pxj8VZ3DWI_0K2ZDKany0AtjUUSOBAN4PYT0YPm6HVXQximMMY078zjwMU8RYhlpmV3pmcjn2U0UFxhliPQraaVA3G7vdaAF1Qze3daNqNj-TNr-4Beqo4zmdPS6rXmCrRPfJDOny-TpdrM5TxrNEx_6veurPVIIdig751MxDBThqsRq9BLWYgWhZzEFRyAC-Zsi4OLLqa6s4Ocy7-A9CR2AmBGnsis3v3bOQCSIQvZh8");'
+                ></div>
+                <div>
+                  <p class="text-[#0e1a13] text-base font-medium leading-normal">Energy Efficiency Quest</p>
+                  <p class="text-[#51946c] text-sm font-normal leading-normal">Discover ways to save energy in your daily life.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="grid grid-cols-1 gap-8">
-            <a class="group grid grid-cols-1 md:grid-cols-3 items-center gap-8 overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                href="#">
-                <div class="h-64 w-full overflow-hidden rounded-xl">
-                    <img alt="Recycle Rush game thumbnail"
-                        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbl6dKIVWE3qmePs-NB_TNWXPwRFy8qOBot8E5-c6Zmt4ab6ecxqLH0Vk6cRvbrBcAWzOYp4I01jwnB5cJL65ZAOtL6MuYa9U4GQCAuDsixXSP2Y5NNKXb3E7SwmaZXYRI-bORu1ymL3KWHCGqSL_FcpP_r2y1txkOIo86uC9sR9Y5IziLH3uFcsIIRrVoWPiM7SskwpGzAYvMGE8rVEXQqOVDZD2Bvn6E5kO6NUiY88_AtZvsUiq-L851gfb3Mn1P02tJdAGp-ugi" />
-                </div>
-                <div class="flex flex-col md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary-900">Recycle Rush</h3>
-                    <p class="mt-2 text-primary-700/90">Sort waste correctly before the time runs out. A fast-paced game
-                        to test your recycling knowledge.</p>
-                    <div class="mt-4 flex items-center gap-2 text-cyan-600 self-start">
-                        <span class="text-lg font-bold">Play Now</span>
-                        <span class="material-symbols-outlined text-2xl"> arrow_forward </span>
-                    </div>
-                </div>
-            </a>
-            <a class="group grid grid-cols-1 md:grid-cols-3 items-center gap-8 overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                href="#">
-                <div class="h-64 w-full overflow-hidden rounded-xl">
-                    <img alt="Aqua Saver game thumbnail"
-                        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE3YYENsYAMrGDbJZx5agS14G-P4BqoHRYCwwFyS2q6M-O3ebQ_P-N2XEZI4YsioI1rdMRVvIIZhCe_ZhcySn2N2xAMPzXi3vx6FhvooaK58CjtyRdiDrEucXXAp7MIAeZjUw23tWs_OrDNIXvUKJ-ihja8pKtTqOzOkhHGKZnKZTqwsTbUUpblsAgTlrou-7EHBaxCB5U2Qfqg6uleLkLD-3kynYIPxLHge6o8zt7tcVuoRmpPR_uG4OurcAEeSLcMGaka_cYjRlU" />
-                </div>
-                <div class="flex flex-col md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary-900">Aqua Saver</h3>
-                    <p class="mt-2 text-primary-700/90">Fix leaks and make smart choices to conserve water in a virtual
-                        home. Every drop counts!</p>
-                    <div class="mt-4 flex items-center gap-2 text-primary-600 self-start">
-                        <span class="text-lg font-bold">Play Now</span>
-                        <span class="material-symbols-outlined text-2xl"> arrow_forward </span>
-                    </div>
-                </div>
-            </a>
-            <a class="group grid grid-cols-1 md:grid-cols-3 items-center gap-8 overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                href="#">
-                <div class="h-64 w-full overflow-hidden rounded-xl">
-                    <img alt="Green Guardian game thumbnail"
-                        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJpH0Mj7sJ4XvHex3BHvAj03SPDDFTanq6EK3yyxZD5LyZq0tL8E-A-t9_nVB0jvejP1v8Tt0vNIH4nIIcANxC4DvFlHfoYSikGc0KYLTF2H9O_RywBpT_tIVbiOyvtTWMnqgP5JbnWE32EUpmbjvee94clQByadCJSwZpxMomr8aQAk568ZFCQnTvfjoVBcoYU4VfqXbfPl28I-v2hLI3s8JDtzTb2Pa_4cKmb6NhCmUg44AQEurmxBhdZUXT1kPv0-DZ7qUYHpOF" />
-                </div>
-                <div class="flex flex-col md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary-900">Green Guardian</h3>
-                    <p class="mt-2 text-primary-700/90">Protect a forest from pollution and deforestation by making
-                        sustainable choices. Grow your own virtual forest!</p>
-                    <div class="mt-4 flex items-center gap-2 text-cyan-600 self-start">
-                        <span class="text-lg font-bold">Play Now</span>
-                        <span class="material-symbols-outlined text-2xl"> arrow_forward </span>
-                    </div>
-                </div>
-            </a>
-            <a class="group grid grid-cols-1 md:grid-cols-3 items-center gap-8 overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                href="#">
-                <div class="h-64 w-full overflow-hidden rounded-xl">
-                    <img alt="Energy Empire game thumbnail"
-                        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2FEXbc-wtBHy0iNbVOx0DEL93mRqe-SZsQJ9dIHCB_5AlwMZs-yfQnbdEPHk9x_OfOqR0t8nDYibS2J9nq0iV_f40zAOuNEvtBfdcGJtVv3iLlPL32nqLF7RHhNi1mi231ju5wPCW1IQ0yO0ZtAZLdWY714gp8tz6DmviIrapHoB6HXYBABtNfYUQum9lPu1xpyjbZTaMx1e_cbbb4VIlcB--h3kTG_Yo_yZ0Fq2eOuYx0OwwbzClxXr-Oui1NkqAU1BEtF6t1Eli" />
-                </div>
-                <div class="flex flex-col md:col-span-2">
-                    <h3 class="text-2xl font-bold text-primary-900">Energy Empire</h3>
-                    <p class="mt-2 text-primary-700/90">Build a city powered by renewable energy. Manage resources and
-                        keep your citizens happy and green.</p>
-                    <div class="mt-4 flex items-center gap-2 text-primary-600 self-start">
-                        <span class="text-lg font-bold">Play Now</span>
-                        <span class="material-symbols-outlined text-2xl"> arrow_forward </span>
-                    </div>
-                </div>
-            </a>
-        </div>
+      </div>
     </div>
-</main>
-<footer class="mt-16 w-full bg-primary-100/50 py-10 text-center">
-    <div class="mx-auto flex max-w-5xl flex-col items-center gap-6">
-        <div class="flex justify-center gap-6">
-            <a class="text-primary-700 transition-colors hover:text-primary-900" href="#">
-                <svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z">
-                    </path>
-                </svg>
-            </a>
-            <a class="text-primary-700 transition-colors hover:text-primary-900" href="#">
-                <svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
-                    </path>
-                </svg>
-            </a>
-            <a class="text-primary-700 transition-colors hover:text-primary-900" href="#">
-                <svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
-                    </path>
-                </svg>
-            </a>
-        </div>
-        <p class="text-base font-normal text-primary-800/80">© 2025 Playora. All rights reserved.</p>
-    </div>
-</footer>
-</div>
-</div>
-
-</body>
-
+  </body>
 </html>
