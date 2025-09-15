@@ -1,55 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-    <link
-      as="style"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
       onload="this.rel='stylesheet'"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <title>Content Management</title>
-    <link href="../../Images/gamification (2).png," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>My Classes</title>
+    <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style type="text/tailwindcss">
       :root {
-        --primary-color: #20df6c;
-        --secondary-color: #1a2e39;
-        --accent-color: #84cc16;
-        --background-color: #f0f4f2;
-        --text-primary: #111714;
-        --text-secondary: #648772;
-      }
-      .btn-primary {
-        @apply bg-[var(--primary-color)] text-white;
-      }
-      .btn-secondary {
-        @apply bg-[var(--secondary-color)] text-white;
-      }
-      .status-published {
-        @apply bg-lime-100 text-lime-800;
-      }
-      .status-draft {
-        @apply bg-gray-100 text-gray-800;
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f;
+        --primary-500: #20df6c;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
       }
     </style>
   </head>
-<body class="bg-gray-50">
-  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
-    <div class="layout-container flex h-full grow flex-col">
-      <header
-        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
 
-          <div class="flex items-center gap-4 text-gray-900">
+ <body class="bg-gray-50 text-gray-900" style="font-family: Lexend, 'Noto Sans', sans-serif">
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+       <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+        </a>
+        <div class="flex items-center gap-4 text-gray-900">
           <div class="text-green-500">
-            <img class="w-10 invisible" src="gamification.png" alt=" ">
+            <img class="w-10 invisible width:40; height: 0;" src="gamification.png" alt="">
           </div>
           <div class="flex items-center gap-4 text-[#111811]">
             <div class="size-8">
@@ -59,50 +49,44 @@
            <a href="EduDash.html"> <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2></a>
           </div>
         </div>
-         <div class="flex items-center gap-8 text-gray-700 font-medium">
-          <a class="hover:text-gray-900 transition-colors" href="EduDash.html">Dashboard</a>
-          <a class="hover:text-gray-900 transition-colors" href="EduMyClasses.html">My Classes</a>
-          <a class="text-gray-900 font-semibold" href="">Content Management</a>
-          <a class="hover:text-gray-900 transition-colors " href="StuTracking.html">Analytics</a>
-        </div>
+      <div class="flex items-center gap-8 text-gray-700 font-medium ">
+        <a class="hover:text-gray-900 transition-colors" href="EduDash.html">Dashboard</a>
+        <a class="hover:text-gray-900 transition-colors" href="EduMyClasses.html">My Classes</a>
+        <a class="ext-gray-900 font-semibold" href="">Content Management</a>
+        <a class="hover:text-gray-900 transition-colors" href="StuTracking.html">Analytics</a>
+      </div>
+      <div class="flex items-center space-x-4 relative">
+        <a href="../Common/notifications.html" class="material-icons text-gray-600">notifications</a>
+        <div class="relative">
+          <!-- hidden checkbox acts as toggle -->
+          <input type="checkbox" id="dropdownToggle" class="hidden peer">
 
-        <div class="flex items-center space-x-4 relative">
-          <a href="../Common/notifications.html" class="material-icons text-gray-600">notifications</a>
-
-          <div class="relative">
-            <!-- hidden checkbox acts as toggle -->
-            <input type="checkbox" id="dropdownToggle" class="hidden peer">
-
-            <!-- button (label for checkbox) -->
-            <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
-              <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
-                <span class="material-icons text-gray-500">person</span>
-              </div>
-
-
-
-            </label>
-
-            <!-- dropdown menu -->
-            <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
-          
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../Common/helpSupport.html">
-                <span class="material-symbols-outlined text-base">help</span>
-                Help & Support
-              </a>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="../Student/settings.html">
-                <span class="material-symbols-outlined text-base">settings</span>
-                Settings
-              </a>
-              <div class="my-1 border-t border-gray-100"></div>
-              <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="../../index.html">
-                <span class="material-symbols-outlined text-base">logout</span>
-                Sign Out
-              </a>
+          <!-- button (label for checkbox) -->
+          <label for="dropdownToggle" class="flex items-center gap-2 cursor-pointer">
+            <div class="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300">
+              <span class="material-icons text-gray-500">person</span>
             </div>
-          </div>
-        </div>
-      </header>
+          </label>
+
+          <!-- dropdown menu -->
+          <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">help</span>
+              Help & Support
+            </a>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+              <span class="material-symbols-outlined text-base">settings</span>
+              Settings
+            </a>
+            <div class="my-1 border-t border-gray-100"></div>
+            <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="../../index.html">
+              <span class="material-symbols-outlined text-base">logout</span>
+              Sign Out
+                </a>
+                </div>
+                </div>
+            </div>
+        </header>
 
 
         <!-- Main -->
