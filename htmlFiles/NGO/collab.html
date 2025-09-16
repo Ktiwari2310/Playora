@@ -1,39 +1,83 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <title>Collaboration</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    
-    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
-<div class="layout-container flex h-full grow flex-col">
-  <header class="border-b border-solid border-b-[#e7edf3] px-10 py-3">
-    <div class="flex items-center gap-4 text-[#0d141b]">
-      <div class="size-4">
-        <!-- icon -->
-       <div class="flex items-center gap-4 text-gray-900">
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Dashboard</title>
+  <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    /* :root {
+        --primary-color: #20DF6C;
+      }
+      .bg-primary {
+        background-color: var(--primary-color);
+      }
+      .text-primary {
+        color: var(--primary-color);
+      }
+      .border-primary {
+        border-color: var(--primary-color);
+      }
+      .tab-content {
+      display: none;
+    } */
+
+    :root {
+        --primary-50: #f0fdf6;
+        --primary-100: #dcfce9;
+        --primary-200: #bbf7d4;
+        --primary-300: #86efb5;
+        --primary-400: #4ade8f;
+        --primary-500: #20df6c;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+
+  
+    </style>
+</head>
+
+<body class="bg-gray-50">
+  <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3">
+        </a>
+        <div class="flex items-center gap-4 text-gray-900">
           <div class="text-green-500">
-            <!-- <img class="w-10" src="gamification.png" alt=""> -->
+            <img class="w-10" src="gamification.png" alt="">
           </div>
           <div class="flex items-center gap-4 text-[#111811]">
-            <div class="size-6">
-              <img src="https://cdn-icons-png.flaticon.com/512/3048/3048600.png" alt="Gamification Icon"
+            <div class="size-8">
+              <img src="../../Images/gamification (2).png" alt="Gamification Icon"
                 class="w-full h-full object-contain" />
             </div>
-            <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2>
+            <a href="../../index.html"> <h2 class="text-[#111811] text-lg font-bold leading-tight tracking-[-0.015em]">Playora</h2></a>
           </div>
+       
+
+        
+
+            
+         
         </div>
-  </header>
+      </header>
 
  
 
@@ -41,7 +85,7 @@
 </header>
 <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
   <div class="flex items-center mb-4">
-        <a class="flex items-center text-gray-500 hover:text-gray-900" href="../Student/studash.html">
+        <a class="flex items-center text-gray-500 hover:text-gray-900" href="../../index.html">
           <span class="material-icons">arrow_back</span>
           <span class="ml-2 font-medium">Back</span>
         </a>
