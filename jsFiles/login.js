@@ -1,9 +1,9 @@
-// Import Firebase SDKs from CDN
+// ✅ Import Firebase SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
-// Firebase config
+// ✅ Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyCSUIPuHp0Urpyug-Ag0AQVrfNHQN_WVxI",
   authDomain: "playora-test.firebaseapp.com",
@@ -14,31 +14,52 @@ const firebaseConfig = {
   measurementId: "G-JS56S7TB3K"
 };
 
-// Initialize Firebase
+// ✅ Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth(app); // ✅ Use getAuth here
+const auth = getAuth(app);
 
-// Submit button logic
-const submit = document.getElementById('continueBtn');
-submit.addEventListener("click", function (event) {
+// ✅ Login Button
+document.getElementById("continueBtn").addEventListener("click", function (event) {
   event.preventDefault();
 
-  const email = document.getElementById('emaillogin').value;
-  const password = document.getElementById('passwordlogin').value;
+  const email = document.getElementById("emaillogin").value.trim();
+  const password = document.getElementById("passwordlogin").value.trim();
+  const userType = document.querySelector('input[name="userType"]:checked');
 
+  if (!userType) {
+    alert("Please select a user type (Student or Educator).");
+    return;
+  }
+
+  if (!email || !password) {
+    alert("Please enter both email and password.");
+    return;
+  }
+
+  // ✅ Login with Firebase
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed in
       const user = userCredential.user;
-      alert("User signed in successfully!");
-      console.log(user);
-      window.location.href = "../Student/studash.html"; // adjust path as needed
+
+      // ✅ Use displayName if available, fallback to email prefix
+      const username = user.displayName || email.split("@")[0];
+
+      // ✅ Save user details for dashboard
+      localStorage.setItem("username", username);
+      localStorage.setItem("userType", userType.value);
+
+      alert("Login successful!");
+
+      // ✅ Redirect based on user type
+      if (userType.value === "educator") {
+        window.location.href = "../Educator/EduDash.html";
+      } else {
+        window.location.href = "../Student/studash.html";
+      }
     })
     .catch((error) => {
-      // Handle errors
       alert(error.message);
       console.error(error);
     });
 });
-

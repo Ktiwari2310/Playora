@@ -10,7 +10,7 @@
     <title>Sign In</title>
     <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-     <script type="module" src="../../jsFiles/login.js" defer></script>
+    <script type="module" src="../../jsFiles/login.js" defer></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body class="bg-gradient-to-br from-green-50 to-white min-h-screen flex flex-col">
@@ -68,33 +68,29 @@
         </div>
 
         <!-- Password -->
-<div class="mb-6 relative">
-  <input
-    type="password"
-    id="passwordlogin"
-    placeholder="Password"
-    autocomplete="current-password"
-    class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
-  />
-  <span
-    id="togglePassword"
-    class="absolute right-4 top-3 text-gray-400 cursor-pointer hover:text-gray-600 select-none"
-  >
-    👁️
-  </span>
-</div>
-
+        <div class="mb-6 relative">
+          <input
+            type="password"
+            id="passwordlogin"
+            placeholder="Password"
+            autocomplete="current-password"
+            class="w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 h-12 px-4 text-sm"
+          />
+          <span
+            id="togglePassword"
+            class="absolute right-4 top-3 text-gray-400 cursor-pointer hover:text-gray-600 select-none"
+          >
+            👁️
+          </span>
+        </div>
 
         <!-- Continue button -->
-         
-        
-  <button
-    type="button" id="continueBtn"
-    class="w-full bg-green-500 hover:bg-green-600 text-white rounded-xl h-12 font-semibold transition transform hover:scale-[1.02] shadow-md"
-  >
-   Continue
-  </button>
-
+        <button
+          type="button" id="continueBtn"
+          class="w-full bg-green-500 hover:bg-green-600 text-white rounded-xl h-12 font-semibold transition transform hover:scale-[1.02] shadow-md"
+        >
+          Continue
+        </button>
 
         <!-- Or divider -->
         <div class="flex items-center my-6">
@@ -127,13 +123,12 @@
       </div>
     </main>
 
+    <!-- Small helper script for password toggle -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const togglePassword = document.getElementById("togglePassword");
-        const passwordInput = document.getElementById("password");
-        const continueBtn = document.getElementById("continueBtn");
+        const passwordInput = document.getElementById("passwordlogin");
 
-        // Toggle show/hide password
         if (togglePassword && passwordInput) {
           togglePassword.addEventListener("click", function () {
             const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
@@ -141,63 +136,7 @@
             this.textContent = type === "password" ? "👁️" : "🙈";
           });
         }
-
-        // Continue button logic (tries multiple candidate paths)
-        if (continueBtn) {
-          continueBtn.addEventListener("click", async function (event) {
-            event.preventDefault();
-
-            const userType = document.querySelector('input[name="userType"]:checked');
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
-
-            if (!userType) {
-              alert("Please select a user type (Student or Educator).");
-              return;
-            }
-
-            if (!email || !password) {
-              alert("Please enter both email and password.");
-              return;
-            }
-
-            // Candidate paths (from Welcome/ signin file location -> sibling folders)
-            const educatorCandidates = [
-              "../Educator/EduDash.html",
-              "../Educator/eduDash.html",
-              "../Educator/EduDash.htm",
-              "../Educator/index.html"
-            ];
-            const studentCandidates = [
-              "../Student/stuDash.html",
-              "../Student/studash.html",
-              "../Student/stuDash.htm",
-              "../Student/index.html"
-            ];
-
-            const candidates = userType.value === "educator" ? educatorCandidates : studentCandidates;
-
-            // Try HEAD request for each candidate (works when served via http(s) and same origin)
-            for (const p of candidates) {
-              try {
-                const res = await fetch(p, { method: "HEAD" });
-                if (res.ok) {
-                  window.location.href = p;
-                  return;
-                }
-              } catch (err) {
-                // fetch may fail locally (file://) or due to CORS — ignore and continue to fallback
-              }
-            }
-
-            // Fallback: navigate to the first candidate (best guess). If this 404s, check filename/casing.
-            window.location.href = candidates[0];
-          });
-        }
       });
     </script>
-
-    
   </body>
 </html>
-

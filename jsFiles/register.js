@@ -1,9 +1,6 @@
-// Import Firebase SDKs from CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
-// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyCSUIPuHp0Urpyug-Ag0AQVrfNHQN_WVxI",
   authDomain: "playora-test.firebaseapp.com",
@@ -14,31 +11,45 @@ const firebaseConfig = {
   measurementId: "G-JS56S7TB3K"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app); // ✅ Use getAuth here
+const auth = getAuth(app);
 
-// Submit button logic
-const submit = document.getElementById('register');
-submit.addEventListener("click", function (event) {
+// ✅ Signup logic
+document.getElementById("signupBtn").addEventListener("click", function (event) {
   event.preventDefault();
 
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  const fullName = document.getElementById("name").value.trim();
+  const schoolName = document.getElementById("school_name").value.trim();
+  const username = document.getElementById("username").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!fullName || !schoolName || !username || !email || !password) {
+    alert("Please fill in all fields.");
+    return;
+  }
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Registration successful
       const user = userCredential.user;
-      alert("User registered successfully!");
-      console.log(user);
-      window.location.href = "../Student/studash.html"; 
+
+      // ✅ Save username to Firebase profile
+      updateProfile(user, { displayName: username })
+        .then(() => {
+          // ✅ Save details locally
+          localStorage.setItem("username", username);
+          localStorage.setItem("fullName", fullName);
+          localStorage.setItem("schoolName", schoolName);
+
+          alert("Signup successful!");
+          window.location.href = "../Student/studash.html";
+        })
+        .catch((error) => {
+          console.error("Profile update failed:", error);
+        });
     })
     .catch((error) => {
-      // Handle errors
       alert(error.message);
       console.error(error);
     });
 });
-

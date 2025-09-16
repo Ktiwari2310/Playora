@@ -131,8 +131,12 @@
       </header>
       <div class="px-40 flex flex-1 justify-center py-5">
         <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-          <h1 class="text-[#0d141b] tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">Welcome
-            back, Clara!</h1>
+ <h1 class="text-[32px] font-bold">
+  Welcome back, <span id="welcomeUser"></span>!
+</h1>
+
+
+
           <p class="text-[#0d141b] text-base font-normal leading-normal pb-3 pt-1 px-4">Explore new challenges and
             continue your eco-journey.</p>
           <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">My Progress
@@ -308,6 +312,24 @@
       </div>
     </div>
   </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const username = localStorage.getItem("username");
+
+    if (username) {
+      document.getElementById("welcomeUser").textContent = username;
+    } else {
+      window.location.href = "../Login/signin.html"; // Redirect if not logged in
+    }
+  });
+</script>
+
+
+
+
+
+
+
 </body>
 
 </html>
