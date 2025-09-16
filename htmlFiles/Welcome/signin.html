@@ -14,6 +14,8 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
     <script type="module" src="../../jsFiles/login.js" defer></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
   </head>
   <body class="bg-gradient-to-br from-green-50 to-white min-h-screen flex flex-col">
     <header class="flex items-center justify-between border-b border-gray-200 px-10 py-4 bg-white shadow-sm">
@@ -105,12 +107,20 @@
 
         <!-- Social logins -->
         <div id="login-screen" class="flex flex-col gap-3">
-          <button id="google-login"
-            class="w-full bg-white border border-gray-300 text-gray-700 rounded-xl h-12 font-medium flex items-center justify-center gap-2 hover:bg-gray-50 transition"
-          >
-            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
-            Continue with Google
-          </button>
+         <div id="g_id_onload"
+     data-client_id="153578646973-j1jdgencrb1ffcevk2uuhknmtf9qn85g.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-callback="handleCredentialResponse"
+     data-auto_prompt="false">
+</div>
+
+<!-- Custom Styled Button -->
+<button id="googleSignInBtn"
+        class="w-full bg-white border border-gray-300 text-gray-700 rounded-xl h-12 font-medium flex items-center justify-center gap-2 hover:bg-gray-50 transition">
+  <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
+  Continue with Google
+</button>
           <button
             class="w-full bg-black text-white rounded-xl h-12 font-medium flex items-center justify-center gap-2 hover:bg-gray-900 transition"
           >
@@ -141,6 +151,26 @@
           });
         }
       });
+ // Render custom styled button
+  google.accounts.id.renderButton(
+    document.getElementById("googleSignInBtn"),
+    { theme: "outline", size: "large", text: "continue_with", shape: "rectangular" }
+  );
+
+  function handleCredentialResponse(response) {
+    const data = parseJwt(response.credential);
+    console.log("User Info:", data);
+    alert(`Welcome ${data.name}`);
+  }
+
+  function parseJwt(token) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(atob(base64).split('')
+      .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+      .join(''));
+    return JSON.parse(jsonPayload);
+  }
     </script>
     
   </body>
