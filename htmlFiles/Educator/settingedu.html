@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Setting</title>
+  <link rel="shortcut icon" href="../../Images/gamification (2).png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+    }
+    .form-switch {
+      @apply relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+    }
+    .form-switch-translate {
+      @apply pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out;
+    }
+    input:checked + .form-switch {
+      background-color: #22c55e;
+    }
+    input:checked + .form-switch .form-switch-translate {
+      transform: translateX(1.25rem);
+    }
+  </style>
+</head>
+<body>
+  <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl z-10 p-2 hidden peer-checked:block">
+    <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="help&supportedu.html">
+      <span class="material-symbols-outlined text-base">help</span>
+      Help & Support
+    </a>
+    <a class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md" href="#">
+      <span class="material-symbols-outlined text-base">settings</span>
+      Settings
+    </a>
+    <div class="my-1 border-t border-gray-100"></div>
+    <a class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-md" href="../../index.html">
+      <span class="material-symbols-outlined text-base">logout</span>
+      Sign Out
+    </a>
+  </div>
+  </div>
+  </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <a class="flex items-center text-gray-500 hover:text-gray-900" href="EduDash.html">
+      <div class="flex items-center mb-4">
+          <span class="material-icons">arrow_back</span>
+          <span class="ml-2 font-medium">Back</span>
+      </div></a>
+      <h2 class="text-3xl font-bold text-gray-900">Settings</h2>
+      <p class="mt-1 text-lg text-gray-600">Manage your account and app preferences.</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-lg">
+      <div class="p-6 border-b border-gray-200" id="profile">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Profile Information</h3>
+        <div class="space-y-6">
+          <div class="flex items-center space-x-6">
+            <img alt="User profile picture" class="h-24 w-24 rounded-full" src="https://lh3.googleusercontent.com/a/ACg8ocJqWk8XOAC2gG35xXm8f5yZOZtM-c_KyLNbzjgf6a0=s96-c"/>
+            <div>
+              <button class="bg-green-100 text-green-600 font-semibold py-2 px-4 rounded-full text-sm hover:bg-green-200 transition duration-300">Change Picture</button>
+              <p class="text-xs text-gray-500 mt-2">JPG, GIF or PNG. 1MB max.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700" for="fullName">Full Name</label>
+              <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" id="fullName" type="text" value="Alex Doe"/>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700" for="username">Username</label>
+              <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" id="username" type="text" value="alexdoe"/>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="email">Email Address</label>
+            <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" id="email" type="email" value="alex.doe@example.com"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700" for="bio">Bio</label>
+            <textarea class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm" id="bio" placeholder="Tell us a little about yourself..." rows="3">Eco-warrior in training!</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 border-b border-gray-200" id="notifications">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Notifications</h3>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-medium text-gray-800">New Quiz Alerts</p>
+              <p class="text-sm text-gray-500">Get notified when new quizzes are available.</p>
+            </div>
+            <label class="flex items-center cursor-pointer">
+              <input checked="" class="sr-only" type="checkbox"/>
+              <div class="form-switch bg-gray-200">
+                <div class="form-switch-translate"></div>
+              </div>
+            </label>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-medium text-gray-800">Weekly Progress Report</p>
+              <p class="text-sm text-gray-500">Receive a summary of your weekly activity and points.</p>
+            </div>
+            <label class="flex items-center cursor-pointer">
+              <input checked="" class="sr-only" type="checkbox"/>
+              <div class="form-switch bg-gray-200">
+                <div class="form-switch-translate"></div>
+              </div>
+            </label>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-medium text-gray-800">Challenge Invitations</p>
+              <p class="text-sm text-gray-500">Get notified when a friend invites you to a challenge.</p>
+            </div>
+            <label class="flex items-center cursor-pointer">
+              <input class="sr-only" type="checkbox"/>
+              <div class="form-switch bg-gray-200">
+                <div class="form-switch-translate"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 border-b border-gray-200" id="privacy">
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Privacy</h3>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-medium text-gray-800">Public Profile</p>
+              <p class="text-sm text-gray-500">Allow other users to see your profile and progress.</p>
+            </div>
+            <label class="flex items-center cursor-pointer">
+              <input checked="" class="sr-only" type="checkbox"/>
+              <div class="form-switch bg-gray-200">
+                <div class="form-switch-translate"></div>
+              </div>
+            </label>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-medium text-gray-800">Leaderboard Visibility</p>
+              <p class="text-sm text-gray-500">Show your name and score on public leaderboards.</p>
+            </div>
+            <label class="flex items-center cursor-pointer">
+              <input checked="" class="sr-only" type="checkbox"/>
+              <div class="form-switch bg-gray-200">
+                <div class="form-switch-translate"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 px-6 py-4 flex justify-end items-center space-x-4">
+        <button class="text-gray-600 font-semibold py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300">Cancel</button>
+        <button class="bg-green-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-green-600 transition duration-300 flex items-center">
+          <span class="material-icons mr-2">save</span>
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
