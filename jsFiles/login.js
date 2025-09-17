@@ -2,6 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
 // ✅ Firebase config
 const firebaseConfig = {
@@ -18,6 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 // ✅ Login Button
 document.getElementById("continueBtn").addEventListener("click", function (event) {
@@ -25,12 +27,6 @@ document.getElementById("continueBtn").addEventListener("click", function (event
 
   const email = document.getElementById("emaillogin").value.trim();
   const password = document.getElementById("passwordlogin").value.trim();
-  const userType = document.querySelector('input[name="userType"]:checked');
-
-  if (!userType) {
-    alert("Please select a user type (Student or Educator).");
-    return;
-  }
 
   if (!email || !password) {
     alert("Please enter both email and password.");
@@ -39,27 +35,38 @@ document.getElementById("continueBtn").addEventListener("click", function (event
 
   // ✅ Login with Firebase
   signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
+  .then((userCredential) => {
+    const user = userCredential.user;
+    getDoc(doc(db, "users", user.uid))
+    .then((userDoc) => {
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
 
-      // ✅ Use displayName if available, fallback to email prefix
-      const username = user.displayName || email.split("@")[0];
+        // ✅ Use displayName if available, fallback to email prefix
+        const username = userData.username || email.split("@")[0];
 
-      // ✅ Save user details for dashboard
-      localStorage.setItem("username", username);
-      localStorage.setItem("userType", userType.value);
+        // ✅ Save user details for dashboard
+        localStorage.setItem("username", username);
+        localStorage.setItem("userType", userData.userType);
 
-      alert("Login successful!");
+        alert("Login successful!");
 
-      // ✅ Redirect based on user type
-      if (userType.value === "educator") {
-        window.location.href = "../Educator/EduDash.html";
-      } else {
-        window.location.href = "../Student/studash.html";
+        // ✅ Redirect based on user type
+        if (userData.userType === "educator") {
+          window.location.href = "../Educator/EduDash.html";
+        } else {
+          window.location.href = "../Student/studash.html";
+        }
       }
-    })
-    .catch((error) => {
+      else{
+        alert("No user data found in Firestore!");
+      }
+    }).catch((error) => {
       alert(error.message);
       console.error(error);
     });
+  }).catch((error) => {
+      alert(error.message);
+      console.error(error);
+  });
 });
