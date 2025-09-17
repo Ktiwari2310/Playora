@@ -25,7 +25,7 @@ logoutBtn.addEventListener("click", () => {
   signOut(auth)
     .then(() => {
       localStorage.clear();   // clear local storage
-      window.location.href = "../../index.html";
+      window.location.href = "../../../index.html";
       alert("You have been logged out successfully.");
     })
     .catch((error) => {
